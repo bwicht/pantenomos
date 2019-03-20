@@ -3,11 +3,24 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>projet_pantenomos rpz</h1>
 
   {{> hello}}
-  {{> info}}
+  {{> premierTitre}}
   {{> test_checkboxes}}
+  {{> troisiemeTitre}}
+  <div class ="container">
+    <ul>
+        {{#each aviss}}
+        {{> avis}}
+       {{/each}} 
+
+    </ul>
+      
+
+  </div>
+  
+  
 </body>
 
 <template name="hello">
@@ -15,15 +28,31 @@
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
+<template name="premierTitre">
+  <h2>partie 1</h2>
  
 </template>
-<template>
-    <label name="test_checkboxes" class="container">One
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
-      </label>
+<template name ="test_checkboxes">
+  <form action="/action_page.php">
+    <input type="checkbox" name="oui" value="Oui"> Je vote pour<br>
+    <input type="checkbox" name="non" value="Non"> Je vote contre<br>
+    <input type="checkbox" name="ouiPrincipe" value="ouiPrincipe" checked> chevreuil<br><br>
+    <input type="submit" value="vérifie ta réponse">
+    <p>ta réponse est: {{reponse}}</p>
+  </form>
 
 </template>
+
+<template name="troisiemeTitre">
+    <h2>partie 3</h2>
+
+  </template>
+
+  <template name="avis">
+      <li>{{ text }}</li>
+     
+  
+    </template>
+
+    
 

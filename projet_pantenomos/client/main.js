@@ -1,5 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Mongo } from 'meteor/mongo';
+
+// import '../imports/ui/body.js'; pourquoi cela fait bugger le code ? 
 
 import './main.html';
 
@@ -20,3 +23,5 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+
