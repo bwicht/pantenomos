@@ -5,6 +5,7 @@ import { Mongo } from 'meteor/mongo';
 // import '../imports/ui/body.js'; pourquoi cela fait bugger le code ? 
 
 import './main.html';
+import '../imports/templates/homePage.html';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
