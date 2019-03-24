@@ -4,58 +4,19 @@
 
 <body>
   <h1>projet_pantenomos rpz</h1>
-
-  {{> hello}}
-  {{> premierTitre}}
-  {{> test_checkboxes}}
-  {{> troisiemeTitre}}
+  
   {{> homePage}}
-  {{> Copyright}}
+  {{> copyright}}
 
   <div class ="container">
     <ul>
         {{#each aviss}}
         {{> avis}}
-       {{/each}} 
-
+       {{/each}}
     </ul>
-      
-
   </div>
   
-  
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-<template name="premierTitre">
-  <h2>partie 1</h2>
- 
-</template>
-<template name ="test_checkboxes">
-  <form action="/action_page.php">
-    <input type="checkbox" name="oui" value="Oui"> Je vote pour<br>
-    <input type="checkbox" name="non" value="Non"> Je vote contre<br>
-    <input type="checkbox" name="ouiPrincipe" value="ouiPrincipe" checked> chevreuil<br><br>
-    <input type="submit" value="vérifie ta réponse">
-    <p>ta réponse est: {{reponse}}</p>
-  </form>
-
-</template>
-
-<template name="troisiemeTitre">
-    <h2>partie 3</h2>
-
-  </template>
-
-  <template name="avis">
-      <li>{{ text }}</li>
-     
-  
-    </template>
 
     
 

@@ -1,0 +1,1 @@
+// Logique de remplissage du contenu des projet.html selon les informations nécessaires

@@ -1,11 +1,12 @@
 <template name="homePage">
+
     <nav>
         <ul>
             <form>
-                <select name="nom" size="1">
-                  <option><a href="#">FR</a></option>  
-                  <option><a href="#">DE</a></option>  
-                  <option><a href="#">IT</a></option>  
+                <select name="language" size="1">
+                  <option>FR</option>  
+                  <option>DE</option>  
+                  <option>IT</option>
                 </select>
             </form>
         </ul>
@@ -13,86 +14,10 @@
 
     <div class="row">
 
-        <div class="column">
-            <div class="card">
-                <h2>Projet 1</h2>
-                <p>blabla</p>
-                <p>blabla</p>
-            </div>
-        </div>
-<div class="column">
-    <div class="card">
-        <h2>Projet 2</h2>
-        <p>blabla</p>
-        <p>blabla</p>
+        {{> projet}}
+        {{> projet}}
+        {{> projet}}
+
     </div>
-</div>
-<div class="column">
-    <div class=card>
-        <h2>Projet 3</h2>
-        <p>blabla</p>
-        <p>blabla</p>
-    </div>
-</div>
-</div>
 
-<style>
-body{
-    padding:10px;
-    font-family: 'Times New Roman','Times New Roman', Times, serif;
-    }
-nav ul form {
-    text-align: right;
-    list-style-type: none;
-}
-h1 {
-    text-align: center
-}
-.column {
-    float: left;
-    width: 30%;
-    padding: 0 10px;
-}
-.row {margin: 0 -5px;}
-
-.row:after{
-    content:"";
-    display: table;
-    clear: both;
-}
-.card{
-    border: 3px red;
-    box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #fff9f8;
-
-}
-@media screen and (max-width:600px){
-    .column{
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-}
-</style>
-</template>
-
-<template name="Copyright">
-    <style>
-        .p{
-            text-align: center;
-            color:red;
-            font-size: 7px;
-            margin-left: 12.5%;
-            width: 75%;
-            margin-top:15%;
-            opacity:0; }
-            </style>
-            <p> Application réalisée par
-                <em>Antoine Lami - Bertil Wicht - Caroline Rohrbach - Léa Keller - Victor Vermot -</em>
-                dans le cadre du cours
-                <em>Programmation pour Internet II - Meteor.js</em>
-                donné par Isaac Pante et Loris Rimaz à l'Univesité de Lausanne au cours du semestre de printemps 2019.
-                </p>
 </template>
