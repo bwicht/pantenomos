@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/avis.js';
+import '../imports/api/commentaires.js';
 
 
 Meteor.startup(() => {
