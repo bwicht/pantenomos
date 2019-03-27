@@ -1,12 +1,14 @@
-import {Template } from 'meteor/templating';
+import { Template } from 'meteor/templating';
 
-import  { Avis } from '../api/avis.js';
+import  { Commentaires } from '../api/commentaires.js';
+
+import './body.html';
 
 Template.body.helpers({
-    aviss : [
-        { text: 'avis de boulet 1'},
-        { text: 'avis de boulet 1'},
-        { text: 'avis de boulet 1'},
-    ]
+     commentaires() {
+        return Commentaires.find({});
 
+     },
+        
+    
 });
