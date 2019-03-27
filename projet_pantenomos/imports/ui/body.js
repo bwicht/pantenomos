@@ -8,7 +8,7 @@ import './commentaires.js';
 
  Template.body.helpers({
     commentaires() {
-        return Commentaires.find({}, { sort: { createdAt: -1 } });
+        return Commentaires.find({});
 
      },
         
