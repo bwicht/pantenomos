@@ -10,4 +10,17 @@
         <p>ta réponse est: {{reponse}}</p>
       </form>
 
+      <textarea rows="4" cols="50">
+        texte ou la personne doit mettre son avis général
+
+        </textarea>
+
+      <div class ="container">
+        <ul>
+            {{#each commentaires}}
+            {{> commentaire}}
+           {{/each}}
+        </ul>
+      </div>
+
 </template>
