@@ -4,6 +4,11 @@
         <h1>Liste des commentaires</h1>
 
         {{> loginButtons}}
+        {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
         
         <form class="new-commentaire">
             <input type="text" name="text" placeholder="Type to add new comment" />

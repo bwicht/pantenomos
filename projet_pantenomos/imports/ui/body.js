@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+
 import { Template } from 'meteor/templating';
 
 import  { Commentaires } from '../api/commentaires.js';
@@ -31,6 +33,8 @@ Template.body.events({
      Commentaires.insert({
        text,
        createdAt: new Date(), // current time
+       owner: Meteor.userId(),
+       username: Meteor.user().username,
      });
   
      // Clear form
