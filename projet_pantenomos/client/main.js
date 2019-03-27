@@ -6,7 +6,6 @@ import { Mongo } from 'meteor/mongo';
 
 import './main.html';
 import '../imports/templates/homePage.html';
-import '../imports/templates/avis.html';
 import '../imports/templates/projet.html';
 import '../imports/templates/firstPart.html';
 import '../imports/templates/secondPart.html';
