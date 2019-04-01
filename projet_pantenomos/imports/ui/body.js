@@ -3,9 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
 import  { Commentaires } from '../api/commentaires.js';
+import  { Projets } from '../api/projets.js';
+import  { Cases } from '../api/cases.js';
 
 import './body.html';
-import './commentaire.js';
+import './commentaire.js'; // ? 
 
 
  Template.body.helpers({
@@ -17,10 +19,8 @@ import './commentaire.js';
     
 });
 
-
-
-
-Template.body.events({
+  // 0
+  Template.body.events({
    'submit .new-commentaire'(event) {
      // Prevent default browser form submit
      event.preventDefault();
@@ -42,3 +42,22 @@ Template.body.events({
    },
  });
 
+
+
+ Template.body.helpers({
+  projets() {
+      return Projets.find({});
+
+   },
+      
+  
+});
+
+Template.body.helpers({
+  cases() {
+      return Cases.find({});
+
+   },
+      
+  
+});
