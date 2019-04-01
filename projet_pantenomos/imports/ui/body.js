@@ -5,7 +5,7 @@ import { Template } from 'meteor/templating';
 import  { Commentaires } from '../api/commentaires.js';
 
 import './body.html';
-import './commentaires.js';
+import './commentaire.js';
 
 
  Template.body.helpers({
