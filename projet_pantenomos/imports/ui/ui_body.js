@@ -1,22 +1,16 @@
 import { Meteor } from 'meteor/meteor';
-
 import { Template } from 'meteor/templating';
-
-import  { Commentaires } from '../api/commentaires.js';
-import  { Projets } from '../api/projets.js';
-import  { Cases } from '../api/cases.js';
+import  { Commentaires } from '../api/bd_comments.js';
+import  { Projets } from '../api/bd_projects.js';
+import  { Cases } from '../api/bd_cases.js';
 
 import './body.html';
-import './commentaire.js'; // ? 
-
+import './ui_comments.js'; // ? 
 
  Template.body.helpers({
     commentaires() {
-        return Commentaires.find({});
-
-     },
-        
-    
+      return Commentaires.find({});
+    },
 });
 
   // 0
@@ -42,14 +36,11 @@ import './commentaire.js'; // ?
    },
  });
 
-
-
  Template.body.helpers({
   projets() {
       return Projets.find({});
 
    },
-      
   
 });
 
@@ -59,5 +50,4 @@ Template.body.helpers({
 
    },
       
-  
 });
