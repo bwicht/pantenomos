@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import  { Commentaires } from '../api/bd_comments.js';
-import  { Projets } from '../api/bd_projects.js';
-import  { Cases } from '../api/bd_cases.js';
+import  { Commentaires } from '../api/db_comments.js';
+import  { Projets } from '../api/db_projects.js';
+import  { Cases } from '../api/db_cases.js';
 
 import './body.html';
 import './ui_comments.js'; // ? 
@@ -41,7 +41,6 @@ import './ui_comments.js'; // ?
       return Projets.find({});
 
    },
-  
 });
 
 Template.body.helpers({
@@ -49,5 +48,4 @@ Template.body.helpers({
       return Cases.find({});
 
    },
-      
 });
