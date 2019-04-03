@@ -2,7 +2,7 @@
 
 import { Template } from 'meteor/templating';
  
-import { Commentaires } from '../api/bd_comments.js';
+import { Commentaires } from '../api/db_comments.js';
  
 import '../templates/vot_thirdPart.html';
 
