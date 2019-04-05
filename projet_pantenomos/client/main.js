@@ -8,7 +8,9 @@ import './main.html';
 import '../imports/templates/homePage.html';
 import '../imports/templates/hp_project.html';
 import '../imports/templates/votation.html';
-import '../imports/templates/vot_firstPart.html';
+
 import '../imports/templates/vot_secondPart.html';
 import '../imports/templates/vot_thirdPart.html';
 import '../imports/templates/hp_copyright.html';
+
+import '../imports/ui/ui_vot_firstPart.js';
