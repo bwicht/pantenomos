@@ -1,3 +1,9 @@
+#lawsForm-wrap {
+	background-color: #eaeaea;
+	padding: 20px 20px;
+	margin-bottom: 50px;
+}
+
 /* The main content */
 .main-content {
     max-width: 600px;
