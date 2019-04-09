@@ -13,7 +13,10 @@
 
    <body>
         {{> sidebar}}
-        <div class="main-content">
-        {{> laws}}
-        </div>
+        <!-- This is where main layout is rendered-->
    </body>
+   <template name="main_layout">
+     <div class="main-content">
+          {{> yield}}
+     </div>
+   </template>
