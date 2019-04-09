@@ -1,7 +1,5 @@
 <template name="login">
-    {{if currentUser}}
     <h3 class="black">You are logged in. Return <a href="/laws"></a></h3>
-    {{else}}
     <form class="form-sigin">
         <h2 class="form-sigin-heading">Account Login</h2>
         <label for="email" class="sr-only">Email Address</label>
@@ -11,5 +9,4 @@
         <button type="submit" id="login-btn" class="btn btn-lg btn-primary btn-block">Log In</button>
         <p>No Account? <a href="/signup"></a>Create Account</p>
     </form>
-    {{/if}}
 </template>
