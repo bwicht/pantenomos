@@ -52,3 +52,22 @@ h1 {
   width: 75%;
   margin-top:15%;
 }
+<<<<<<< HEAD
+=======
+
+
+#laws{
+    border-style: solid;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+}
+
+#firstLaw {
+    margin-bottom: 10px;
+}
+
+#secondLaw {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+>>>>>>> master
