@@ -24,8 +24,5 @@ msavin:mongol
 twbs:bootstrap
 fortawesome:fontawesome
 iron:router
-themeteorchef:bert
 accounts-base
 accounts-password
-session
-meteortoys:allthings
