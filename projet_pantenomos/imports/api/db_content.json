@@ -1,0 +1,346 @@
+// Structure de la base de données JSON
+
+{
+    titre : 'Réforme fiscale et financement de l’AVS',
+    date : [
+        {jour: '19'},
+        {mois: 'mai'},
+        {année: '2019'},
+    ]
+}
+
+{
+    arrete: 'I',
+    intitule: 'Les actes mentionnés ci-après sont modifiés comme suit:',
+    texte: '
+    1. Loi fédérale du 3 octobre 2003 sur la péréquation financière et la compensation des charges
+    
+    Art. 3, al. 3, 2 et 3 phrases
+    
+    3 ... En ce qui concerne la fortune des personnes physiques, il ne tient compte que de l’accroissement de celle-ci. En ce qui concerne les bénéfices des personnes morales, il prend en considération le fait que leur exploitabilité fiscale diffère de celle des revenus et de la fortune des personnes physiques; à cet effet, il distingue notamment les bénéfices visés à l’art. 24b de la loi fédérale du 14 décembre 1990 sur l’harmonisation des impôts directs des cantons et des communes (LHID) des autres bénéfices.
+    
+    Art. 23a Dispositions transitoires concernant la modification du 28 septembre 2018
+    
+    1 Pour les cinq premières années suivant l’entrée en vigueur de la modification du 28 septembre 2018, le Conseil fédéral continue de prendre en compte le statut fiscal particulier des personnes morales visées à l’art. 28, al. 2 à 4, LHID de l’ancien droit. Pendant cette période, les bénéfices déterminants au sens de l’art. 3, al. 3, de la présente loi sont calculés conformément à la version valable jusqu’à l’entrée en vigueur de la présente modification. Sont utilisés les facteurs bêta de l’année de référence 2020. Les bénéfices pondérés par les facteurs bêta sont pris en compte dans le calcul du potentiel de ressources des années de référence correspondantes; à partir de la deuxième année suivant l’entrée en vigueur, le volume de ces bénéfices est réduit d’un cinquième chaque année.
+    
+    2 Ce mode de calcul est également utilisé si la personne morale a renoncé volontairement à son statut fiscal particulier après le 31 décembre 2016.
+    
+    3 De la cinquième à la onzième année de référence suivant l’entrée en vigueur de ladite modification, le Conseil fédéral peut introduire des seuils et des plafonds pour les facteurs au moyen desquels les bénéfices des personnes morales sont pris en compte dans le calcul du potentiel de ressources au sens de l’art. 3, al. 3.
+    
+    4 Durant les années mentionnées à l’al. 3, la dotation minimale qui devrait être atteinte conformément à l’art. 6, al. 3, est régie par les ressources entrant en ligne de compte la quatrième année suivant l’entrée en vigueur de la modification. À cette fin, la Confédération verse aux cantons concernés des contributions complémentaires s’élevant à 180 millions de francs par an.
+    
+    2. Loi fédérale du 14 décembre 1990 sur l’impôt fédéral direct
+    
+    Préambule
+    vu les art. 128 et 129 de la Constitution,
+    
+    Art. 18b, al. 1
+    
+    1 Les dividendes, les parts de bénéfice, les excédents de liquidation et les avantages appréciables en argent provenant d’actions, de parts à des sociétés à responsabilité limitée, de parts à des sociétés coopératives et de bons de participation ainsi que les bénéfices provenant de l’aliénation de tels droits de participation sont imposables, après déduction des charges imputables, à hauteur de 70 % lorsque ces droits de participation équivalent à 10 % au moins du capital-actions ou du capital social d’une société de capitaux ou d’une société coopérative. 
+    
+    Art.20, al. 1bis et 3 à 7
+    
+    1bis Les dividendes, les parts de bénéfice, les excédents de liquidation et les avantages appréciables en argent provenant d’actions, de parts à des sociétés à responsabilité limitée, de parts à des sociétés coopératives et de bons de participation (y compris les actions gratuites, les augmentations gratuites de la valeur nominale, etc.) sont imposables à hauteur de 70 % lorsque ces droits de participation équivalent à 10 % au moins du capital-actions ou du capital social d’une société de capitaux ou d’une société coopérative.
+    
+    3 Le remboursement d’apports, d’agios et de versements supplémentaires (réserves issues d’apports de capital) effectués par les détenteurs des droits de participation après le 31 décembre 1996 est traité de la même manière que le remboursement du capital-actions ou du capital social. L’al. 4 est réservé.
+    
+    4 Si, lors du remboursement de réserves issues d’apports de capital conformément à l’al. 3, une société de capitaux ou une société coopérative cotée dans une bourse suisse ne distribue pas d’autres réserves au moins pour un montant équivalent, le remboursement est imposable à hauteur de la moitié de la différence entre le remboursement et la distribution des autres réserves, mais au plus à hauteur du montant des autres réserves pouvant être distribuées en vertu du droit commercial qui sont disponibles dans la société.
+    
+    5 L’al. 4 ne s’applique pas aux réserves issues d’apports de capital:
+        a.	qui ont été constituées après le 24 février 2008 dans le cadre de concentrations équivalant économiquement à des fusions, par l’apport de droits de participation ou de droits de sociétariat dans une société de capitaux ou une société coopérative étrangère au sens de l’art. 61, al. 1, let. c, ou lors d’un transfert transfrontalier dans une société de capitaux suisse selon l’art. 61, al. 1, let. d; 
+        b.	qui existaient déjà au sein d’une société de capitaux ou d’une société coopérative étrangère au moment d’une fusion ou restructuration transfrontalière au sens de l’art. 61, al. 1, let. b, et al. 3, ou du déplacement du siège ou de l’administration effective après le 24 février 2008; 
+        c.	en cas de liquidation de la société de capitaux ou de la société coopérative.  
+    6 Les al. 4 et 5 s’appliquent par analogie en cas d’utilisation de réserves issues d’apports de capital pour l’émission d’actions gratuites ou l’augmentation gratuite de la valeur nominale.
+    
+    7 Si, lors de la vente de droits de participation à une société de capitaux ou une société coopérative qui est cotée dans une bourse suisse et qui les a émis, le remboursement des réserves issues d’apports de capital ne correspond pas au moins à la moitié de l’excédent de liquidation obtenu, la part de cet excédent de liquidation imposable est réduite d’un montant correspondant à la moitié de la différence entre cette part et le remboursement, mais au plus du montant des réserves qui sont imputables à ces droits de participation et qui sont disponibles dans la société.
+    
+    Art. 20a, al. 1, let. b
+    
+    1 Sont également considérés comme rendement de la fortune mobilière au sens de l’art. 20, al. 1, let. c:
+        b.	le produit du transfert d’une participation au capital-actions ou au capital social d’une société de capitaux ou d’une société coopérative représentant un transfert de la fortune privée à la fortune commerciale d’une entreprise de personnes ou d’une personne morale dans laquelle le vendeur ou la personne qui effectue l’apport détient une participation d’au moins 50 % au capital après le transfert, dans la mesure où le total de la contre-prestation reçue est supérieur à la somme de la valeur nominale de la participation transférée et des réserves issues d’apport de capital visées à l’art. 20, al. 3 à 7; il en va de même lorsque plusieurs participants effectuent le transfert en commun.
+    
+    Art. 58, al. 1, let. c, 2e phrase
+    Abrogée
+    
+    Art. 61a Déclaration de réserves latentes au début de l’assujettissement
+    
+    1 Si le contribuable déclare des réserves latentes au début de l’assujettissement, y compris la plus-value qu’il a créée lui-même, ces réserves ne sont pas soumises à l’impôt sur le bénéfice. Ne peuvent pas être déclarées les réserves latentes d’une société de capitaux ou d’une société coopérative provenant de la possession de 10 % au moins du capital-actions ou du capital social d’une autre société, ou d’une participation de 10 % au moins au bénéfice et aux réserves d’une autre société.
+    
+    2 Sont considérés comme début de l’assujettissement le transfert de valeurs patrimoniales, d’exploitations, de parties distinctes d’exploitation ou de fonctions de l’étranger à une entreprise ou un établissement stable situé en Suisse, la fin d’une exonération prévue par l’art. 56 ainsi que le transfert en Suisse du siège ou du lieu de l’administration effective.
+    
+    3 Les réserves latentes déclarées doivent être amorties annuellement au taux appliqué sur le plan fiscal à l’amortissement des valeurs patrimoniales concernées.
+    
+    4 La plus-value créée par le contribuable lui-même qui est déclarée doit être amortie dans un délai de dix ans.
+    
+    Art. 61b Imposition de réserves latentes à la fin de l’assujettissement
+    
+    1 Lorsque l’assujettissement prend fin, les réserves latentes qui n’ont pas été imposées et qui existent alors, y compris la plus-value créée par le contribuable lui-même, sont imposées.
+    
+    2 Sont considérés comme fin de l’assujettissement le transfert de valeurs patrimoniales, d’exploitations, de parties distinctes d’exploitation ou de fonctions de Suisse à une entreprise ou un établissement stable situé à l’étranger, le passage à une exonération prévue par l’art. 56 ainsi que le transfert à l’étranger du siège ou du lieu de l’administration effective.
+    
+    Art. 125 al. 3
+    
+    3 Pour la taxation de l’impôt sur le bénéfice, les sociétés de capitaux et les sociétés coopératives doivent en outre indiquer, à la fin de la période fiscale ou de l’assujettissement, le montant de leur capital propre. Ce capital propre comprend le capital-actions ou le capital social libéré, les réserves issues d’apports de capital visées à l’art. 20, al. 3 à 7, portées au bilan commercial, les réserves ouvertes et les réserves latentes constituées au moyen de bénéfices imposés ainsi que la part des fonds étrangers qui est économiquement assimilable au capital propre.
+    
+    Art. 196, al. 1 et 1bis
+    
+    1 Les cantons versent à la Confédération 78,8 % des impôts encaissés, des amendes infligées pour soustraction fiscale ou violation de règles de procédure ainsi que des intérêts qu’ils ont perçus.
+    1bis Ils octroient aux communes une compensation appropriée pour les conséquences de l’abrogation des art. 28, al. 2 à 58, et 29, al. 2, let. b9, de la loi fédérale du 14 décembre 1990 sur l’harmonisation des impôts directs des cantons et des communes.
+    
+    3. Loi fédérale du 14 décembre 1990 sur l’harmonisation des impôts directs des cantons et des communes
+    
+    Titre Ne concerne que le texte allemand.
+    
+    Art. 7, al. 1, 3e et 4e phrases
+    
+    1 ... Les dividendes, les parts de bénéfice, les excédents de liquidation et les avantages appréciables en argent provenant d’actions, de parts à des sociétés à responsabilité limitée, de parts à des sociétés coopératives et de bons de participation (y compris les actions gratuites, les augmentations gratuites de la valeur nominale, etc.) sont imposables à hauteur de 50 % lorsque ces droits de participation équivalent à 10 % au moins du capital-actions ou du capital social d’une société de capitaux ou d’une société coopérative. Les cantons peuvent prévoir une imposition plus élevée.
+    
+    Art. 7a, al. 1, let. b
+    
+    1 Sont également considérés comme rendement de la fortune au sens de l’art. 7, al. 1:
+    b. le produit du transfert d’une participation au capital-actions ou au capital social d’une société de capitaux ou d’une société coopérative représentant un transfert de la fortune privée à la fortune commerciale d’une entreprise de personnes ou d’une personne morale dans laquelle le vendeur ou la personne qui effectue l’apport détient une participation d’au moins 50 % au capital après le transfert, dans la mesure où le total de la contre-prestation reçue est supérieur à la somme de la valeur nominale de la participation transférée et des réserves issues d’apports de capital visées à l’art. 7b; il en va de même lorsque plusieurs participants effectuent le transfert en commun.
+     
+    Principe de l’apport en capital
+    
+    1 Le remboursement d’apports, d’agios et de versements supplémentaires (réserves issues d’apports de capital) effectués par les détenteurs des droits de participation après le 31 décembre 1996 est traité de la même manière que le remboursement du capital-actions ou du capital social. L’al. 2 est réservé.
+    
+    2 Si, lors du remboursement de réserves issues d’apports de capital conformément à l’al. 1, une société de capitaux ou une société coopérative cotée dans une bourse suisse ne distribue pas d’autres réserves au moins pour un montant équivalent, le remboursement est imposable à hauteur de la moitié de la différence entre le remboursement et la distribution des autres réserves, mais au plus à hauteur du montant des autres réserves pouvant être distribuées en vertu du droit commercial qui sont disponibles dans la société.
+    
+    3 L’al. 2 ne s’applique pas aux réserves issues d’apports de capital: 
+        a.	qui ont été constituées après le 24 février 2008 dans le cadre de concentrations équivalant économiquement à des fusions, par l’apport de droits de participation ou de droits de sociétariat dans une société de capitaux étrangère ou une société coopérative au sens de l’art. 24, al. 3, let. c, ou lors d’un transfert trans- frontalier dans une société de capitaux suisse selon l’art. 24, al. 3, let. d;
+        b.	qui existaient déjà au sein d’une société de capitaux ou d’une société coopérative étrangère au moment d’une fusion ou restructuration transfrontalière au sens de l’art. 24, al. 3, let. b, et al. 3quater, ou du déplacement du siège ou de l’administration effective après le 24 février 2008;
+        c.	en cas de liquidation de la société de capitaux ou de la société coopérative.
+    4 Les al. 2 et 3 s’appliquent par analogie en cas d’utilisation de réserves issues d’apports de capital pour l’émission d’actions gratuites ou l’augmentation gratuite de la valeur nominale.
+    
+    5 Si, lors de la vente de droits de participation à une société de capitaux ou une société coopérative qui est cotée dans une bourse suisse et qui les a émis, le remboursement des réserves issues d’apports de capital ne correspond pas au moins à la moitié de l’excédent de liquidation obtenu, la part de cet excédent de liquidation imposable est réduite d’un montant correspondant à la moitié de la différence entre cette part et le remboursement, mais au plus du montant des réserves qui sont imputables à ces droits de participation et qui sont disponibles dans la société.
+    
+    Art. 8, al. 2quinquies
+    
+    2quinquies Les dividendes, les parts de bénéfice, les excédents de liquidation et les avantages appréciables en argent provenant d’actions, de parts à des sociétés à responsabilité limitée, de parts à des sociétés coopératives et de bons de participation ainsi que les bénéfices provenant de l’aliénation de tels droits de participation sont imposables, après déduction des charges imputables, à hauteur de 50 % lorsque ces droits de participation équivalent à 10 % au moins du capital-actions ou du capital social d’une société de capitaux ou d’une société coopérative. Les cantons peuvent prévoir une imposition plus élevée. L’imposition partielle n’est accordée sur les bénéfices d’aliénation que si les droits de participation sont restés propriété du contribuable ou de l’entreprise de personnes pendant un an au moins.
+    
+    Art. 8a Revenus provenant de brevets et de droits comparables en cas d’activité lucrative indépendante
+    
+    Les art. 24a et 24b s’appliquent par analogie aux revenus provenant de brevets et de droits comparables en cas d’activité lucrative indépendante.
+    
+    Art. 10a Déduction des dépenses de recherche et de développement en cas d’activité lucrative indépendante
+    
+    L’art. 25a s’applique par analogie à la déduction des dépenses de recherche et de développement en cas d’activité lucrative indépendante.
+    
+    Art. 14, al. 3, 2e phrase
+    
+    3 ... Les cantons peuvent prévoir une réduction d’impôt pour le patrimoine afférent aux droits visés à l’art. 8a.
+    
+    Art. 24, al. 3bis, 1re phrase, et 3quater, 2e phrase
+    
+    3bis Lorsqu’une société de capitaux ou une société coopérative transfère une participation à une société du même groupe sise à l’étranger, l’imposition de la différence entre la valeur déterminante pour l’impôt sur le bénéfice et la valeur vénale de la participation est différée. ... 
+    3quater ... Le transfert à une société fille suisse au sens de l’al. 3, let. d, est réservé.
+    
+    Art. 24a Brevets et droits comparables: définitions 1 Sont réputés brevets:
+        a.	les brevets au sens de la Convention du 5 octobre 1973 sur le brevet européen dans sa version révisée du 29 novembre 2000 désignant la Suisse;
+        b.	les brevets au sens de la loi du 25 juin 1954 sur les brevets; 
+        c.	les brevets étrangers correspondant aux brevets visés aux let. a ou b. 
+    
+    2 Sont réputés droits comparables: 
+        a.	les certificats complémentaires de protection au sens de la loi du 25 juin 1954 sur les brevets ainsi que la prolongation de leur durée;
+        b.	les topographies protégées en vertu de la loi du 9 octobre 1992 sur les topo- graphies14;
+        c.	les variétés végétales protégées en vertu de la loi fédérale du 20 mars 1975 sur la protection des obtentions végétales;
+        d.	les données protégées en vertu de la loi du 15 décembre 2000 sur les produits thérapeutiques;
+        e.	les rapports protégés en vertu d’une disposition d’exécution de la loi du 29 avril 1998 sur l’agriculture;
+        f.	les droits étrangers correspondant aux droits visés aux let. a à e.
+    Art. 24b Brevets et droits comparables: imposition
+    
+    1 Si le contribuable en fait la demande, le bénéfice net provenant de brevets et de droits comparables est pris en compte dans le calcul du bénéfice net imposable en proportion des dépenses de recherche et de développement éligibles par rapport aux dépenses totales de recherche et de développement par brevet ou droit comparable (quotient Nexus) avec une réduction de 90 %. Les cantons peuvent prévoir une réduction moindre.
+    
+    2 Le bénéfice net provenant de brevets et de droits comparables qui sont inclus dans les produits est déterminé en soustrayant du bénéfice net de chacun de ces produits 6 % des coûts attribués à ces produits ainsi que la rémunération de la marque.
+    
+    3 Lorsque le bénéfice net provenant de brevets et de droits comparables est imposé pour la première fois de façon réduite, les dépenses de recherche et de développement qui ont déjà été prises en compte lors de périodes fiscales antérieures, ainsi qu’une éventuelle déduction au sens de l’art. 25a, sont ajoutées au bénéfice net imposable. Une réserve latente imposée doit être constituée dans la mesure du mon- tant ajouté. Les cantons peuvent garantir cette imposition d’une autre manière dans un délai de cinq ans à compter du début de l’imposition réduite.
+    
+    4 Le Conseil fédéral édicte des dispositions complémentaires, notamment sur:
+        a.	le calcul du bénéfice net provenant de brevets et de droits comparables imposable de façon réduite et, notamment, le quotient Nexus; 
+        b.	l’application de la réglementation aux produits qui ne présentent que de faibles différences entre eux et se fondent sur les mêmes brevets et droits comparables;
+        c.	les obligations en matière de documentation;
+        d.	le début et la fin de l’imposition réduite, et
+        e.	le traitement des pertes provenant de brevets et de droits comparables.
+    Art. 24c Déclaration de réserves latentes au début de l’assujettissement
+    
+    1 Si le contribuable déclare des réserves latentes au début de l’assujettissement, y compris la plus-value qu’il a créée lui-même, ces réserves ne sont pas soumises à l’impôt sur le bénéfice. Ne peuvent pas être déclarées les réserves latentes d’une société de capitaux ou d’une société coopérative provenant de la possession de 10 % au moins du capital-actions ou du capital social d’une autre société, ou d’une participation de 10 % au moins au bénéfice et aux réserves d’une autre société.
+    
+    2 Sont considérés comme début de l’assujettissement le transfert de valeurs patrimoniales, d’exploitations, de parties distinctes d’exploitation ou de fonctions de l’étranger à une entreprise ou un établissement stable situé en Suisse, la fin d’une exonération visée à l’art. 23, al. 1, ainsi que le transfert en Suisse du siège ou du lieu de l’administration effective.
+    
+    3 Les réserves latentes déclarées doivent être amorties annuellement au taux appliqué sur le plan fiscal à l’amortissement des valeurs patrimoniales concernées.
+    
+    4 La plus-value créée par le contribuable lui-même qui est déclarée doit être amortie dans un délai de dix ans.
+    
+    Art. 24d Imposition de réserves latentes à la fin de l’assujettissement
+    
+    1 Lorsque l’assujettissement prend fin, les réserves latentes qui n’ont pas été imposées et qui existent alors, y compris la plus-value créée par le contribuable lui-même, sont imposées.
+    
+    2 Sont considérés comme fin de l’assujettissement le transfert de valeurs patrimoniales, d’exploitations, de parties distinctes d’exploitation ou de fonctions de Suisse à une entreprise ou un établissement stable situé à l’étranger, le passage à une exonération visée à l’art. 23, al. 1, ainsi que le transfert à l’étranger du siège ou du lieu de l’administration effective.
+    
+    Art. 25a Déduction supplémentaire des dépenses de recherche et de développement
+    
+    1 Sur demande, les cantons peuvent autoriser la déduction des dépenses de recherche et de développement que le contribuable a engagées en Suisse, directement ou par l’intermédiaire de tiers, à raison d’un montant dépassant de 50 % au plus les dé- penses de recherche et de développement justifiées par l’usage commercial.
+    
+    2 Sont réputées recherche et développement la recherche scientifique et l’innovation fondée sur la science au sens de l’art. 2 de la loi fédérale du 14 décembre 2012 sur l’encouragement de la recherche et de l’innovation.
+    
+    3 Une déduction augmentée est admissible pour: 
+        a.	les dépenses de personnel directement imputables à la recherche et au développement, plus un supplément équivalant à 35 % de ces dépenses, mais jusqu’à concurrence des dépenses totales du contribuable;
+        b.	80 % des dépenses pour les travaux de recherche et de développement facturés par des tiers.
+    4 Si le mandant des travaux de recherche et de développement est habilité à effectuer la déduction, le mandataire n’a droit à aucune déduction à ce titre.
+    
+    Art. 25abis Déduction pour autofinancement
+    
+    1 Les charges justifiées par l’usage commercial comprennent également la déduction pour autofinancement, pour autant que la loi cantonale le prévoie et que dans le chef-lieu du canton le taux cumulé de l’impôt du canton, de la commune et d’éventuelles autres corporations publiques se monte à 13,5 % au moins pour l’ensemble du barème. Cette déduction correspond aux intérêts notionnels sur le capital propre de sécurité.
+    
+    2 Le capital propre de sécurité correspond à la part du capital propre imposable en Suisse avant une réduction selon l’art. 29, al. 3, qui dépasse le capital propre nécessaire à l’activité commerciale à long terme. Il se calcule sur la base des taux de couverture du capital propre fixés en fonction du risque associé à la catégorie des actifs concernée.
+    
+    3 Sont exclus les intérêts notionnels sur:
+        a.	les participations au sens de l’art. 28, al. 1;
+        b.	les actifs qui ne sont pas nécessaires à l’exploitation;
+        c.	les actifs visés à l’art. 24a;
+        d.	les réserves latentes qui sont prises en compte selon l’art. 24c, y compris sur la plus-value que le contribuable a créée lui-même, ainsi que sur les réserves latentes comparables prises en compte sans être soumises à l’impôt;
+        e.	les actifs concernant des transactions qui permettent de réaliser une économie d’impôt injustifiée, notamment des créances de toute sorte contre des personnes proches dans la mesure où ces créances proviennent de la vente de participations au sens de l’art. 28, al. 1 à 1ter, ou de distributions. 
+    4 Le taux des intérêts notionnels sur le capital propre de sécurité se fonde sur les rendements des obligations de la Confédération sur dix ans. Si ce capital propre de sécurité se compose en partie de créances de toutes sortes envers des personnes proches de l’entreprise, l’application d’un taux d’intérêt correspondant au taux appliqué à des tiers peut être demandée; demeure réservé l’al. 3, let. e.
+    
+    5 Le calcul des intérêts notionnels sur le capital propre de sécurité est effectué à la fin de la période fiscale sur la base:
+        a.	de la valeur moyenne des différents actifs pendant la période fiscale, à leur valeur déterminante pour l’impôt sur le bénéfice;
+        b.	de la valeur moyenne du capital propre pendant la période fiscale;
+        c.	des taux de couverture du capital propre visés aux al. 2 et 3, et
+        d.	des dispositions relatives au taux des intérêts notionnels fixé à l’al. 4.
+    
+    6 Le Conseil fédéral édicte les dispositions nécessaires à l’exécution des al. 2 à 5. Art. 25b Limitation de la réduction fiscale
+    
+    1 La réduction fiscale totale fondée sur les art. 24b, al. 1 et 2, 25a et 25abis ne doit pas dépasser 70 % du bénéfice imposable avant compensation des pertes, à l’exclusion du rendement net des participations au sens de l’art. 28, al. 1 et 1bis, et avant déduction des réductions effectuées.
+    
+    2 Les cantons peuvent prévoir une réduction moindre.
+    
+    3 Ni les diverses réductions ni la réduction fiscale totale ne doivent entraîner de reports de pertes.
+    
+    Art. 28, al. 2 à 5
+    Abrogés
+    
+    Art. 29, al. 2, let. b, et 3
+    
+    2 Le capital propre imposable comprend:
+        b. abrogée
+    
+    3 Les cantons peuvent prévoir une réduction d’impôt pour le capital propre afférent aux droits de participation visés à l’art. 28, al. 1, aux droits visés à l’art. 24a ainsi qu’aux prêts consentis à des sociétés du groupe.
+    
+    Art. 72z Adaptation des législations cantonales à la modification du 28 septembre 2018
+    
+    1 Les cantons adaptent leur législation aux modifications des art. 7, al. 1, 3e et 4e phrases, 7a, al. 1, let. b, 7b, 8, al. 2quinquies, 8a, 10a, 14, al. 3, 2e phrase, 24, al. 3bis, 1re phrase, et 3quater, 2e phrase, 24a à 24d, 25a, 25abis, 25b, 28, al. 2 à 5, 29, al. 2, let. b, et 3, et 78g à la date de la dernière mise en vigueur partielle de la modification du 28 septembre 2018.
+    
+    2 À partir de cette date, les dispositions énumérées à l’al. 1 sont directement applicables si le droit fiscal cantonal leur est contraire. En pareil cas, le gouvernement cantonal édicte les dispositions provisoires nécessaires.
+    
+    3 Les cantons peuvent adapter plus tôt leur législation à l’art. 78g, al. 1 et 2.
+    
+    Art. 78g Dispositions transitoires concernant la modification du 28 septembre 2018 
+    1 Si des personnes morales ont été imposées sur la base de l’art. 28, al. 2 à 420, de l’ancien droit, les réserves latentes existant à la fin de cette imposition, y compris la plus-value créée par le contribuable lui-même, doivent, lors de leur réalisation, être imposées séparément dans les cinq ans qui suivent, dans la mesure où elles n’ont pas été imposables jusqu’alors.
+    
+    2 Le montant des réserves latentes que le contribuable fait valoir, y compris la plus-value qu’il a créée lui-même, est fixé par une décision de l’autorité de taxation.
+    
+    3 Les amortissements de réserves latentes, y compris de la plus-value créée par le contribuable lui-même, qui ont été déclarées à la fin de l’imposition fondée sur l’art. 28, al. 2 à 4, de l’ancien droit sont pris en compte dans le calcul de la limitation de la réduction fiscale visée à l’art. 25b.
+    
+    4. Loi fédérale du 22 juin 1951 concernant l’exécution des conventions internationales conclues par la Confédération en vue d’éviter les doubles impositions
+    
+    Art. 2, al. 1, let. g
+    
+    1 Le Conseil fédéral peut en particulier:
+        g.	déterminer à quelles conditions un établissement stable d’une entreprise étrangère qui est situé en Suisse et est soumis à l’impôt ordinaire sur le bénéfice tant pour l’impôt fédéral direct que pour les impôts cantonaux et communaux peut demander une imputation forfaitaire d’impôt pour les revenus provenant de pays tiers soumis à des impôts non récupérables.
+    
+    5. Loi fédérale du 20 décembre 1946 sur l’assurance-vieillesse et survivants
+    
+    Art. 2 al. 4 et 5
+    
+    4 Les cotisations des assurés exerçant une activité lucrative sont égales à 8.7 % du revenu déterminant. Les assurés doivent payer au moins la cotisation minimale de 810 francs par an.
+    
+    5 Les assurés n’exerçant aucune activité lucrative paient une cotisation selon leur condition sociale. La cotisation minimale est de 810 francs par an. La cotisation maximale correspond à 25 fois la cotisation minimale.
+    
+    Art. 5 al. 1
+    
+    1 Une cotisation de 4.35 % est perçue sur le revenu provenant d’une activité dépendante, appelé ci-après salaire déterminant.
+    
+    Art. 6 2. Cotisations des assurés dont l’employeur n’est pas tenu de payer des cotisations
+    
+    1 Les salariés dont l’employeur n’est pas tenu de payer des cotisations versent des cotisations de 8.7 % sur leur salaire déterminant.
+    
+    2 Les cotisations des assurés dont l’employeur n’est pas tenu de payer des cotisations peuvent être perçues conformément à l’art. 14, al. 1, si l’employeur y consent. Le taux de cotisation s’élève alors à 4.35 % du salaire déterminant pour chacune des parties.
+    
+    Art. 8 Cotisations perçues sur le revenu provenant d’une activité indépendante
+    
+    1. Principe
+    
+    1 Une cotisation de 8.1 % est perçue sur le revenu provenant d’une activité indépendante. Pour calculer la cotisation, le revenu est arrondi au multiple de 100 francs immédiatement inférieur. S’il est inférieur à 56 400 francs mais s’élève au moins à 9400 francs par an, le taux de cotisation est ramené jusqu’à 4.35 % selon un barème dégressif établi par le Conseil fédéral.
+    
+    2 Si le revenu annuel de l’activité indépendante est égal ou inférieur à 9300 francs, l’assuré paie la cotisation minimale de 405 francs par an, sauf si ce montant a déjà été perçu sur son salaire déterminant. Dans ce cas, l’assuré peut demander que la cotisation due sur le revenu de l’activité indépendante soit perçue au taux le plus bas du barème dégressif. 
+    Art. 10 al. 1
+    
+    1 Les assurés n’exerçant aucune activité lucrative paient une cotisation selon leur condition sociale. La cotisation minimale est de 405 francs, la cotisation maximale correspond à 50 fois la cotisation minimale. Les assurés qui exercent une activité lucrative et qui paient moins de 405 francs pendant une année civile, y compris la part d’un éventuel employeur, sont considérés comme des personnes sans activité lucrative. Le Conseil fédéral peut majorer ce montant selon la condition sociale de l’assuré pour les personnes qui n’exercent pas durablement une activité lucrative à plein temps.
+    
+    Art. 13 Taux des cotisations d’employeurs
+    
+    Les cotisations d’employeurs s’élèvent à 4.35 % du total des salaires déterminants versés à des personnes tenues de payer des cotisations.
+    
+    Art. 103, al. 1bis à 1quater
+    
+    1bis La contribution fédérale au sens de l’al. 1 est augmentée. L’augmentation cor- respond: 
+        a.	aux répercussions fiscales statiques estimées pour la Confédération, les cantons et les communes liées: 
+            1.	à l’impôt sur le bénéfice,
+            2.	à la déduction pour autofinancement et aux modifications au niveau de l’impôt sur le capital,
+            3.	à l’imposition des dividendes, et
+            4.	au principe de l’apport de capital;
+        b.	déduction faite:
+            1.	des recettes supplémentaires liées à l’augmentation du taux de cotisation AVS, et
+            2.	du montant de la part fédérale au pour-cent démographique en faveur de l’AVS.
+    1ter L’augmentation est arrondie à un vingtième de point de pourcentage.
+    
+    1quater L’augmentation est fixée sur la base de l’estimation des valeurs au moment de l’adoption de la loi fédérale du 28 septembre 2018 relative à la réforme fiscale et au financement de l’AVS. 
+    6. Arrêté fédéral du 20 mars 1998 sur le relèvement des taux de la taxe sur la valeur ajoutée en faveur de l’AVS/AI
+    
+    Titre
+    
+    Loi fédérale sur le relèvement des taux de la taxe sur la valeur ajoutée en faveur de l’AVS 
+    Préambule
+    
+    vu l’art. 130, al. 3, de la Constitution,
+    Art. 1 Relèvement des taux de la TVA
+    
+    Pour garantir le financement de l’assurance-vieillesse et survivants (AVS), les taux de la taxe sur la valeur ajoutée sont relevés comme suit:
+        a.	le taux normal, de 1 point;
+        b.	le taux réduit, de 0,3 point;
+        c.	le taux spécial pour les prestations du secteur de l’hébergement, de 0,5 point.
+    
+    Art. 2, al. 1 à 3
+    
+    1 La totalité des recettes provenant du relèvement des taux de la TVA est affectée à l’AVS.
+    
+    2 et 3 Abrogés
+    7. Loi fédérale du 13 octobre 1965 sur l’impôt anticipé
+    
+    Art. 4a, al. 4
+    
+    4 Les sociétés de capitaux et sociétés coopératives qui sont cotées dans une bourse suisse doivent, lors de l’acquisition de leurs propres droits de participation conformément aux al. 1 à 3, porter l’excédent de liquidation au moins pour moitié à la charge des réserves issues d’apports, d’agios et de versements supplémentaires (réserves issues d’apports de capital). Si cette condition n’est pas remplie, le mon- tant des réserves issues d’apports de capital est corrigé en conséquence, mais au plus à hauteur des réserves issues d’apports de capital qui sont disponibles.
+    
+    Art. 5 al. 1bis à 1sexies
+    
+    1bis Le remboursement de réserves issues d’apports de capital effectués par les détenteurs des droits de participation après le 31 décembre 1996 est traité de la même manière que le remboursement du capital-actions ou du capital social si la société de capitaux ou la société coopérative comptabilise les réserves issues d’apports de capital sur un compte spécial de son bilan commercial et communique toute modification de ce compte à l’Administration fédérale des contributions (AFC). L’al. 1ter est réservé.
+    
+    1ter Lors du remboursement de réserves issues d’apports de capital conformément à l’al. 1bis, les sociétés de capitaux et sociétés coopératives qui sont cotées dans une bourse suisse doivent distribuer d’autres réserves au moins pour un montant équivalent. Si cette condition n’est pas remplie, le remboursement est imposable à hauteur de la moitié de la différence entre le remboursement et la distribution des autres réserves, mais au plus à hauteur du montant des autres réserves disponibles pouvant être distribuées en vertu du droit commercial. Les autres réserves pouvant être distribuées en vertu du droit commercial doivent être créditées à hauteur d’un mon- tant équivalent sur le compte spécial des réserves issues d’apports de capital.
+    
+    1quater L’al. 1ter ne s’applique pas aux réserves issues d’apports de capital:
+        a.	qui ont été constituées après le 24 février 2008 dans le cadre de concentrations équivalant économiquement à des fusions, par l’apport de droits de participation ou de droits de sociétariat dans une société de capitaux ou une société coopérative étrangère au sens de l’art. 61, al. 1, let. c, de la loi fédérale sur l’impôt fédéral direct ou lors d’un transfert transfrontalier dans une société de capitaux suisse selon l’art. 61, al. 1, let. d, de cette loi;
+        b.	qui existaient déjà au sein d’une société de capitaux ou d’une société coopérative étrangère au moment d’une fusion ou restructuration transfrontalière au sens de l’art. 61, al. 1, let. b, et al. 3, de la loi fédérale sur l’impôt fédéral direct ou du déplacement du siège ou de l’administration effective d’après le 24 février 2008;
+        c.	qui sont remboursées à des personnes morales suisses ou étrangères qui détiennent au moins 10 % du capital-actions ou du capital social de la société qui effectue le versement;
+        d.	dans le cas de liquidation ou de déplacement du siège ou de l’administration effective de la société de capitaux ou de la société coopérative à l’étranger.
+    1quinquies La société doit comptabiliser les réserves issues d’apports de capital visées à l’al. 1quater, let. a et b, sur un compte spécial et communiquer toute modification de ce compte à l’AFC.
+    
+    1sexies Les al. 1ter à 1quinquies s’appliquent par analogie en cas d’utilisation de réserves issues d’apports de capital pour l’émission d’actions gratuites ou l’augmentation gratuite de la valeur nominale.
+    
+    II
+    1 La présente loi est sujette au référendum.
+    
+    2 Les art. 72z27, al. 3, et 78g, al. 1 et 2, de la loi fédérale du 14 décembre 1990 sur l’harmonisation des impôts directs des cantons et des communes28 (ch. 3) entrent en vigueur le lendemain du jour auquel il est établi:
+        a.	qu’aucun référendum n’a abouti contre la loi, ou
+        b.	que la loi a été acceptée par le peuple.
+    3 Le Conseil fédéral fixe la date de l’entrée en vigueur des autres dispositions.'
+}
