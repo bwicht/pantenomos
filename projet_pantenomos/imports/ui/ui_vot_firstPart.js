@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import  { Cases } from '../api/db_cases.js';
-import '../imports/templates/ui_vot_firstPart.html';
+import '../templates/vot_firstPart.html';
 
 
 // initialisation des variables qui définiront le choix de l'utilisateur
@@ -29,14 +29,15 @@ Template.vot_firstPart.helpers({
   });
 
 Template.vot_firstPart.events({
-    'click .cases'(event, instance) {
+    'checked .cases'(event, instance) {
         // pourquoi event en opaque
-
+        event.target
         instance.case1.set(instance.case1.get() + 1 );
+        votes.update({article: 72},{$inc : {votePour : 1 }})
 
 
     },
-    'click .cases'(event, instance){
+    'checked .cases'(event, instance){
         
         Cases.insert({
             value: instance.case1.get(),
