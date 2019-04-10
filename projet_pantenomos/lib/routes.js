@@ -13,5 +13,10 @@ template: 'laws'
         path: '/',
         template: 'login'
         });
+
+        //Signup
+    this.route('signup', {
+        path: '/',
+        template: 'signup'
         });
-        // comment
+        });
