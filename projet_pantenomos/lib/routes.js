@@ -16,7 +16,7 @@ template: 'laws'
 
         //Signup
     this.route('signup', {
-        path: '/',
+        path: '/signup',
         template: 'signup'
         });
         });
