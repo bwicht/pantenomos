@@ -1,16 +1,17 @@
 Router.configure({
-layoutTemplate: "main_template"
+layoutTemplate: "main_layout"
 });
 Router.map(function(){
     //Laws
-this.route("laws", {
-path: "/laws",
-template: "laws"
+this.route('laws', {
+path: '/laws',
+template: 'laws'
 });
 
     //Login
-    this.route("login", {
-        path: "/",
-        template: "login"
+    this.route('login', {
+        path: '/',
+        template: 'login'
         });
         });
+        // comment
