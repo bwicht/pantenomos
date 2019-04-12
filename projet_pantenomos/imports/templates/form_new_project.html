@@ -1,0 +1,77 @@
+<template name="form_new_project">
+    
+    Titre: <input id="titre" type="text" size="60" />
+    <br/>
+    <input id="addAmendement" type="button" value="Ajouter amendement">
+    <br/>
+
+<style>
+
+    div { 
+        border-width:1px;
+        border-style:solid;
+        border-color:black;
+        width: 600px;
+        }
+
+</style>
+
+<script>
+
+    let amendementCount = 0;
+
+    document.getElementById("addAmendement").addEventListener("click", function() {
+
+        amendementCount++;
+
+        let newAmendement = document.createElement("div");
+        let newAmendementTitle = document.createElement("span");
+
+        newAmendementTitle.innerHTML = "Amendement " + amendementCount;
+
+        newAmendement.appendChild(newAmendementTitle);
+
+        newAmendement.appendChild(document.createElement("br"));
+
+        let newAddArticle = document.createElement("input");
+
+        newAddArticle.type = "button";
+        newAddArticle.value = "Ajouter un article";
+
+        newAmendement.appendChild(newAddArticle);
+
+        newAmendement.appendChild(document.createElement("br"));
+
+        let articleCount = 0;
+
+        newAddArticle.addEventListener("click", function() {
+
+            articleCount++;
+
+            let newArticleTitle = document.createElement("span");
+
+            newArticleTitle.innerHTML = "Art. " + articleCount;
+
+            newAmendement.appendChild(newArticleTitle);
+
+            newAmendement.appendChild(document.createElement("br"));
+
+            let newArticle = document.createElement("textarea");
+
+            newArticle.rows = 10;
+            newArticle.cols = 80;
+
+            newAmendement.appendChild(newArticle);
+
+            newAmendement.appendChild(document.createElement("br"));
+        });
+
+        document.body.appendChild(newAmendement);
+
+        document.body.appendChild(document.createElement("br"));
+                            
+    });
+
+</script>
+
+</template>
