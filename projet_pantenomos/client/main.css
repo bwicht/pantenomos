@@ -44,15 +44,19 @@ h1 {
     }
 }
 
-#txtcopyright {
-  text-align: center;
-  color:lightgrey;
-  font-size: 12px;
-  margin-left: 12.5%;
-  width: 75%;
-  margin-top:15%;
-}
+.articleTextArea {
+    font-size: 12px;
+    border-color: lightgrey;
+  }
 
+#txtcopyright {
+    text-align: center;
+    color:lightgrey;
+    font-size: 12px;
+    margin-left: 12.5%;
+    width: 75%;
+    margin-top:15%;
+}
 
 #laws{
     border-style: solid;
