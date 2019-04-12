@@ -11,3 +11,10 @@ FlowRouter.route('/add_text', {
         BlazeLayout.render('form_new_project');
     }
 });
+
+FlowRouter.route('/votation_page', {
+    name: 'votation',
+    action(){
+        BlazeLayout.render('votation');
+    }
+});
