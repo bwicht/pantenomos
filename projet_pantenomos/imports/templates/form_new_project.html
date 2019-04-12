@@ -2,10 +2,15 @@
     
     {{> header}}
 
+    <p>
     Titre: <input id="titre" type="text" size="60" />
+    </p>
+        <input id="addAmendement" type="button" value="Nouvel amendement">
     <br/>
-    <input id="addAmendement" type="button" value="Ajouter amendement">
-    <br/>
+
+    <div id="lawText">
+
+    </div>
 
 <script>
 
@@ -16,7 +21,7 @@
         amendementCount++;
 
         let newAmendement = document.createElement("div");
-        let newAmendementTitle = document.createElement("span");
+        let newAmendementTitle = document.createElement("input");
 
         newAmendementTitle.innerHTML = "Amendement " + amendementCount;
 
@@ -27,7 +32,7 @@
         let newAddArticle = document.createElement("input");
 
         newAddArticle.type = "button";
-        newAddArticle.value = "Ajouter un article";
+        newAddArticle.value = "+";
 
         newAmendement.appendChild(newAddArticle);
 
@@ -57,9 +62,9 @@
             newAmendement.appendChild(document.createElement("br"));
         });
 
-        document.body.appendChild(newAmendement);
+        document.getElementById("lawText").appendChild(newAmendement);
 
-        document.body.appendChild(document.createElement("br"));
+        document.getElementById("lawText").appendChild(document.createElement("br"));
                             
     });
 
