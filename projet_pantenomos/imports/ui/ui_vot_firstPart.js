@@ -17,6 +17,7 @@ Template.vot_firstPart.onCreated(function vot_firstPartOnCreated() {
 });
 
 // helpers = fonctions, on leur donne un paramètre et ils rendent un paramètre si nécéssaire
+
 Template.vot_firstPart.helpers({
     cases() {
         return Cases.find().fetch();
