@@ -6,12 +6,17 @@ import { Mongo } from 'meteor/mongo';
 
 import './main.html';
 import '../imports/templates/homePage.html';
+
 import '../imports/templates/hp_project.html';
 import '../imports/templates/hp_project_init.html';
+
 import '../imports/templates/votation.html';
+import '../imports/templates/form_new_project.html';
+
 import '../imports/templates/loginButtons.html';
-import '../imports/templates/vot_secondPart.html';
-import '../imports/templates/vot_thirdPart.html';
-import '../imports/templates/hp_copyright.html';
 
 import '../imports/ui/ui_vot_firstPart.js';
+import '../imports/templates/vot_secondPart.html';
+import '../imports/templates/vot_thirdPart.html';
+
+import '../imports/templates/hp_copyright.html';
