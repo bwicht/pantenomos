@@ -1,10 +1,12 @@
-import { Template } from 'meteor/templating';
+import { Meteor } from 'meteor/meteor'
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Mongo } from 'meteor/mongo';
 
 // Il serait mieux d'importer que les fichiers .js, qui eux-mêmes appeleraient les templates concernés.
+import '../lib/routes.js';
 
-import './main.html';
+import '../imports/templates/header.html';
+
 import '../imports/templates/homePage.html';
 
 import '../imports/templates/hp_project.html';

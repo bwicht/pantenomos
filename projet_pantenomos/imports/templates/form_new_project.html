@@ -1,20 +1,11 @@
 <template name="form_new_project">
     
+    {{> header}}
+
     Titre: <input id="titre" type="text" size="60" />
     <br/>
     <input id="addAmendement" type="button" value="Ajouter amendement">
     <br/>
-
-<style>
-
-    div { 
-        border-width:1px;
-        border-style:solid;
-        border-color:black;
-        width: 600px;
-        }
-
-</style>
 
 <script>
 
@@ -73,5 +64,7 @@
     });
 
 </script>
+    
+    {{> hp_copyright}}
 
 </template>

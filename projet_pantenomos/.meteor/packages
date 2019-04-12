@@ -25,3 +25,5 @@ twbs:bootstrap
 fortawesome:fontawesome
 accounts-base
 accounts-password
+kadira:flow-router
+kadira:blaze-layout
