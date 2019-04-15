@@ -11,7 +11,7 @@ import '../imports/templates/hp_project.html';
 import '../imports/templates/hp_project_init.html';
 
 import '../imports/templates/votation.html';
-import '../imports/templates/form_new_project.html';
+import '../imports/templates/newProject.html';
 
 import '../imports/templates/loginButtons.html';
 
@@ -24,3 +24,5 @@ import '../imports/templates/hp_copyright.html';
 // Import JavaScript
 import '../lib/routes.js';
 import '../imports/ui/ui_vot_firstPart.js';
+import '../imports/ui/ui_vot_secondPart.js';
+import '../imports/ui/ui_project.js';

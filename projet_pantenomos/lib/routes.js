@@ -6,9 +6,9 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/add_text', {
-    name: 'form_new_project',
+    name: 'newProject',
     action(){
-        BlazeLayout.render('form_new_project');
+        BlazeLayout.render('newProject');
     }
 });
 

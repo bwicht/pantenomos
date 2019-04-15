@@ -1,28 +1,29 @@
-<!-- Page de formulaire pour l'ajout d'un projet de loi -->
+import { Projects } from '../api/db_projects.js';
 
-<template name="form_new_project">
+let amendementCount = 0;
 
-    {{> header}}
+Template.newProject.events({
 
-    <p>
-        Titre du projet : <input id="titre" type="text" size="60" />
-    </p>
+    //Création d'un projet
+    'submit #formNewProject': function(event, template){
 
-    <p>
-        <input id="addAmendement" type="button" value="Nouvel amendement">
-    </p>
+        event.preventDefault();
 
-    <div id="lawText">
+        let projectTitle = document.getElementById("projectTitle").value;
 
-    </div>
+        // Insert a task into the collection
+        Projects.insert({
+            projectTitle
+        });
 
-<script>
+        // Clear form
+        document.getElementById("projectTitle").value = '';
+    },
 
-    //Création de nouveaux amendements
-    let amendementCount = 0;
+    'click #addAmendement': function(event){
 
-    document.getElementById("addAmendement").addEventListener("click", function() {
-
+        event.preventDefault();
+        
         amendementCount++;
 
         let newAmendement = document.createElement("div");
@@ -102,11 +103,6 @@
         document.getElementById("lawText").appendChild(newAmendement);
 
         document.getElementById("lawText").appendChild(document.createElement("br"));
-                            
-    });
 
-</script>
-    
-    {{> hp_copyright}}
-
-</template>
+    }
+});

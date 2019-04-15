@@ -4,20 +4,11 @@
 
     <div id="laws">
         <ul>
-            <li id="firstLaw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias magnam odio inventore a distinctio est, suscipit fugiat? Hic delectus consequuntur quisquam, praesentium impedit rerum quibusdam odio? Nihil deleniti saepe incidunt?</li>
-            
-            <div id="firstComment">
-                <input type="text">
-                <input type="button" value="valider">
-              </div>
-
-            <li id="secondLaw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias magnam odio inventore a distinctio est, suscipit fugiat? Hic delectus consequuntur quisquam, praesentium impedit rerum quibusdam odio? Nihil deleniti saepe incidunt?</li>
-            
-            <div id="secondComment">
-                <input type="text">
-                <input type="button" value="valider">
-              </div>
-
+            {{#each projects}}
+                <li>
+                    <h4>{{projectTitle}}</h4>
+                </li>
+            {{/each}}
         </ul>
     </div>
     
