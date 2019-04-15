@@ -2,14 +2,19 @@
 
     <h2>Sondage</h2>
 
+    <div id = "survey">
+
         <form class="cases">
-        <input type="checkbox" name="oui" value="Oui"> Je vote pour<br>
-        <input type="checkbox" name="non" value="Non"> Je vote contre<br>
-        <input type="checkbox" name="ouiPrincipe" value="ouiPrincipe" checked> Je vote oui sur le principe<br>
-        <input type="checkbox" name="nonPrincipe" value="nonPrincipe" checked> Je vote non sur le principe<br><br>
 
-    </form>
+            <input type="checkbox" name="oui" value="Oui"> Je vote pour<br>
+            <input type="checkbox" name="non" value="Non"> Je vote contre<br>
+            <input type="checkbox" name="ouiPrincipe" value="ouiPrincipe" checked> Je vote oui sur le principe<br>
+            <input type="checkbox" name="nonPrincipe" value="nonPrincipe" checked> Je vote non sur le principe<br><br>
 
-    <p>Vous avez séléctionné la réponse : {{case1}}</p>
+        </form>
+
+        <p>Vous avez séléctionné la réponse : {{case1}}</p>
+
+    </div>
 
 </template>

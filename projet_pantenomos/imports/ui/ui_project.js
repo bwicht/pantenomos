@@ -9,26 +9,56 @@ Template.newProject.events({
 
         event.preventDefault();
 
-        let projectTitle = document.getElementById("projectTitle").value;
+        let project =  {title: '', amendements: []};
+
+        project.title = document.getElementById("projectTitle").value;
+
+        let amendements = document.getElementsByClassName("amendement");
+
+        for (let i = 1; i <= amendements.length; i++) {
+
+            let newAmendement = {title: document.getElementById("am_" + i + "_title").value, articles: []};
+
+            let articles = document.getElementsByClassName("article " + i);
+
+            for (let j = 1; j <= articles.length; j++) {
+
+                let newArticle = {title: document.getElementById("am_" + i + "_art_" + j + "_title").value, text: document.getElementById("am_" + i + "_art_" + j + "_text").value}
+                
+                newAmendement.articles.push({article: newArticle});
+            }
+
+            project.amendements.push({amendement: newAmendement});
+        }
 
         // Insert a task into the collection
-        Projects.insert({
-            projectTitle
-        });
+        Projects.insert({project});
 
         // Clear form
         document.getElementById("projectTitle").value = '';
+
+        var topNode = document.getElementById("lawText");
+
+        while (topNode.firstChild) {
+            topNode.removeChild(topNode.firstChild);
+        }
     },
 
     'click #addAmendement': function(event){
 
         event.preventDefault();
-        
+
         amendementCount++;
 
         let newAmendement = document.createElement("div");
+
+        newAmendement.className = "amendement";
+        
+        newAmendement.id = amendementCount;
+
         let newAmendementTitle = document.createElement("input");
 
+        newAmendementTitle.id = "am_" + amendementCount + "_title";
         newAmendementTitle.type = "text";
         newAmendementTitle.size = 90;
         newAmendementTitle.value = amendementCount + ". ";
@@ -51,13 +81,23 @@ Template.newProject.events({
         //Création de nouveaux articles
         newAddArticle.addEventListener("click", function() {
 
-            articleCount++;
+            articleCount++;;
 
             let newArticle = document.createElement("div");
 
-            let newArticleTitle = document.createElement("span");
+            newArticle.className = "article " + amendementCount;
 
-            newArticleTitle.innerHTML = "Art. " + articleCount;
+            newArticle.id = "am_" + newAmendement.id + "_art_" + articleCount
+
+            let newArticleTitle = document.createElement("input");
+
+            newArticleTitle.className = "articleTitle";
+
+            newArticleTitle.id = newArticle.id + "_title";
+
+            newArticleTitle.type = "text";
+            newArticleTitle.size = 90;
+            newArticleTitle.value = "Art. " + articleCount;
 
             newArticle.appendChild(newArticleTitle);
 
@@ -65,6 +105,7 @@ Template.newProject.events({
 
             let newArticleTextArea = document.createElement("textarea");
 
+            newArticleTextArea.id = newArticle.id + "_text";
             newArticleTextArea.className = "articleTextArea";
 
             newArticleTextArea.rows = 10;

@@ -12,7 +12,7 @@ FlowRouter.route('/add_text', {
     }
 });
 
-FlowRouter.route('/votation_page', {
+FlowRouter.route('/votation', {
     name: 'votation',
     action(){
         BlazeLayout.render('votation');
