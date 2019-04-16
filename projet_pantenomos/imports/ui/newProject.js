@@ -1,15 +1,5 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
-  
-//extraie les données collectées dans la BD
-Template.vot_secondPart.helpers({
-    projects() {
-
-        //console.log(Projects.find().fetch());
-
-        return Projects.find().fetch();
-    },
-});
 
 //À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
 
@@ -46,7 +36,7 @@ Template.newProject.events({
         }
 
         //insert un projet dans la collection
-        Projects.insert({project});
+        Meteor.call('projects.create', project);
 
         //vide le formulaire
         document.getElementById("projectTitle").value = '';
@@ -56,6 +46,10 @@ Template.newProject.events({
         while (topNode.firstChild) {
             topNode.removeChild(topNode.firstChild);
         }
+
+        setTimeout(function(){
+            FlowRouter.go('homePage');
+        }, 250);
     },
 
     //création de nouveaux amendements

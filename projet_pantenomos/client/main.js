@@ -5,7 +5,6 @@
 import '../imports/templates/header.html';
 import '../imports/templates/homePage.html';
 import '../imports/templates/hp_copyright.html';
-import '../imports/templates/hp_project_init.html';
 import '../imports/templates/hp_project.html';
 import '../imports/templates/loginButtons.html';
 import '../imports/templates/newProject.html';
@@ -17,7 +16,9 @@ import '../imports/templates/votation.html';
 //importation de fichiers JavaScript
 import '../imports/ui/cases.js';
 import '../imports/ui/comments.js';
-import '../imports/ui/guests.js';
+import '../imports/ui/header.js';
+import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
+import '../imports/ui/votation.js';
 
 import '../lib/routes.js';

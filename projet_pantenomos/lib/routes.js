@@ -12,7 +12,7 @@ FlowRouter.route('/nouveauprojet', {
     }
 });
 
-FlowRouter.route('/votation', {
+FlowRouter.route('/votation/:_id', {
     name: 'votation',
     action(){
         BlazeLayout.render('votation');

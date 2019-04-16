@@ -20,7 +20,17 @@
 
     <div class="row">
 
-        {{> hp_project_init}}
+        {{#each projects}}
+            <div class="column">
+                <div class="card" id="{{_id}}">
+                    <div class="initiative">
+            
+                        <h4>{{project.title}}</h4>
+    
+                    </div>
+                </div>
+            </div>
+        {{/each}}
 
     </div>
 
