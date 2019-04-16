@@ -3,16 +3,10 @@ import { Template } from 'meteor/templating';
 import  { Comments } from '../api/db_comments.js';
 import '../templates/vot_thirdPart.html';
 
-//ajout de commentaires par l'utilisateur
-Template.vot_thirdPart.helpers({
-    comments() {
-      return Comments.find({});
-    },
-});
-
-//MERCI D'AJOUTER UN COMMENTAIRE
+//ajout d'un commentaire dans la base de données
 Template.vot_thirdPart.events({
-  'submit .new-comment'(event) {
+
+  'submit .newCcomment'(event) {
     //empêche le navigateur par défaut de soumettre le formulaire
     event.preventDefault();
 
@@ -30,5 +24,12 @@ Template.vot_thirdPart.events({
 
     //vide le formulaire
     target.text.value = '';
+  },
+});
+
+//extraie les données collectées dans la BD
+Template.vot_thirdPart.helpers({
+  comments() {
+    return Comments.find().fetch();
   },
 });
