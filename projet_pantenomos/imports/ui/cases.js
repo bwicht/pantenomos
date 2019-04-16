@@ -1,5 +1,4 @@
 //importation des méthodes
-import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import  { Cases } from '../api/db_cases.js';
 import '../templates/vot_firstPart.html';
