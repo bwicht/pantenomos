@@ -6,6 +6,6 @@ import { Projects } from '../imports/api/db_projects.js';
 Meteor.startup(() => {
   // code to run on server at startup
 
-  //Clear all the projects
+  // Vide toute la base de données /!\
   //Projects.remove({});
 });
