@@ -3,8 +3,6 @@
     {{> header}}
 
     {{> loginButtons}}
-
-    <a href="/add_text">Ajouter un projet de loi</a>
     
     <nav>
         <ul>
@@ -13,6 +11,8 @@
                   <option>FR</option>  
                   <option>DE</option>  
                   <option>IT</option>
+                  <option>RM</option>
+                  <option>EN</option>
                 </select>
             </form>
         </ul>
@@ -23,6 +23,9 @@
         {{> hp_project_init}}
 
     </div>
+
+    <br><br>
+    <input type="button" value="Nouveau projet" onClick="FlowRouter.go('newProject')"/>
 
     {{> hp_copyright}}
 

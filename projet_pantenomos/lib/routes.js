@@ -1,11 +1,11 @@
 FlowRouter.route('/', {
-    name: 'homepage',
+    name: 'homePage',
     action(){
         BlazeLayout.render('homePage');
     }
 });
 
-FlowRouter.route('/add_text', {
+FlowRouter.route('/nouveauprojet', {
     name: 'newProject',
     action(){
         BlazeLayout.render('newProject');
