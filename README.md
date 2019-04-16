@@ -15,7 +15,7 @@ Le projet PanteNomos propose une plateforme d’échanges relative aux projets d
 
 1.  L’entête, composé de l’intitulé de la votation ainsi que d’un sondage comportant les quatre modalités relativement basiques: « Pour », « Contre », « Pour le principe », « Contre le principe » [cette information, pertinente d’un point de vue statistique – géographiquement et démographiquement – n’est pas la plus centrale].
 
-2. La seconde partie présente les différents amendements de la votation concernée, et permet à l’utilisateur de réitérer les quatre modalités en fonction des points individuels, ainsi que de surligner les parties problématiques (selon un code couleur graduel) ou sujettes à débat. Un espace relatif permet à l’utilisateur de commenter chaque point individuellement, si besoin.
+2. La seconde partie présente les différents amendements de la votation concernée, et permet à l’utilisateur de commenter ou surligner les parties plus spécifiques (selon un code couleur graduel), problématiques ou sujettes à débat.
 
 3. La troisième partie est un espace d’expression plus large autour des textes proposés, de type FAQ ou commentaires libres, afin de discuter du projet ou de la thématique plus générale.
 
