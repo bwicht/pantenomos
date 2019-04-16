@@ -6,15 +6,15 @@ import '../templates/vot_firstPart.html';
 
 // initialisation des variables qui définiront le choix de l'utilisateur
 // + un compteur tuto
-Template.vot_firstPart.onCreated(function vot_firstPartOnCreated() {
+// Template.vot_firstPart.onCreated(function vot_firstPartOnCreated() {
     
-    this.case1 = new ReactiveVar (0);
-    this.case2 = new ReactiveVar (0);
-    this.case3 = new ReactiveVar (0);
-    this.case4 = new ReactiveVar (0);
-    this.counter = new ReactiveVar (0);
+//     this.case1 = new ReactiveVar (0);
+//     this.case2 = new ReactiveVar (0);
+//     this.case3 = new ReactiveVar (0);
+//     this.case4 = new ReactiveVar (0);
+//     this.counter = new ReactiveVar (0);
 
-});
+// });
 
 // helpers = fonctions, on leur donne un paramètre et ils rendent un paramètre si nécéssaire
 Template.vot_firstPart.helpers({
@@ -50,6 +50,7 @@ Template.vot_firstPart.events({
 
 });
 
+// Comment faire en sorte que seule une case puisse être cochée?
 function onlyOne(checkbox) {
     var checkboxes = document.getElementsByName('check')
     checkboxes.forEach((item) => {
