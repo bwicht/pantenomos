@@ -1,12 +1,14 @@
+//importation des méthodes
 import { Projects } from '../api/db_projects.js';
-
-let amendementCount = 0;
 
 //À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
 
+//défini la variable des amendements à 0
+let amendementCount = 0;
+
+//création d'un projet
 Template.newProject.events({
 
-    //Création d'un projet
     'submit #formNewProject': function(event, template){
 
         event.preventDefault();
@@ -33,10 +35,10 @@ Template.newProject.events({
             project.amendements.push({amendement: newAmendement});
         }
 
-        // Insert un projet dans la collection
+        //insert un projet dans la collection
         Projects.insert({project});
 
-        // Vide le formulaire
+        //vide le formulaire
         document.getElementById("projectTitle").value = '';
 
         var topNode = document.getElementById("lawText");
@@ -46,7 +48,7 @@ Template.newProject.events({
         }
     },
 
-    // Ajoute la fonction clic
+    //création de nouveaux amendements
     'click #addAmendement': function(event){
 
         event.preventDefault();
@@ -81,7 +83,7 @@ Template.newProject.events({
 
         let articleCount = 0;
 
-        //Création de nouveaux articles
+        //création de nouveaux articles
         newAddArticle.addEventListener("click", function() {
 
             articleCount++;;
@@ -123,7 +125,7 @@ Template.newProject.events({
             removeArticle.type = "button";
             removeArticle.value = "-";
 
-            //Possibilité de supprimer les nouveaux articles
+            //possibilité de supprimer les nouveaux articles
             removeArticle.addEventListener("click", function() {
         
                 articleCount--;

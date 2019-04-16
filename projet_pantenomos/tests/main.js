@@ -1,3 +1,5 @@
+// A QUOI SERT CE FICHIER?
+
 import assert from "assert";
 
 describe("projet_pantenomos", function () {
