@@ -2,21 +2,20 @@
 
 import { Template } from 'meteor/templating';
  
-// import { Commentaires } from '.db_comments';
-import  { Commentaires } from '../api/db_comments.js';
+import { Comments } from '.db_comments';
+import  { Comments } from '../api/db_comments.js';
  
 import '../templates/vot_thirdPart.html';
-import './ui_comments.js';
 
-Template.body.helpers({
-    commentaires() {
-      return Commentaires.find({});
+Template.vot_thirdPart.helpers({
+    comments() {
+      return Comments.find({});
     },
 });
 
-  // 0
-  Template.body.events({
-   'submit .new-commentaire'(event) {
+
+  Template.vot_thirdPart.events({
+   'submit .new-comment'(event) {
      // Prevent default browser form submit
      event.preventDefault();
   
@@ -24,8 +23,8 @@ Template.body.helpers({
      const target = event.target;
      const text = target.text.value;
   
-     // Insert a task into the collection
-     Commentaires.insert({
+     // Insert a comment into the collection
+     Comments.insert({
        text,
        createdAt: new Date(), // current time
        owner: Meteor.userId(),
