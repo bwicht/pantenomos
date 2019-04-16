@@ -18,8 +18,8 @@ import '../imports/templates/votation.html';
 
 //importation de fichiers JavaScript
 import '../imports/ui/ui_body.js';
-import '../imports/ui/ui_comment.js';
-import '../imports/ui/ui_project.js';
-import '../imports/ui/ui_vot_firstPart.js';
+import '../imports/ui/comments.js';
+import '../imports/ui/newProject.js';
+import '../imports/ui/cases.js';
 
 import '../lib/routes.js';
