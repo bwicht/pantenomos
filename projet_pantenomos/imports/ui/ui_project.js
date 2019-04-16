@@ -2,6 +2,8 @@ import { Projects } from '../api/db_projects.js';
 
 let amendementCount = 0;
 
+//À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
+
 Template.newProject.events({
 
     //Création d'un projet
@@ -31,10 +33,10 @@ Template.newProject.events({
             project.amendements.push({amendement: newAmendement});
         }
 
-        // Insert a task into the collection
+        // Insert un projet dans la collection
         Projects.insert({project});
 
-        // Clear form
+        // Vide le formulaire
         document.getElementById("projectTitle").value = '';
 
         var topNode = document.getElementById("lawText");
@@ -44,6 +46,7 @@ Template.newProject.events({
         }
     },
 
+    // Ajoute la fonction clic
     'click #addAmendement': function(event){
 
         event.preventDefault();
