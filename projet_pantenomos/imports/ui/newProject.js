@@ -1,5 +1,15 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
+  
+//extraie les données collectées dans la BD
+Template.vot_secondPart.helpers({
+    projects() {
+
+        //console.log(Projects.find().fetch());
+
+        return Projects.find().fetch();
+    },
+});
 
 //À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
 
