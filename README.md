@@ -35,4 +35,4 @@ PanteNomos a été développé avec le framework de développement web en Javasc
 
 Certaines librairies et modules utilisés pour le développement sont parfois soumis à un copyright par leurs auteurs respectifs.
 
-Copyright © 2019 - l'équipe de développement de Compromise : *Antoine Lami – Caroline Roxana Rohrbach – Victor Vermot – Bertil Wicht – Léa Keller*
+Copyright © 2019 - l'équipe de développement PanteNomos : *Antoine Lami – Caroline Roxana Rohrbach – Victor Vermot – Bertil Wicht – Léa Keller*
