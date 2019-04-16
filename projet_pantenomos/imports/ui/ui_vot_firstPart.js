@@ -31,7 +31,7 @@ Template.vot_firstPart.events({
     'checked .cases'(event, instance) {
         // pourquoi event en opaque
         event.target
-        instance.case1.set(instance.case1.get() + 1 );
+        instance.case.set(instance.case1.get() + 1 );
         votes.update({article: 72},{$inc : {votePour : 1 }})
 
 
@@ -49,4 +49,11 @@ Template.vot_firstPart.events({
 
 
 });
+
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('check')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
 
