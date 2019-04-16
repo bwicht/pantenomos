@@ -1,19 +1,17 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
 
-let project;
-
 //extraie les données collectées dans la BD
+
 Template.vot_secondPart.helpers({
 
-    project: function(){
+    addLineBreak: function (data) {
+        
+        return data.replace(/\n/g, "<br />");
+    },
 
-        let projectId = FlowRouter.getParam('_id');
+    project: function() {
 
-        project = Projects.findOne({_id: projectId}).project;
-
-        console.log(project);
-
-        return project;
+        return Projects.findOne({_id: FlowRouter.getParam('_id')}).project;
     },
 });
