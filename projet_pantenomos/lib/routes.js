@@ -1,22 +1,20 @@
-Router.configure({
-layoutTemplate: "main_layout"
-});
-Router.map(function(){
-    //Laws
-this.route('laws', {
-path: '/laws',
-template: 'laws'
+FlowRouter.route('/', {
+    name: 'homePage',
+    action(){
+        BlazeLayout.render('homePage');
+    }
 });
 
-    //Login
-    this.route('login', {
-        path: '/',
-        template: 'login'
-        });
+FlowRouter.route('/nouveauprojet', {
+    name: 'newProject',
+    action(){
+        BlazeLayout.render('newProject');
+    }
+});
 
-        //Signup
-    this.route('signup', {
-        path: '/signup',
-        template: 'signup'
-        });
-        });
+FlowRouter.route('/votation/:_id', {
+    name: 'votation',
+    action(){
+        BlazeLayout.render('votation');
+    }
+});
