@@ -1,0 +1,44 @@
+<template name="homePage">
+
+    {{> header}}
+
+    {{> loginButtons}}
+    
+    <nav>
+        <ul>
+            <form>
+                <select name="language" size="1">
+                  <option>FR</option>  
+                  <option>DE</option>  
+                  <option>IT</option>
+                  <option>RM</option>
+                  <option>EN</option>
+                </select>
+            </form>
+        </ul>
+    </nav>
+
+    <div class="row">
+
+        {{#each projects}}
+            <div class="column">
+                <div class="card" id="{{_id}}">
+                    <div class="initiative">
+            
+                        <h4>{{project.title}}</h4>
+    
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+
+    </div>
+
+    <br><br>
+    <input type="button" value="Nouveau projet" onClick="FlowRouter.go('newProject')"/>
+
+    {{> hp_copyright}}
+
+
+</template>
+

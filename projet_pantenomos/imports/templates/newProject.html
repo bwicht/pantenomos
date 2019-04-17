@@ -1,0 +1,27 @@
+<!-- Page de formulaire pour l'ajout d'un projet de loi -->
+
+<template name="newProject">
+
+    {{> header}}
+
+    <form id="formNewProject">
+
+        <p>
+            Titre du projet : <input id="projectTitle" type="text" size="60" />
+        </p>
+
+        <div id="lawText">
+
+        </div>
+
+        <p>
+            <input id="addAmendement" type="button" value="Nouvel amendement">
+        </p>
+
+        <input type="submit" id="btnAddNewProject" value="Ajouter projet">
+    
+    </form>
+    
+    {{> hp_copyright}}
+
+</template>
