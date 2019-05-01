@@ -1,7 +1,10 @@
-import '../templates/loginButtons.html';
+import '../templates/navbar.html';
 
-Template.loginButtons.events({
+Template.navbar.events({
+
     "click .js-open-login-modal"(event,instance){
+
         Modal.show('login_modal');
+        
     }
 });
