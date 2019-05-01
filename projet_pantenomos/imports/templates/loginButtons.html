@@ -1,12 +1,14 @@
 <template name="loginButtons">
-        <button class ="btn btn-success js-open-login">Connexion</button>
+    <div class="container">
+        <button class ="btn btn-success js-open-login-modal">Connexion</button>
+    </div>     
 </template>
     
-<template name="login">
+<template name="login_modal">
             <div class ="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <h3>Créer un compte</h3>
+                        {{> atForm}}
                     </div>
                 </div>
             </div>
