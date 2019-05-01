@@ -1,4 +1,4 @@
-import '../templates/navbar.html';
+/*import '../templates/navbar.html';
 
 Template.navbar.events({
 
@@ -8,3 +8,4 @@ Template.navbar.events({
         
     }
 });
+*/

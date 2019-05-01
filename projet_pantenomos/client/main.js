@@ -21,6 +21,6 @@ import '../imports/ui/header.js';
 import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
 import '../imports/ui/votation.js';
-import '../imports/ui/navbar.js';
+//import '../imports/ui/navbar.js';
 
 import '../lib/routes.js';
