@@ -1,7 +1,7 @@
 <template name="homePage">
        
     {{> navbar}}
-  
+    {{>swissmap}}
 
     {{> loginButtons}}
     
@@ -22,6 +22,7 @@
     </nav>
    -->
     {{> header}}
+
     <div class="row">
 
         {{#each projects}}
@@ -40,7 +41,8 @@
 
     <br><br>
     <input type="button" value="Nouveau projet" onClick="FlowRouter.go('newProject')"/>
-   
+  
+
 
     {{> hp_copyright}}
 
