@@ -1,7 +1,7 @@
 <template name="homePage">
        
     {{> navbar}}
-    {{>swissmap}}
+
 
     {{> loginButtons}}
     
@@ -22,11 +22,12 @@
     </nav>
    -->
     {{> header}}
-
+<div class="container">
     <div class="row">
+        
 
         {{#each projects}}
-            <div class="column">
+            <div class="card-deck"> 
                 <div class="card" id="{{_id}}">
                     <div class="initiative">
             <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
@@ -36,14 +37,12 @@
                 </div>
             </div>
         {{/each}}
-
+    
     </div>
-
+</div>
     <br><br>
     <input type="button" value="Nouveau projet" onClick="FlowRouter.go('newProject')"/>
   
-<img src="../panteNomos/Suissemap.jpeg";
-id="bg-image">
 
     {{> hp_copyright}}
 
