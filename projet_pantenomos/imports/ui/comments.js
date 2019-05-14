@@ -21,6 +21,7 @@ Template.vot_thirdPart.events({
     let newComment = {
       project_id: FlowRouter.getParam('_id'),
       text: document.getElementById("txtComment").value,
+      pseudo: document.getElementById("pseudoComment").value,
       createdAt: new Date(),
     };
 
@@ -28,6 +29,7 @@ Template.vot_thirdPart.events({
     Meteor.call('comments.create', newComment);
 
     document.getElementById("txtComment").value = "";
+    document.getElementById("pseudoComment").value = "";
 
   },
 });
@@ -40,4 +42,5 @@ Template.vot_thirdPart.helpers({
       //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
       return Comments.find().fetch();
     },
+
 });

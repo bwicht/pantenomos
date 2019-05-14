@@ -6,22 +6,25 @@
 
       <h3>Espace commentaires</h3>
 
+      <form class="newComment">
+
+          Pseudonyme:<br><br>
+          <input input id="pseudoComment" type="text" size="10"><br><br>
+          Commentaire:<br><br>
+          <input id="txtComment" type="text" size="60"><br><br>
+          <input type="submit" value="Poster"><br><br>
+  
+        </form>
+
       <!-- À faire: ajouter les commentaires en puces, puis essayer de les relier au compte utilisateur. -->
 
       <ul>
         
         {{#each comments}}
-            <li>{{comment.createdAt}} — {{comment.text}}</li>
+            <li>{{comment.pseudo}}, le {{formateDate comment.createdAt}} : <br> {{comment.text}}<br><br></li>
         {{/each}}
         
       </ul>
-
-      <form class="newComment">
-
-        <input id="txtComment" type="text" size="60" placeholder="Poster un commentaire"><br><br>
-        <input type="submit" value="Poster">
-
-      </form>
 
   </div>
 
