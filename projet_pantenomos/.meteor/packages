@@ -21,11 +21,11 @@ autopublish@1.0.7             # Publish all data to the clients (for prototyping
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 
 msavin:mongol
-alexwine:bootstrap-4
-peppelg:bootstrap-3-modal
 fortawesome:fontawesome
 accounts-base
 accounts-password
 kadira:flow-router
 kadira:blaze-layout
 useraccounts:bootstrap
+alexwine:bootstrap-4
+peppelg:bootstrap-3-modal
