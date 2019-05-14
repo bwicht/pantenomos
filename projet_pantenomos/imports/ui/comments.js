@@ -27,6 +27,8 @@ Template.vot_thirdPart.events({
     //insert un commentaire dans la collection
     Meteor.call('comments.create', newComment);
 
+    document.getElementById("txtComment").value = "";
+
   },
 });
 
