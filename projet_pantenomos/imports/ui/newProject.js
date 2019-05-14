@@ -3,8 +3,15 @@ import { Projects } from '../api/db_projects.js';
 
 //À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
 
-//défini la variable des amendements à 0
-let amendementCount = 0;
+//Initialise la variable amendementCount
+let amendementCount;
+
+Template.newProject.onRendered(function () {
+
+    amendementCount = 0;
+
+    console.log(amendementCount);
+});
 
 //création d'un projet
 Template.newProject.events({
