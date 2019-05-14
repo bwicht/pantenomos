@@ -9,8 +9,6 @@ let amendementCount;
 Template.newProject.onRendered(function () {
 
     amendementCount = 0;
-
-    console.log(amendementCount);
 });
 
 //création d'un projet
@@ -26,21 +24,22 @@ Template.newProject.events({
 
         let amendements = document.getElementsByClassName("amendement");
 
-        for (let i = 1; i <= amendements.length; i++) {
+        Array.from(amendements).forEach((amendement) => {
+            
+            let newAmendement = {title: document.getElementById("am_" + amendement.id + "_title").value, articles: []};
 
-            let newAmendement = {title: document.getElementById("am_" + i + "_title").value, articles: []};
+            let articles = document.getElementsByClassName("article " + amendement.id);
 
-            let articles = document.getElementsByClassName("article " + i);
+            Array.from(articles).forEach((article) => {
 
-            for (let j = 1; j <= articles.length; j++) {
+                let newArticle = {title: document.getElementById(article.id + "_title").value, text: document.getElementById(article.id + "_text").value};
 
-                let newArticle = {title: document.getElementById("am_" + i + "_art_" + j + "_title").value, text: document.getElementById("am_" + i + "_art_" + j + "_text").value}
-                
                 newAmendement.articles.push({article: newArticle});
-            }
+
+            });
 
             project.amendements.push({amendement: newAmendement});
-        }
+        });
 
         //insert un projet dans la collection
         Meteor.call('projects.create', project);
