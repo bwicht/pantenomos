@@ -24,3 +24,13 @@ import '../imports/ui/newProject.js';
 import '../imports/ui/votation.js';
 
 import '../lib/routes.js';
+
+Template.registerHelper('formateDate', function(date) {
+    
+    return moment(date).format('MM.DD.YYYY, à HH:mm');
+});
+
+Template.registerHelper('addLineBreak', function (data) {
+        
+    return data.replace(/\n/g, "<br />");
+});
