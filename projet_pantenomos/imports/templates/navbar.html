@@ -1,25 +1,37 @@
 <template name="navbar">
-<nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
-        <a href="#" class="navbar-brand"><img src="https://www.admin.ch/gov/fr/_jcr_content/logo/image.imagespooler.png/1443432260207/Logo%20Schweizerische%20Eidgenossenschaft.png"
-            alt="Logo confédération" id="logo" class="logo"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="navbar-item">
-                    <a href="#" class="nav-link">DE</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#" class="nav-link">FR</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#" class="nav-link">RM</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#" class="nav-link">EN</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+            <a href="#" class="navbar-brand"><img src="https://www.admin.ch/gov/fr/_jcr_content/logo/image.imagespooler.png/1443432260207/Logo%20Schweizerische%20Eidgenossenschaft.png"
+                alt="Logo confédération" id="logo" class="logo"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">DE</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">FR</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">RM</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">EN</a>
+                    </li>
+                </ul>
+            </div>
+           <button class ="btn btn-success js-open-login-modal">Connexion</button>
     </nav>
 </template>
+
+<!-- <template name="login_modal">
+        <div class ="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    {{> atForm}}
+                </div>
+            </div>
+        </div>
+</template>
+-->
