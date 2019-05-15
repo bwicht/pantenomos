@@ -1,9 +1,12 @@
 <template name="homePage">
-
-    {{> header}}
+       
+    {{> navbar}}
+  
 
     {{> loginButtons}}
     
+    
+ <!---
     <nav>
         <ul>
             <form>
@@ -17,15 +20,16 @@
             </form>
         </ul>
     </nav>
-
+   -->
+    {{> header}}
     <div class="row">
 
         {{#each projects}}
             <div class="column">
                 <div class="card" id="{{_id}}">
                     <div class="initiative">
-            
-                        <h4>{{project.title}}</h4>
+            <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
+                        <h4 class="mb-0">{{project.title}}</h4>
     
                     </div>
                 </div>
@@ -35,6 +39,7 @@
     </div>
 
     <br><br>
+
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
 
     {{> hp_copyright}}

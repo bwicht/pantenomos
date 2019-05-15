@@ -1,5 +1,5 @@
 /* The left sidebar */
-.sidebar-left {
+/* .sidebar-left {
   position: fixed;
   top: 0;
   left: 0;
@@ -74,8 +74,8 @@
 }
 
 /* Link Colors */
-.sidebar-left .sidebar-links a.link-blue {
-  border-color: #2495d0;
+/*.sidebar-left .sidebar-links a.link-blue {
+  border-color: #2495d0; 
 }
 .sidebar-left .sidebar-links a.link-blue i.fa {
   color: #2495d0;
@@ -106,11 +106,11 @@
   border-color: #915ba2;
 }
 .sidebar-left .sidebar-links a.link-purple i.fa {
-  color: #915ba2;
+  color: #915ba2; 
 }
 
 /* Making the sidebar responsive */
-@media (max-width: 900px) {
+/*@media (max-width: 900px) {
 
   .main-content{
     max-width: none;
@@ -143,7 +143,7 @@
 }
 
 /* Mobile phone layout */
-@media (max-width: 450px) {
+/*@media (max-width: 450px) {
 
   .sidebar-left {
     padding: 20px 0;
@@ -174,4 +174,4 @@
     vertical-align: middle;
   }
 
-}
+} */
