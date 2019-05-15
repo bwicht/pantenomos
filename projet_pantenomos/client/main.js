@@ -9,7 +9,7 @@ import '../imports/templates/hp_project.html';
 import '../imports/templates/loginButton.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
-import '../imports/templates/sidebar.html';
+//import '../imports/templates/sidebar.html';
 import '../imports/templates/vot_firstPart.html';
 import '../imports/templates/vot_secondPart.html';
 import '../imports/templates/vot_thirdPart.html';
