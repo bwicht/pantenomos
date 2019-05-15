@@ -9,9 +9,17 @@
 
       <!-- À faire: ajouter les commentaires en puces, puis essayer de les relier au compte utilisateur. -->
 
+      <ul>
+        
+        {{#each comments}}
+            <li>{{comment.createdAt}} — {{comment.text}}</li>
+        {{/each}}
+        
+      </ul>
+
       <form class="newComment">
 
-        <input type="text" size="60" placeholder="Poster un commentaire"><br><br>
+        <input id="txtComment" type="text" size="60" placeholder="Poster un commentaire"><br><br>
         <input type="submit" value="Poster">
 
       </form>
