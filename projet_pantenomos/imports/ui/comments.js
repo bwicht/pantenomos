@@ -40,7 +40,7 @@ Template.vot_thirdPart.helpers({
     comments: function() {
 
       //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
-      return Comments.find().fetch();
+      return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch()
     },
 
 });
