@@ -26,6 +26,8 @@ accounts-base
 accounts-password
 kadira:flow-router
 kadira:blaze-layout
+
 useraccounts:bootstrap
 alexwine:bootstrap-4
 peppelg:bootstrap-3-modal
+momentjs:moment
