@@ -1,5 +1,6 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
+import '../templates/votation.html';
 
 //extraie les données collectées dans la BD
 Template.vot_secondPart.helpers({

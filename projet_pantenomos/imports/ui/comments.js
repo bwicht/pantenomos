@@ -1,5 +1,7 @@
 //importation des méthodes
 import  { Comments } from '../api/db_comments.js';
+import '../templates/vot_thirdPart.html';
+
 
 //ajout d'un commentaire dans la base de données
 Template.vot_thirdPart.events({

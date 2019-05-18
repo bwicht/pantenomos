@@ -1,25 +1,24 @@
+<!-- Seconde partie: texte de loi -->
 <template name="vot_secondPart">
-
-{{>navbar}}
 
     <h2>Textes de lois</h2><br>
 
     <div id="laws" class="container">
 
-        <h3>{{project.title}}</h3>
+        <h2>{{project.title}}</h2>
 
-            {{#each project.amendements}}
+        {{#each project.amendements}}
 
-                <h4>{{amendement.title}}</h4>
+            <h4>{{amendement.title}}</h4>
 
-                    {{#each amendement.articles}}
+                {{#each amendement.articles}}
 
-                <h4>{{article.title}}</h4>
-                    <h5>{{{addLineBreak article.text}}}</h5>
+            <h4>{{article.title}}</h4>
+                <h5>{{{addLineBreak article.text}}}</h5>
 
-                        {{/each}}
+                    {{/each}}
 
-                        {{/each}}
+                    {{/each}}
 
     </div>
     
