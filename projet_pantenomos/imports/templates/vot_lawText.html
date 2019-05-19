@@ -1,7 +1,7 @@
 <!-- Seconde partie: texte de loi -->
 <template name="vot_lawText">
 
-    <h2>Textes de lois</h2><br>
+    <h2>Quels sont les points sur lesquels vous souhaiteriez revenir?</h2><br>
 
     <div id="laws" class="container">
 
@@ -14,9 +14,9 @@
             <h4>{{article.title}}</h4>
                 <h5>{{{addLineBreak article.text}}}</h5>
 
-                    {{/each}}
-
-                    {{/each}}
+                {{/each}}
+                
+        {{/each}}
 
     </div>
     

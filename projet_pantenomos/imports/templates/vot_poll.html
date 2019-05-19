@@ -1,18 +1,18 @@
 <!-- Première partie: sondage -->
 <template name="vot_poll">
 
-    <h2>Sondage</h2><br>
+    <h2>Êtes-vous pour ou contre cette initiative?</h2><br>
 
     <div id = "survey">
 
-        <form class="cases">
+        <form class="poll" id="pollChoice">
 
-            <input type="radio" name="avis" value="Oui"> POUR<br>
-            <input type="radio" name="avis" value="Non"> CONTRE<br>
-            <input type="radio" name="avis" value="ouiPrincipe" > OUI SUR LE PRINCIPE<br>
-            <input type="radio" name="avis" value="nonPrincipe" > NON SUR LE PRINCIPE<br><br>
+            <input type="radio" class="pollCheckBox" name="avis" value="Pour" checked> POUR<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="PourPrincipe"> POUR SUR LE PRINCIPE<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="Contre"> CONTRE<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="ContrePrincipe"> CONTRE SUR LE PRINCIPE<br><br>
            
-           <p id = "choixReponse">Votre réponse: {{cases.value}}</p>
+           <p id = "choixReponse">Votre réponse: {{pollChoice.value}}</p>
         
         </form>
  
