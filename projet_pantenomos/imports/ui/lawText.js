@@ -2,6 +2,7 @@
 import { Projects } from '../api/db_projects.js';
 import '../templates/vot_lawText.html';
 
+//surlignage en fonction du choix du sondage
 Template.vot_lawText.events({
 
     'mouseup #laws'(event, instance) {
@@ -21,6 +22,16 @@ Template.vot_lawText.events({
         else if (pollChoice == "Contre") {
 
             highlight.className = "highlightContre";
+        }
+
+        else if (pollChoice == "PourPrincipe") {
+
+            highlight.className = "highlightPourPrincipe";
+        }
+
+        else if (pollChoice == "ContrePrincipe") {
+
+            highlight.className = "highlightContrePrincipe";
         }
 
         highlight.textContent = selection_text;

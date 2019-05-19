@@ -119,11 +119,17 @@ h5 {
 }
 
 .highlightPour {
+    background-color: #9fdf9f;
+}
 
-    background-color: lightgreen;
+.highlightPourPrincipe {
+    background-color: #d9f2d9;
 }
 
 .highlightContre {
+    background-color: #ffcccc;
+}
 
-    background-color: rosybrown;
+.highlightContrePrincipe {
+    background-color: #ffe6e6;
 }
