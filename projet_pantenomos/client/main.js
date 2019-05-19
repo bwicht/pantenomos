@@ -6,7 +6,7 @@ import '../imports/templates/header.html';
 import '../imports/templates/homePage.html';
 import '../imports/templates/hp_copyright.html';
 import '../imports/templates/hp_project.html';
-import '../imports/templates/loginButton.html';
+import '../imports/templates/LoginButton.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
 //import '../imports/templates/sidebar.html';
@@ -23,7 +23,8 @@ import '../imports/ui/header.js';
 import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
 import '../imports/ui/votation.js';
-//import '../imports/ui/navbar.js';
+import '../imports/ui/navbar.js';
+import '../both';
 
 import '../lib/routes.js';
 
