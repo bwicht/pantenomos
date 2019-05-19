@@ -1,6 +1,6 @@
-// Le fichier both sert au paramétrage de la création du compte coté client et serveur. 
+//Le fichier both sert au paramétrage de la création du compte coté client et serveur. 
 
-// ligne 3: Change la langue de la modal de connexion
+//ligne 3: Change la langue de la modal de connexion
 T9n.setLanguage('fr');
 
 //lignes 7-180: Configuration de la création d'un compte utilisateur 
