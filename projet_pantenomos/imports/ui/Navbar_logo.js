@@ -1,7 +1,7 @@
 //se rendre sur la page principale
-Template.header.events({
+Template.navbar.events({
 
-    'click #titleMain': function(event){
+    'click #logo': function(event){
 
         event.preventDefault();
         FlowRouter.go('homePage');

@@ -1,11 +1,11 @@
 //importation des méthodes
 import { Template } from 'meteor/templating';
 import  { Cases } from '../api/db_cases.js';
-import '../templates/vot_firstPart.html';
+import '../templates/vot_poll.html';
 
 //initialisation des variables qui définiront le choix de l'utilisateur
 //+ un compteur tuto
-//Template.vot_firstPart.onCreated(function vot_firstPartOnCreated() {
+//Template.vot_poll.onCreated(function vot_pollOnCreated() {
     
 //     this.case1 = new ReactiveVar (0);
 //     this.case2 = new ReactiveVar (0);
@@ -16,7 +16,7 @@ import '../templates/vot_firstPart.html';
 //});
 
 //helpers = fonctions, on leur donne un paramètre et ils rendent un paramètre si nécéssaire
-Template.vot_firstPart.helpers({
+Template.vot_poll.helpers({
     cases() {
         return Cases.find().fetch();
   
@@ -27,7 +27,7 @@ Template.vot_firstPart.helpers({
   });
 
 //MERCI D'AJOUTER UN COMMENTAIRE
-Template.vot_firstPart.events({
+Template.vot_poll.events({
 
     'checked .cases'(event, instance) {
         //pourquoi event en opaque

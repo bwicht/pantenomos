@@ -1,8 +1,10 @@
 //importation des méthodes
 import  { Comments } from '../api/db_comments.js';
+import '../templates/vot_comments.html';
+
 
 //ajout d'un commentaire dans la base de données
-Template.vot_thirdPart.events({
+Template.vot_comments.events({
 
   'submit .newComment'(event) {
 
@@ -35,12 +37,12 @@ Template.vot_thirdPart.events({
 });
 
 //extrait les données collectées dans la BD
-Template.vot_thirdPart.helpers({
+Template.vot_comments.helpers({
   
     comments: function() {
 
       //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
-      return Comments.find().fetch();
+      return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
     },
 
 });

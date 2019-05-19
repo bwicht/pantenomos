@@ -1,31 +1,21 @@
+<!-- Page d'accueil -->
 <template name="homePage">
        
     {{> navbar}}
-  
 
     {{> loginButton}}
-    
-    
- <!---
-    <nav>
-        <ul>
-            <form>
-                <select name="language" size="1">
-                  <option>FR</option>  
-                  <option>DE</option>  
-                  <option>IT</option>
-                  <option>RM</option>
-                  <option>EN</option>
-                </select>
-            </form>
-        </ul>
-    </nav>
-   -->
-    {{> header}}
-    <div class="row">
 
+<div id="titleMain">
+
+    <h1>Pantenomos Project</h1>
+    
+</div>
+
+<div class="container">
+    <div class="row">
+        
         {{#each projects}}
-            <div class="column">
+            <div class="card-deck"> 
                 <div class="card" id="{{_id}}">
                     <div class="initiative">
             <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
@@ -35,15 +25,15 @@
                 </div>
             </div>
         {{/each}}
-
+    
     </div>
+</div>
 
     <br><br>
 
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
 
     {{> hp_copyright}}
-
 
 </template>
 
