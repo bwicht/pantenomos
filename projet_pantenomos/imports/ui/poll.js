@@ -28,26 +28,18 @@ Template.vot_poll.helpers({
 //MERCI D'AJOUTER UN COMMENTAIRE
 Template.vot_poll.events({
 
-    'checked .cases'(event, instance) {
+    'checked .poll'(event, instance) {
         //pourquoi event en opaque
         event.target
         instance.case.set(instance.case1.get() + 1 );
-        votes.update({article: 72},{$inc : {votePour : 1 }})
+        votes.update({article: 72},{$inc : {PourPrincipe : 1 }})
     },
 
-    'checked .cases'(event, instance){
+    'checked .poll'(event, instance){
         Cases.insert({
             value: instance.case1.get(),
             createdAt: new Date()
         });
     },
 });
-
-//comment faire en sorte que seule une case puisse être cochée?
-function onlyOne(checkbox) {
-    var checkboxes = document.getElementsByName('check')
-    checkboxes.forEach((item) => {
-        if (item !== checkbox) item.checked = false
-    })
-}
 

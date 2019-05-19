@@ -1,7 +1,4 @@
 //importation de méthodes
-
-
-//À FAIRE: il serait mieux d'importer que les fichiers .js, qui eux-mêmes appeleraient les templates concernés.
 import '../imports/templates/homePage.html';
 import '../imports/templates/hp_copyright.html';
 import '../imports/templates/loginButton.html';
@@ -13,12 +10,12 @@ import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
 import '../imports/ui/votation.js';
 import '../imports/ui/navbar.js';
-import '../both';
-import '../imports/ui/cases.js';
+import '../imports/ui/poll.js';
 import '../imports/ui/lawText.js';
 import '../imports/ui/comments.js';
 import '../imports/ui/Navbar_logo.js';
 
+import '../both';
 
 //formatage date
 import '../lib/routes.js';

@@ -133,3 +133,7 @@ h5 {
 .highlightContrePrincipe {
     background-color: #ffe6e6;
 }
+
+.navbar-item {
+    font-family: Arial, Helvetica, sans-serif;
+}
