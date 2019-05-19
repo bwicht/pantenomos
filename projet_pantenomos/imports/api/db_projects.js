@@ -8,8 +8,7 @@ Meteor.methods({
     
     'projects.create'(project) {
 
-        let e = Projects.insert({project});
-
-        return e;
-    }
+        return Projects.insert({project});
+    },
+    
 })

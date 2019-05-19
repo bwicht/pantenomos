@@ -2,7 +2,6 @@
 import  { Comments } from '../api/db_comments.js';
 import '../templates/vot_comments.html';
 
-
 //ajout d'un commentaire dans la base de données
 Template.vot_comments.events({
 

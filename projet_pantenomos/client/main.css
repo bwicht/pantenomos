@@ -112,7 +112,18 @@ h5 {
 #titleMain{
     padding-top: 100px;
 }
-.cases {
+
+.poll {
     margin-right: 100px;
     margin-left: 100px; 
+}
+
+.highlightPour {
+
+    background-color: lightgreen;
+}
+
+.highlightContre {
+
+    background-color: rosybrown;
 }

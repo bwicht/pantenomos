@@ -7,15 +7,14 @@ import '../imports/templates/hp_copyright.html';
 import '../imports/templates/loginButton.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
-import '../imports/templates/vot_lawText.html';
-
 
 //importation de fichiers JavaScript
-import '../imports/ui/cases.js';
-import '../imports/ui/comments.js';
 import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
 import '../imports/ui/votation.js';
+import '../imports/ui/cases.js';
+import '../imports/ui/lawText.js';
+import '../imports/ui/comments.js';
 import '../imports/ui/Navbar_logo.js';
 
 //formatage date

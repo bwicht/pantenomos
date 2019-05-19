@@ -5,12 +5,12 @@
 
     <div id = "survey">
 
-        <form class="cases">
+        <form class="poll" id="pollChoice">
 
-            <input type="radio" name="avis" value="Oui"> POUR<br>
-            <input type="radio" name="avis" value="Non"> CONTRE<br>
-            <input type="radio" name="avis" value="ouiPrincipe" > OUI SUR LE PRINCIPE<br>
-            <input type="radio" name="avis" value="nonPrincipe" > NON SUR LE PRINCIPE<br><br>
+            <input type="radio" class="pollCheckBox" name="avis" value="Pour" checked> POUR<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="Contre"> CONTRE<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="pourPrincipe" > POUR SUR LE PRINCIPE<br>
+            <input type="radio" class="pollCheckBox" name="avis" value="contrePrincipe" > CONTRE SUR LE PRINCIPE<br><br>
            
            <p id = "choixReponse">Votre réponse: {{cases.value}}</p>
         
