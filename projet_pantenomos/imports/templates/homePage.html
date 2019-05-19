@@ -1,31 +1,19 @@
+<!-- Page d'accueil -->
 <template name="homePage">
        
     {{> navbar}}
 
-
     {{> loginButton}}
+
+<div id="titleMain">
+
+    <h1>Pantenomos Project</h1>
     
-    
- <!---
-    <nav>
-        <ul>
-            <form>
-                <select name="language" size="1">
-                  <option>FR</option>  
-                  <option>DE</option>  
-                  <option>IT</option>
-                  <option>RM</option>
-                  <option>EN</option>
-                </select>
-            </form>
-        </ul>
-    </nav>
-   -->
-    {{> header}}
+</div>
+
 <div class="container">
     <div class="row">
         
-
         {{#each projects}}
             <div class="card-deck"> 
                 <div class="card" id="{{_id}}">
@@ -40,12 +28,12 @@
     
     </div>
 </div>
+
     <br><br>
 
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
 
     {{> hp_copyright}}
-
 
 </template>
 

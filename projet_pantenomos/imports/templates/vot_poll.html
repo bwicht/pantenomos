@@ -1,0 +1,21 @@
+<!-- Première partie: sondage -->
+<template name="vot_poll">
+
+    <h2>Sondage</h2><br>
+
+    <div id = "survey">
+
+        <form class="cases">
+
+            <input type="radio" name="avis" value="Oui"> POUR<br>
+            <input type="radio" name="avis" value="Non"> CONTRE<br>
+            <input type="radio" name="avis" value="ouiPrincipe" > OUI SUR LE PRINCIPE<br>
+            <input type="radio" name="avis" value="nonPrincipe" > NON SUR LE PRINCIPE<br><br>
+           
+           <p id = "choixReponse">Votre réponse: {{cases.value}}</p>
+        
+        </form>
+ 
+    </div>
+
+</template>
