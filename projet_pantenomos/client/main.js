@@ -1,7 +1,6 @@
 //importation de méthodes
 import '../imports/templates/homePage.html';
-import '../imports/templates/hp_copyright.html';
-import '../imports/templates/LoginButton.html';
+import '../imports/templates/copyright.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
 
