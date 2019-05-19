@@ -8,8 +8,9 @@ let email = AccountsTemplates.removeField('email');
 let password = AccountsTemplates.removeField('password');
 
 AccountsTemplates.addField({
-    _id: 'Ex. Jean Despont',
+    _id: 'username',
     type: 'text',
+    placeHolder: 'Ex. Jean Deusspont',
     displayName: "Nom d'utilisateur",
     required: true,
     minLength: 3,
