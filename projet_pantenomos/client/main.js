@@ -4,7 +4,6 @@
 //À FAIRE: il serait mieux d'importer que les fichiers .js, qui eux-mêmes appeleraient les templates concernés.
 import '../imports/templates/homePage.html';
 import '../imports/templates/hp_copyright.html';
-import '../imports/templates/hp_project.html';
 import '../imports/templates/LoginButton.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
