@@ -1,13 +1,17 @@
 <!-- Page relative au projet spécifique -->
 <template name="votation">
 
+    <div id="titleMain">
+
+        <h1>{{project.title}}</h1>
+            
+    </div>
+
     {{>navbar}}
 
-    {{> header}}
-
-    {{> vot_firstPart}}
-    {{> vot_secondPart}}
-    {{> vot_thirdPart}}
+    {{> vot_poll}}
+    {{> vot_lawText}}
+    {{> vot_comments}}
 
     {{> hp_copyright}}
 

@@ -2,13 +2,16 @@
 import { Projects } from '../api/db_projects.js';
 import '../templates/votation.html';
 
-//extraie les données collectées dans la BD
-Template.vot_secondPart.helpers({
-    
-    project: function() {
+let getProject = {
 
+    project: function() {
+        
         return Projects.findOne({_id: FlowRouter.getParam('_id')}).project;
     },
-});
+};
+
+//extraie les données collectées dans la BD
+Template.votation.helpers(getProject);
+Template.vot_lawText.helpers(getProject);
 
 //surligner et commenter les amendements
