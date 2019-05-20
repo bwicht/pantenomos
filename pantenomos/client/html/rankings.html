@@ -1,0 +1,53 @@
+<template name="rankings">
+{{#if currentUser}}
+	<!-- Highest No -->
+	<div id="profile-wrap">
+		<center>
+			<h1>The Highest No Comment</h1>
+			{{#with highestNoPic}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			{{/with}}
+			<h3>{{highestNo.username}}</h3>
+			<div>
+				<img src="no.png" class="profile-smiley" id="no">
+			</div>
+			<div class="score" id="">
+				<h3 class="count red block">{{highestNo.profile.noScore}}</h3>	
+			</div>
+		</center>
+	</div>
+	<!-- End Highest No -->
+
+	<!-- Highest Yes -->
+	<div id="profile-wrap">
+		<center>
+			<h1>The Highest Yes Comment</h1>
+			{{#with highestYesPic}}
+			<img src="{{image}}" class="profile-img">
+			{{else}}
+			<img src="github.svg" class="profile-img">
+			{{/with}}
+			<h3>{{highestYes.username}}</h3>
+			<div>
+				<img src="yes.png" class="profile-smiley" id="yes">
+			</div>
+			<div class="score" id="">
+				<h3 class="count green block">{{highestYes.profile.yesScore}}</h3>	
+			</div>
+		</center>
+	</div>
+	<!-- End Highest Yes -->
+{{/if}}
+</template>
+
+
+
+
+
+
+
+
+
+

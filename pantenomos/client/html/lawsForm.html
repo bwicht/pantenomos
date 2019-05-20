@@ -1,0 +1,30 @@
+<template name="lawsForm">
+	{{#if currentUser}}
+	<!-- Laws Form-->
+	<div id="lawsForm-wrap">
+		<center>
+			<form class="laws-post">
+				<h2 class="lawsForm-heading">Comment a Law</h2>
+				<label for="lawsName" class="sr-only">Law Name</label>
+				<input type="text" name="lawsName" id="lawsName" class="form-control" placeholder="Law Name" maxlength="40">
+				<label for="lawsPost" class="sr-only">Law Post</label>
+				<input type="text" name="lawsPost" id="lawsPost" class="form-control" placeholder="Law Post" maxlength="140">
+
+				<button class="btn btn-lg btn-success btn-block" type="submit">Comment Law</button>
+			</form>
+		</center>
+	</div>
+	<!-- End Laws Form-->
+	{{else}}
+	<!-- Laws Form-->
+	<div id="lawsForm-wrap">
+		<center>
+			<form class="laws-post">
+				<h2 class="form-signin-heading">Log In To Comment</h2>
+				<a href="/" class="btn btn-md btn-primary" id="login-redir">Login</a>
+			</form>
+		</center>
+	</div>
+	<!-- End Laws Form-->
+	{{/if}}
+</template>
