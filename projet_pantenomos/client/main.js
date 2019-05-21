@@ -3,6 +3,7 @@ import '../imports/templates/homePage.html';
 import '../imports/templates/copyright.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
+import '../imports/templates/sidebar.html';
 
 //importation de fichiers JavaScript
 import '../imports/ui/homePage.js';
