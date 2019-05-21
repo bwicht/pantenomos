@@ -163,7 +163,11 @@ h5 {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-
+#Title{
+    margin: 0 auto;
+    width: 50%;
+    display: block;
+}
 
 /* ==========================================================================
    Mobile styles - Width adjustments
