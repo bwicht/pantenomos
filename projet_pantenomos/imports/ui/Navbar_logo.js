@@ -8,3 +8,21 @@ Template.navbar.events({
     }
 
 });
+Template.navbar.events({
+
+    'click #Title': function(event){
+
+        event.preventDefault();
+        FlowRouter.go('homePage');
+    }
+
+});
+Template.navbar.events({
+
+    'click #Home': function(event){
+
+        event.preventDefault();
+        FlowRouter.go('homePage');
+    }
+
+});
