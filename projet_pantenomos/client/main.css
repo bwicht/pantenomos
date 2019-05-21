@@ -144,9 +144,6 @@ h5 {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-#Title{ 
-    text-align: center;  
-}
 
 .sidebar {
     height: 100%;
@@ -166,7 +163,10 @@ h5 {
     .sidebar a {font-size: 18px;}
   }
 
-
+#Title{
+    margin-left: 7%;
+    text-align: center;
+}
 /* ==========================================================================
    Mobile styles - Width adjustments
    ========================================================================== */
