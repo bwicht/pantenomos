@@ -137,3 +137,43 @@ h5 {
 .navbar-item {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+
+/* ==========================================================================
+   Mobile styles - Width adjustments
+   ========================================================================== */
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) { 
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) { 
+
+}
+
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Large screens ----------- */
+@media (min-width: 1200px) and (max-width: 3000px) {
+
+}
+
+/* ==========================================================================
+   Height adjustments
+   ========================================================================== */
+/* Landscape phones and down */
+@media (max-height:  800px) { 
+
+}
