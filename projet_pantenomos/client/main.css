@@ -138,7 +138,10 @@ h5 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.border{
+    border-width: 12px;
+    border-color: red;
+}
 
 
 
@@ -177,3 +180,4 @@ h5 {
 @media (max-height:  800px) { 
 
 }
+
