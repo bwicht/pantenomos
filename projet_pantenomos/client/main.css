@@ -143,17 +143,9 @@ h5 {
 .navbar-item {
     font-family: Arial, Helvetica, sans-serif;
 
-<<<<<<< HEAD
-.border{
-    border-width: 12px;
-    border-color: red;
-=======
-
 }
 #Title{ 
-    text-align: center;
-    
->>>>>>> master
+    text-align: center;  
 }
 
 .sidebar {
