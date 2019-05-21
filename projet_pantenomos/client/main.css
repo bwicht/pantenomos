@@ -142,12 +142,12 @@ h5 {
 
 .navbar-item {
     font-family: Arial, Helvetica, sans-serif;
- 
-}
-.navbar-text{
-    text-align: center;
-}
 
+}
+#Title {
+
+
+}
 
 .sidebar {
     height: 100%;
