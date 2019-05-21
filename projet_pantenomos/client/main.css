@@ -158,7 +158,7 @@ h5 {
     padding-top: 16px;
   }
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: 160px; 
     padding: 0px 10px;
   }
   @media screen and (max-height: 450px) {
