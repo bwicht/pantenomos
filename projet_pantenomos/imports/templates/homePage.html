@@ -11,19 +11,19 @@
     <div class="row">
         
         {{#each projects}}
+       
             <div class="card-deck"> 
                 <div class="card" id="{{_id}}" >
                     <div class="initiative">
             <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
                         <h4 class="mb-0">{{project.title}}</h4>
                     </div>
-                </div>
-            </div>
+             </div>
+        </div>
         {{/each}}
     
     </div>
 </div>
-
     <br><br>
 
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
