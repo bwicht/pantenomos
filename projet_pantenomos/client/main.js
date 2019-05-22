@@ -5,6 +5,7 @@ import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
 import '../imports/templates/sidebar.html';
 
+
 //importation de fichiers JavaScript
 import '../imports/ui/homePage.js';
 import '../imports/ui/newProject.js';
