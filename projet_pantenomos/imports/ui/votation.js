@@ -11,4 +11,5 @@ Template.votation.helpers({
 
         return currentProject && currentProject.project;
     },
+
 });

@@ -24,10 +24,3 @@ Template.registerHelper('formateDate', function(date) {
     
     return moment(date).format('MM.DD.YYYY, à HH:mm');
 });
-
-//regexp pour les sauts de lignes
-Template.registerHelper('addLineBreak', function (data) {
-        
-    return data.replace(/\n/g, "<br />");
-});
-

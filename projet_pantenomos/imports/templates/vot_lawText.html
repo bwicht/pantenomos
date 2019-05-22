@@ -9,14 +9,20 @@
 
         {{#each project.amendements}}
 
-            <h4>{{amendement.title}}</h4>
 
-                {{#each amendement.articles}}
+                <div class="lawAmendementTitle">{{amendement.title}}</div>
 
-            <h4>{{article.title}}</h4>
-                <h5>{{{addLineBreak article.text}}}</h5>
+                    {{#each amendement.articles}}
 
-                {{/each}}
+                    <div class="lawTextBody">
+
+                    <div class="lawTextTitle">{{article.title}}</div>
+                
+                    {{{addLineBreak article.text}}}
+
+                    </div>
+
+                    {{/each}}
                 
         {{/each}}
 

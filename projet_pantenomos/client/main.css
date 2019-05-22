@@ -193,6 +193,23 @@ h5 {
     margin-left:20px;
 }
 
+.subArticle {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+
+.lawAmendementTitle {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.lawTextBody {
+
+    margin-bottom: 24px;
+}
+
 
 /* ==========================================================================
    Mobile styles - Width adjustments

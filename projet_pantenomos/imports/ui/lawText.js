@@ -2,58 +2,58 @@
 import { Projects } from '../api/db_projects.js';
 import '../templates/vot_lawText.html';
 
+let firstClickDiv;
+
 //surlignage en fonction du choix du sondage
 Template.vot_lawText.events({
 
-    'mouseup #laws'(event, instance) {
+    'mousedown .subArticle'(event, instance) {
+
+        firstClickDiv = event.target;
+    },
+
+    'mouseup .subArticle'(event, instance) {
+
+        if (firstClickDiv == event.target) {
+
+            let selection = document.getSelection();
+
+            let selection_text = selection.toString();
+
+            let highlight = document.createElement('span');
+
+            let pollChoice = document.querySelector('.custom-control-input:checked').value;
+
+            if (pollChoice == "Pour") {
+
+                highlight.className = "highlightPour";
+            }
+
+            else if (pollChoice == "Contre") {
+
+                highlight.className = "highlightContre";
+            }
+
+            else if (pollChoice == "PourPrincipe") {
+
+                highlight.className = "highlightPourPrincipe";
+            }
+
+            else if (pollChoice == "ContrePrincipe") {
+
+                highlight.className = "highlightContrePrincipe";
+            }
+
+            selection_text = selection_text.split('\n')[0];
+
+            highlight.textContent = selection_text;
+
+            let range = selection.getRangeAt(0);
         
-        let selection = document.getSelection();
-        // console.log(selection.getRangeAt(0).startContainer.parentNode.innerHTML[selection.anchorOffset])
-        let selection_text = selection.toString();
-        // console.log(selection_text)
+            range.deleteContents();
 
-        // let parent = selection.getRangeAt(0).startContainer.parentNode
-        // let textComplet = parent.innerHTML
-
-        // arrTextComplet = textComplet.split("")
-        // arrTextComplet.splice(selection.anchorOffset, 0, "<span class='highlightPour'>")
-        // arrTextComplet.splice((selection.anchorOffset + selection.toString().length + 1), 0, "</span>")
-        // let textFinal = arrTextComplet.join("")
-        
-        // console.log(textFinal)
-
-        // parent.innerHTML = textFinal
-
-        let highlight = document.createElement('span');
-        
-        let pollChoice = document.querySelector('.custom-control-input:checked').value;
-
-        if (pollChoice == "Pour") {
-
-            highlight.className = "highlightPour";
+            range.insertNode(highlight);
         }
-
-        else if (pollChoice == "Contre") {
-
-            highlight.className = "highlightContre";
-        }
-
-        else if (pollChoice == "PourPrincipe") {
-
-            highlight.className = "highlightPourPrincipe";
-        }
-
-        else if (pollChoice == "ContrePrincipe") {
-
-            highlight.className = "highlightContrePrincipe";
-        }
-
-        highlight.textContent = selection_text;
-
-        let range = selection.getRangeAt(0);
-        
-        range.deleteContents();
-        range.insertNode(highlight);
     },
 });
 
@@ -65,6 +65,13 @@ Template.vot_lawText.helpers({
         let currentProject = Projects.findOne({_id: FlowRouter.getParam('_id')});
 
         return currentProject && currentProject.project;
+    },
+
+    //regexp pour les sauts de lignes
+    addLineBreak: function (data) {
+        
+        return data.replace(/(.*)/g, "<div class=\"subArticle\">\$1</div>");
+
     },
 
 });
