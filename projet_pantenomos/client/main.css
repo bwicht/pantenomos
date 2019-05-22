@@ -166,6 +166,7 @@ h5 {
     background-repeat: no-repeat;
     background-size: 750px;
     background-position: right top;
+    background-color:#F7F7F7;
     content: "";
     position: absolute;
     top: 90px;
