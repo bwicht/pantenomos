@@ -164,8 +164,9 @@ h5 {
   }
 
 #Title{
-    margin-left: 7%;
-    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    display: block;
 }
 /* ==========================================================================
    Mobile styles - Width adjustments
