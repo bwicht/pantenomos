@@ -1,4 +1,10 @@
 <template name="navbar">
+    
+<!--Import pour avoir le boutton Home-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
     <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
 
@@ -20,7 +26,8 @@
 
                 
                         <li class="navbar-item">
-                                <a class="nav-link" id="Home" href="#">HOME</a>
+                        <a href="#" class="nav-link glyphicon glyphicon-home" id="Home"></a>
+                          
                         </li>
 
                     <li class="navbar-item">
@@ -38,18 +45,20 @@
                     <li class="navbar-item">
                         <a href="#" class="nav-link">EN</a>
                     </li>
+                       <!-- lignes 26-32 : Création boutons "Connexion" et "Déconnexion" de la navbar-->
+                    {{#unless loginIn}}
+                    {{#if currentUser}}
+                    <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
+                    {{else}}
+                    <button class ="btn btn-danger js-open-login-modal">Connexion</button>
+                    {{/if}}    
+                {{/unless}} 
                 </ul>
-                   <!-- lignes 26-32 : Création boutons "Connexion" et "Déconnexion" de la navbar-->
-            {{#unless loginIn}}
-            {{#if currentUser}}
-            <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
-            {{else}}
-            <button class ="btn btn-danger js-open-login-modal">Connexion</button>
-            {{/if}}    
-        {{/unless}} 
-            </div>
-
+                </div>
+            
     </nav>
+
+
     
 </template>
 

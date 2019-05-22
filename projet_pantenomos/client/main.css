@@ -114,7 +114,9 @@ h5 {
     margin-bottom: 10px;
 }
 #logo{
-    height:70px;
+  padding-bottom:10%;
+    height:100px;
+    
 }
 #titleMain{
     padding-top: 110px;
