@@ -12,5 +12,3 @@ Template.votation.helpers({
         return currentProject && currentProject.project;
     },
 });
-
-//surligner et commenter les amendements

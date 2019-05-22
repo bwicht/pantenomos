@@ -1,6 +1,8 @@
 <!-- Page d'accueil -->
 <template name="homePage">
-    {{> sidebar}} 
+
+    {{> sidebar}}
+
     {{> navbar}}
 
 <br><br>
@@ -13,8 +15,7 @@
                 <div class="card" id="{{_id}}" >
                     <div class="initiative">
             <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
-                        <h4 class="card-text">{{project.title}}</h4>
-                  
+                        <h4 class="mb-0">{{project.title}}</h4>
                     </div>
                 </div>
             </div>
@@ -28,6 +29,7 @@
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
 
     {{> copyright}}
+
 </div>
 </template>
 
