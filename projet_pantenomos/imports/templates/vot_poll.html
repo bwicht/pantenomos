@@ -1,33 +1,43 @@
 <!-- Première partie: sondage -->
 <template name="vot_poll">
+
     <div class="border border-danger">
+        <div class="main_1">
         <h2>Êtes-vous pour ou contre cette initiative?</h2><br>
 
         <div class="d-flex justify-content-between">
+
             <div class = "survey">
-                    <form class="poll" id="pollChoice">
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline1">Pour</label>
-                </div>
 
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline2">Pour sur le principe</label>
-                </div>
+                <form class="poll" id="pollChoice">
 
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline3">Contre</label>
-                </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" value="Pour" checked>
+                        <label class="custom-control-label" for="defaultInline1">Pour</label>
+                    </div>
 
-                <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" value="PourPrincipe">
+                        <label class="custom-control-label" for="defaultInline2">Pour sur le principe</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample" value ="ContrePrincipe">
                         <label class="custom-control-label" for="defaultInline4">Contre sur le principe</label>
-                </div>
-               <p id = "choixReponse">Votre réponse: {{pollChoice.value}}</p>
-                    </form>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" value="Contre">
+                        <label class="custom-control-label" for="defaultInline3">Contre</label>
+                    </div>
+
+                </form>
+
+                <p id = "choixReponse">Votre réponse: {{pollChoice.value}}</p>
+
             </div>
+
         </div>
     </div>
+</div>
 </template>

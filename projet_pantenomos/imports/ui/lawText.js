@@ -6,13 +6,28 @@ import '../templates/vot_lawText.html';
 Template.vot_lawText.events({
 
     'mouseup #laws'(event, instance) {
-       
+        
         let selection = document.getSelection();
+        // console.log(selection.getRangeAt(0).startContainer.parentNode.innerHTML[selection.anchorOffset])
         let selection_text = selection.toString();
+        // console.log(selection_text)
+
+        // let parent = selection.getRangeAt(0).startContainer.parentNode
+        // let textComplet = parent.innerHTML
+
+        // arrTextComplet = textComplet.split("")
+        // arrTextComplet.splice(selection.anchorOffset, 0, "<span class='highlightPour'>")
+        // arrTextComplet.splice((selection.anchorOffset + selection.toString().length + 1), 0, "</span>")
+        // let textFinal = arrTextComplet.join("")
+        
+        // console.log(textFinal)
+
+        // parent.innerHTML = textFinal
+        
 
         let highlight = document.createElement('span');
         
-        let pollChoice = document.querySelector('.pollCheckBox:checked').value;
+        let pollChoice = document.querySelector('.custom-control-input:checked').value;
 
         if (pollChoice == "Pour") {
 
