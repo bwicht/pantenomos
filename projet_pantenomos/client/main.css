@@ -49,10 +49,9 @@ h5 {
     clear: both;
 }
 
-.container{
-    padding-top: 100px;
+.container_1{
+    padding-top: 150px;
     margin:center;
- 
     
 }
 
@@ -60,8 +59,9 @@ h5 {
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
-    text-align: center;
+    text-align:  center;
     background-color: #fff9f8;
+
 }
 
 @media screen and (max-width:600px) {
@@ -168,6 +168,7 @@ h5 {
     margin-left: 7%;
     text-align: center;
 }
+
 /* ==========================================================================
    Mobile styles - Width adjustments
    ========================================================================== */
