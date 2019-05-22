@@ -8,7 +8,7 @@
           <!-- vw pour que le text soit responsive-->
                 <span class="navbar-text" id="Title">
                     <a href="#"></a>
-                     <h1 style="font-size:4vw;">Projet Pantenomos</h1>
+                     <h1 style="font-size:3vw;">Projet Pantenomos</h1>
                       </span>         
                 
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -39,16 +39,15 @@
                         <a href="#" class="nav-link">EN</a>
                     </li>
                 </ul>
-            </div>
-
-            <!-- lignes 26-32 : Création boutons "Connexion" et "Déconnexion" de la navbar-->
+                   <!-- lignes 26-32 : Création boutons "Connexion" et "Déconnexion" de la navbar-->
             {{#unless loginIn}}
-                {{#if currentUser}}
-                <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
-                {{else}}
-                <button class ="btn btn-danger js-open-login-modal">Connexion</button>
-                {{/if}}    
-            {{/unless}} 
+            {{#if currentUser}}
+            <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
+            {{else}}
+            <button class ="btn btn-danger js-open-login-modal">Connexion</button>
+            {{/if}}    
+        {{/unless}} 
+            </div>
 
     </nav>
     

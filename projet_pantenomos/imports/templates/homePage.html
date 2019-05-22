@@ -1,11 +1,13 @@
 <!-- Page d'accueil -->
 <template name="homePage">
-    {{> sidebar}} 
+
+    {{> sidebar}}
+
     {{> navbar}}
 
 <br><br>
 <div class="main">
-<div class="container">
+<div class="container_1">
     <div class="row">
         {{#each projects}}
             <div class="card-deck"> 
@@ -26,6 +28,7 @@
     <input id="btnNewProject" type="button" value="Nouveau projet"/>
 
     {{> copyright}}
+
 </div>
 </template>
 
