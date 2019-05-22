@@ -23,7 +23,6 @@ Template.vot_lawText.events({
         // console.log(textFinal)
 
         // parent.innerHTML = textFinal
-        
 
         let highlight = document.createElement('span');
         
@@ -57,7 +56,6 @@ Template.vot_lawText.events({
         range.insertNode(highlight);
     },
 });
-
 
 //extrait les données collectées dans la BD
 Template.vot_lawText.helpers({
