@@ -12,7 +12,7 @@ Template.vot_lawText.events({
 
         let highlight = document.createElement('span');
         
-        let pollChoice = document.querySelector('.pollCheckBox:checked').value;
+        let pollChoice = document.querySelector('.custom-control-input:checked').value;
 
         if (pollChoice == "Pour") {
 
