@@ -49,7 +49,7 @@ h5 {
     clear: both;
 }
 
-.container{
+.container_1{
     padding-top: 100px;
  
     
@@ -116,7 +116,7 @@ h5 {
     height:70px;
 }
 #titleMain{
-    padding-top: 100px;
+    padding-top: 110px;
 }
 
 .poll {
@@ -145,6 +145,7 @@ h5 {
 
 }
 
+
 .sidebar {
     height: 100%;
     width: 160px;
@@ -162,11 +163,14 @@ h5 {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-
+  
 #Title{
-    margin-left: 7%;
-    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    display: block;
 }
+
+
 /* ==========================================================================
    Mobile styles - Width adjustments
    ========================================================================== */
