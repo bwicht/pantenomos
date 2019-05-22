@@ -45,7 +45,6 @@ Template.vot_lawText.events({
 
 
 //extrait les données collectées dans la BD
-
 Template.vot_lawText.helpers({
     
     project: function() {
