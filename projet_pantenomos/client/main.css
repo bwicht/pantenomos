@@ -38,6 +38,13 @@ h5 {
     width: 30%;
     padding: 0 10px;
 }
+@media screen and (max-width:600px) {
+    .card-deck{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
 
 .row {
     margin: 0 -5px;
@@ -51,11 +58,9 @@ h5 {
 
 .container_1{
     padding-top: 100px;
- 
-    
-}
+ }
 
-.card {
+.card{
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
@@ -63,13 +68,6 @@ h5 {
     background-color: #fff9f8;
 }
 
-@media screen and (max-width:600px) {
-    .card-deck{
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-}
 
 .articleTextArea {
     font-size: 12px;
@@ -155,6 +153,11 @@ h5 {
     overflow-x: hidden;
     padding-top: 16px;
   }
+.sidebar-item{
+    padding-top:120px;
+}
+
+
 
 .main {
     margin-left: 160px; 

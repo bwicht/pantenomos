@@ -3,7 +3,8 @@ import '../imports/templates/homePage.html';
 import '../imports/templates/copyright.html';
 import '../imports/templates/navbar.html';
 import '../imports/templates/newProject.html';
-import '../imports/templates/sidebar.html';
+
+
 
 //importation de fichiers JavaScript
 import '../imports/ui/homePage.js';
@@ -14,6 +15,7 @@ import '../imports/ui/poll.js';
 import '../imports/ui/lawText.js';
 import '../imports/ui/comments.js';
 import '../imports/ui/Navbar_logo.js';
+import '../imports/ui/sidebar.js';
 
 import '../both';
 
