@@ -2,22 +2,6 @@
 import { Projects } from '../api/db_projects.js';
 import '../templates/vot_lawText.html';
 
-function findSubArticle(el) {
-
-    while (el.parentNode) {
-
-        el = el.parentNode;
-
-        if (el.className === "subArticle") {
-
-            return el;
-        }
-    }
-
-    return null;
-}
-
-
 //surlignage en fonction du choix du sondage
 Template.vot_lawText.events({
 
@@ -25,17 +9,16 @@ Template.vot_lawText.events({
 
         let selection = document.getSelection();
 
-        let selectionStart = findSubArticle(selection.anchorNode);
-
         let selectionText = selection.toString();
 
+        //
         if (selectionText.split('\n').length > 1) {
 
             selection.collapseToStart();
 
             let index = 0;
 
-            //Etedons la sélection jusqu'à trouver un retour à la ligne...
+            //étedons la sélection jusqu'à trouver un retour à la ligne...
             while (true) {
 
                 if (selection.toString()[index] != "\n") {
@@ -56,10 +39,12 @@ Template.vot_lawText.events({
 
         }
 
+        //définition des variables pour créer un span selon l'élément sélecionné dans le sondage
         let highlight = document.createElement('span');
 
         let pollChoice = document.querySelector('.custom-control-input:checked').value;
 
+        //définiton de la couleur du surlignage en fonction du choix du sondage
         if (pollChoice == "Pour") {
 
             highlight.className = "highlightPour";

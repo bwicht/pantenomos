@@ -10,19 +10,22 @@
     <form id="formNewProject">
 
         <p>
-            Titre du projet : <input id="projectTitle" type="text" size="60" />
+            <input id="projectTitle" class="formProject" type="text" size="60o" placeholder="Titre du projet" />
+        </p>
+
+        <p>
+            <textarea id="projectSummary" rows="3" cols="58" placeholder="Résumé du projet"></textarea>
         </p>
 
         <div id="lawText">
-
         </div>
 
         <p>
-            <input id="addAmendement" type="button" value="Nouvel amendement">
+            <input id="addAmendement" class="formProject" type="button" value="Nouvel amendement">
         </p>
 
-        <input type="submit" id="btnAddNewProject" value="Ajouter projet">
-    
+        <input type="submit" id="btnAddNewProject" class="formProject" value="Ajouter projet">
+
     </form>
     
     {{> copyright}}

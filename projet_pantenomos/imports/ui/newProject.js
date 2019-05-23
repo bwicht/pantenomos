@@ -18,8 +18,9 @@ Template.newProject.events({
 
         event.preventDefault();
 
-        let project = {title: '', amendements: []};
+        let project = {title: '', summary: '', amendements: []};
 
+        project.summary = document.getElementById("projectSummary").value;
         project.title = document.getElementById("projectTitle").value;
 
         let amendements = document.getElementsByClassName("amendement");
