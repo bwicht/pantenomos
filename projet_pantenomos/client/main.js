@@ -14,6 +14,7 @@ import '../imports/ui/poll.js';
 import '../imports/ui/lawText.js';
 import '../imports/ui/comments.js';
 import '../imports/ui/Navbar_logo.js';
+import '../imports/ui/globalHelpers';
 
 import '../both';
 
@@ -24,3 +25,15 @@ Template.registerHelper('formateDate', function(date) {
     
     return moment(date).format('MM.DD.YYYY, à HH:mm');
 });
+
+
+import { Cases,Projects,Comments } from '../imports/api'
+
+if (Meteor.isDevelopment){
+    window.Cases = Cases;
+    window.Projects = Projects;
+    window.Comments = Comments;
+}
+
+
+

@@ -1,36 +1,77 @@
 <!-- Troisième partie: commentaires -->
-<template name="vot_comments">
- 
-<div class="border border-danger mt-4" >
-  <div class="main_1">
 
-  {{> navbar}}
 
-  <h2>Ajoutez un commentaire général</h2>
+  <template name="vot_comments">
+      {{#if currentUser}}
+      {{> navbar}}
+      <div class="border border-danger mt-4">
+        <div class="card bg-light">
+          <div class="card-body">
+            <form class="js-create-comment">
+              <label>Laissez un commentaire général</label>
+              <input type="text" class='form-control mb-2' placeholder="Commentaire" name="content">
+              <button type="submit" class="btn btn-danger float-right">Commenter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+  </template>
 
-    <div class="container">
+<template name="comment_list" >
+  {{#if currentUser}}
+    {{#each comment in comments}}
+          {{> comment_single comment=comment}}
+    {{/each}}
+  {{/if}}
+</template>
 
-      <form class="newComment">
+  <template name ="comment_single">
+      {{#if currentUser}}
+      <div class="card bg-light">
+        <div class="card-body">    
+            <h5 class="card-title">{{getUserFullname comment.ownerId}}</h5>
+            <p class="card-text">{{comment.content}}</p>
+        </div>
+      </div> 
+      {{/if}}
+  </template>
 
-          Pseudonyme:<br><br>
-          <input input id="pseudoComment" type="text" size="10"><br><br>
-          Commentaire:<br><br>
-          <input id="txtComment" type="text" size="60"><br><br>
-          <input type="submit" value="Poster"><br><br>
-  
-        </form>
 
-      <!-- À faire: ajouter les commentaires en puces, puis essayer de les relier au compte utilisateur. -->
 
-      <ul>
-        
-        {{#each comments}}
-            <li>{{comment.pseudo}}, le {{formateDate comment.createdAt}} : <br> {{comment.text}}<br><br></li>
-        {{/each}}
-        
-      </ul>
+<template name="vot_comments2">
+    {{#if currentUser}}
 
-  </div>
-</div>
-</div>
+    {{else}}
+
+    <div class="border border-danger mt-4" >
+    
+      {{> navbar}}
+    
+      <h2>Ajoutez un commentaire général</h2>
+    
+        <div class="container">
+    
+          <form class="newComment">
+    
+              Pseudonyme:<br><br>
+              <input input id="pseudoComment" type="text" size="10"><br><br>
+              Commentaire:<br><br>
+              <input id="txtComment" type="text" size="60"><br><br>
+              <input type="submit" value="Poster"><br><br>
+      
+            </form>
+    
+          <ul>
+            
+            {{#each comments}}
+                <li>{{comment.pseudo}}, le {{formateDate comment.createdAt}} : <br> {{comment.text}}<br><br></li>
+            {{/each}}
+            
+          </ul>
+    
+        </div>
+
+    </div>
+    {{/if}}
 </template>

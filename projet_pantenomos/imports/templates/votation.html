@@ -15,10 +15,21 @@
 
     <p id="summary">{{project.summary}}</p>
 
+    <div class="mt-2 mr-3 ml-3">
     {{> vot_poll}}
-    {{> vot_lawText}}
-    {{> vot_comments}}
+    </div>
 
+    <div class="mt-5 mr-3 ml-3">
+    {{> vot_lawText}}
+    </div>
+
+    <div class="mt-5 mr-3 ml-3">
+    {{> vot_comments}}
+    {{> comment_list}}
+    {{>vot_comments2}}
+    </div> 
+    
+    
     {{> copyright}}
     
 </div>
