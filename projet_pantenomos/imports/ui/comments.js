@@ -5,43 +5,60 @@ import '../templates/vot_comments.html';
 //ajout d'un commentaire dans la base de données
 Template.vot_comments.events({
 
-  'submit .newComment'(event) {
+  'submit .js-create-comment'(event,instance) {
 
     //empêche le navigateur par défaut de soumettre le formulaire
     event.preventDefault();
 
-        // //insert un commentaire dans la collection
-        // Comments.insert({
-        //   text,
-        //   createdAt: new Date(), // date actuelle
-        //   owner: Meteor.userId(),
-        //   username: Meteor.user().username,
-        // });
+        // On récupère le contenu du commentaire 
+      const content = event.target.content.value
 
-
-    let newComment = {
-      project_id: FlowRouter.getParam('_id'),
-      text: document.getElementById("txtComment").value,
-      pseudo: document.getElementById("pseudoComment").value,
+    let commentDoc = {
+      content: content,
+      articleId: FlowRouter.getParam('articleId'),
       createdAt: new Date(),
-    };
+      ownerId: Meteor.userId()
+   }
 
-    //insert un commentaire dans la collection
-    Meteor.call('comments.create', newComment);
+   Comments.insert(commentDoc)
 
-    document.getElementById("txtComment").value = "";
-    document.getElementById("pseudoComment").value = "";
+   event.target.content.value = "";
+  }
 
-  },
+});
+
+Template.comment_list.helpers({
+  comments(){
+    return Comments.find({articleId: FlowRouter.getParam('articleId')});
+  }
+
+})
+
+Template.vot_comments2.events({
+
+  'submit .newComment'(event) {
+   //empêche le navigateur par défaut de soumettre le formulaire
+   event.preventDefault();
+
+   let newComment = {
+    project_id: FlowRouter.getParam('_id'),
+    text: document.getElementById("txtComment").value,
+    pseudo: document.getElementById("pseudoComment").value,
+    createdAt: new Date(),
+  };
+  Meteor.call('comments.create', newComment);
+
+  document.getElementById("txtComment").value = "";
+  document.getElementById("pseudoComment").value = "";
+  }
 });
 
 //extrait les données collectées dans la BD
-Template.vot_comments.helpers({
+Template.vot_comments2.helpers({
   
-    comments: function() {
+  comments: function() {
 
-      //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
-      return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
-    },
-
+    //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
+    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
+ },
 });
