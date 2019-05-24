@@ -8,7 +8,7 @@
         <div class="card bg-light">
           <div class="card-body">
             <form class="js-create-comment">
-              <label>Ajoutez un commentaire général</label>
+              <h2>Ajoutez un commentaire général</h2> <br>
               <input type="text" class='form-control mb-2' placeholder="Commentaire" name="content">
               <button type="submit" class="btn btn-danger float-right">Commenter</button>
             </form>
@@ -19,11 +19,11 @@
   </template>
 
 <template name="comment_list" >
-  {{#if currentUser}}
-    {{#each comment in comments}}
-          {{> comment_single comment=comment}}
-    {{/each}}
-  {{/if}}
+  {{#if currentUser}}   
+        {{#each comment in comments}}
+              {{> comment_single comment=comment}}
+        {{/each}}
+      {{/if}}
 </template>
 
   <template name ="comment_single">
@@ -52,8 +52,10 @@
             <div class="card-body">
             <h2>Ajoutez un commentaire général</h2> <br>
               <form class="newComment">     
-                Pseudonyme:<br><br>
-                <input input id="pseudoComment" type="text" class='form-control mb-2 col-xs-3' placeholder="Ex. Jean Despont"><br><br>
+                <div class="col-xs-3">
+                  Pseudonyme:<br><br>
+                  <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br><br>
+                </div>
                 Commentaire:<br><br>
                 <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br><br>
                 <button type="submit" class="btn btn-danger float-right">Commenter</button><br><br>
