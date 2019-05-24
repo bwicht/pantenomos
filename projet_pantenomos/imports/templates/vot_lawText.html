@@ -1,5 +1,13 @@
 <!-- Seconde partie: texte de loi -->
 <template name="vot_lawText">
+
+<div class="hoveringDiv" id="hoveringDiv">
+    <div class="popupChoices highlightPour">Pour</div>
+    <div class="popupChoices highlightPourPrincipe">Pour sur le principe</div>
+    <div class="popupChoices">Pas d'avis</div>
+    <div class="popupChoices highlightContrePrincipe">Contre sur le principe</div>
+    <div class="popupChoices highlightContre">Contre</div>
+</div>
   
  <div class="border border-danger mt-4">
      <div class="main_1"> 
@@ -9,20 +17,37 @@
 
         {{#each project.amendements}}
 
+            {{#let amendementIndex=@index}}
 
-                <div class="lawAmendementTitle">{{amendement.title}}</div>
+            <div class="lawAmendementTitle">{{amendement.title}}</div>
 
-                    {{#each amendement.articles}}
+                {{#each amendement.articles}}
+
+                    {{#let articleIndex=@index}}
 
                     <div class="lawTextBody">
 
-                    <div class="lawTextTitle">{{article.title}}</div>
-                
-                    {{{addLineBreak article.text}}}
+                        <div class="lawTextTitle">{{article.title}}</div>
+                    
+                        {{{article.text}}}
+
+                        {{#each article.points}}
+
+                            {{#let pointIndex=@index}}
+
+                            <div class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_point_{{pointIndex}}">{{content}} <span class="showPopup">+</span></div>
+
+                            {{/let}}
+
+                        {{/each}}
 
                     </div>
 
-                    {{/each}}
+                    {{/let}}
+
+                {{/each}}
+
+                {{/let}}
                 
         {{/each}}
 

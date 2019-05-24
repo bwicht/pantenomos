@@ -33,7 +33,17 @@ Template.newProject.events({
 
             Array.from(articles).forEach((article) => {
 
-                let newArticle = {title: document.getElementById(article.id + "_title").value, text: document.getElementById(article.id + "_text").value};
+                let newPoints = [];
+
+                Array.from(document.getElementById(article.id + "_text").value.split('\n')).forEach((point) => {
+
+                    if (point != "") {
+
+                        newPoints.push({content: point, score: 0});
+                    }
+                });                
+
+                let newArticle = {title: document.getElementById(article.id + "_title").value, points: newPoints};
 
                 newAmendement.articles.push({article: newArticle});
 

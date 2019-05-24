@@ -201,12 +201,35 @@ h5 {
     margin-left:20px;
 }
 
-.subArticle {
+.articlePoint {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 16px;
 }
 
+#hoveringDiv {
+    text-align: center;
+    background:white;
+    border: 1px solid lightgrey;
+    position: fixed;
+    display: none;
+    width: 150px;
+    font-size: 12px;
+}
+
+.showPopup {
+
+    background-color: lightgrey;
+    border: 1px solid grey;
+    font-size: 14px;
+}
+
+.popupChoices {
+    padding: 5px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
 
 .lawAmendementTitle {
     font-size: 18px;
