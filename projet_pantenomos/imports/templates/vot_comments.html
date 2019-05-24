@@ -1,10 +1,9 @@
 <!-- Troisième partie: commentaires -->
 
-
+<!-- Lignes 4-36 : Création du formulaire de commentaire pour l'utilisateur connecté-->
   <template name="vot_comments">
       {{#if currentUser}}
       {{> navbar}}
-      <div class="border border-danger mt-4">
         <div class="card bg-light">
           <div class="card-body">
             <form class="js-create-comment">
@@ -14,7 +13,6 @@
             </form>
           </div>
         </div>
-      </div>
       {{/if}}
   </template>
 
@@ -37,8 +35,7 @@
       {{/if}}
   </template>
 
-
-
+  <!-- Lignes 38-74 : Création du formulaire de commentaire pour l'utilisateur déconnecté-->
 <template name="vot_comments2">
     {{#if currentUser}}
 
