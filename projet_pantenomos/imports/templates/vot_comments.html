@@ -2,73 +2,52 @@
 
 <!-- Lignes 4-36 : Création du formulaire de commentaire pour l'utilisateur connecté-->
   <template name="vot_comments">
-      {{#if currentUser}}
       {{> navbar}}
-        <div class="card bg-light">
+        <div class="card">
           <div class="card-body">
+              {{#if currentUser}}
             <form class="js-create-comment">
               <h2>Ajoutez un commentaire général</h2> <br>
               <input type="text" class='form-control mb-2' placeholder="Commentaire" name="content">
               <button type="submit" class="btn btn-danger float-right">Commenter</button>
             </form>
+             {{else}}
+             <h2>Ajoutez un commentaire général</h2> <br>
+            <form class="newComment"> 
+              Pseudonyme:<br><br>
+              <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br><br>             
+              Commentaire:<br><br>
+              <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br><br>
+              <button type="submit" class="btn btn-danger float-right">Commenter</button><br><br>             
+            </form>
+            {{/if}}     
           </div>
-        </div>
-      {{/if}}
-  </template>
+        </div> 
+</template>
 
 <template name="comment_list" >
-  {{#if currentUser}}   
         {{#each comment in comments}}
               {{> comment_single comment=comment}}
         {{/each}}
-      {{/if}}
 </template>
 
   <template name ="comment_single">
-      {{#if currentUser}}
-      <div class="card bg-light">
+    {{#if currentUser}}
+      <div class="card my-2">
         <div class="card-body">    
-            <h5 class="card-title">{{getUserFullname comment.ownerId}}, le {{formateDate comment.createdAt}}</h5>
-            <p class="card-text">{{comment.content}}</p>
+            <h5 class="card-title">{{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text">{{comment.content}} {{comment.text}}</p>
         </div>
       </div> 
-      {{/if}}
-  </template>
-
-  <!-- Lignes 38-74 : Création du formulaire de commentaire pour l'utilisateur déconnecté-->
-<template name="vot_comments2">
-    {{#if currentUser}}
-
     {{else}}
-
-    <div class="border border-danger mt-4" >
-    
-      {{> navbar}}
-    
-        <div class="card bg-light">
-            <div class="card-body">
-            <h2>Ajoutez un commentaire général</h2> <br>
-              <form class="newComment">     
-                <div class="col-xs-3">
-                  Pseudonyme:<br><br>
-                  <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br><br>
-                </div>
-                Commentaire:<br><br>
-                <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br><br>
-                <button type="submit" class="btn btn-danger float-right">Commenter</button><br><br>
-              
-              </form>
-    
-              <ul>
-                
-                {{#each comments}}
-                    <li>{{comment.pseudo}}, le {{formateDate comment.createdAt}} : <br> {{comment.text}}<br><br></li>
-                {{/each}}
-                
-              </ul>
-            </div>
+     
+      <div class="card my-2">
+        <div class="card-body">
+               
+            <h5 class="card-title"> {{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text"> {{comment.text}} {{comment.content}}</p>
+            
         </div>
-
-    </div>
+      </div>     
     {{/if}}
 </template>

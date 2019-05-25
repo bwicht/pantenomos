@@ -55,7 +55,7 @@ h5 {
     
 }
 
-.card {
+.cardHome {
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
@@ -241,6 +241,10 @@ h5 {
     margin-bottom: 24px;
 }
 
+.bordure{
+    border: 5px solid;
+    border-color:rgb(255, 222, 222);
+}
 
 /* ==========================================================================
    Mobile styles - Width adjustments
