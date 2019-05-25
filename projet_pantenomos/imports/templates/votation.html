@@ -16,19 +16,16 @@
     <p id="summary">{{project.summary}}</p>
 
     <div class="mt-2 mr-3 ml-3">
-    {{> vot_poll}}
+        {{> vot_poll}}
     </div>
 
     <div class="mt-5 mr-3 ml-3">
-    {{> vot_lawText}}
+        {{> vot_lawText}}
     </div>
 
-    <div class="mt-5 mr-3 ml-3">
-        <div class="border border-danger mt-4">
-            {{> vot_comments}}
-            {{> comment_list}}
-        </div>
-            {{>vot_comments2}}
+    <div class="mt-5 mr-3 ml-3">    
+        {{> vot_comments}}
+        {{> comment_list}}   
     </div> 
     
     {{> copyright}}
