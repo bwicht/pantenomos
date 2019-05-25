@@ -44,9 +44,10 @@ Template.vot_comments.events({
 
   }
 });
-
+// Lignes 48-52 : Helper pour que les commentaire apparaissent sous le bon article 
 Template.comment_list.helpers({
-  comments(){
-    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();   
-  },
+  comments: function() {
+    return Comments.find({project_id: FlowRouter.getParam('_id')});
+ },
 });
+

@@ -1,6 +1,6 @@
 <!-- Troisième partie: commentaires -->
 
-<!-- Lignes 4-36 : Création du formulaire de commentaire pour l'utilisateur connecté-->
+<!-- Lignes 4-26 : Création des formulaires pour les utilisateur connecté et déconnecté-->
   <template name="vot_comments">
       {{> navbar}}
         <div class="card">
@@ -25,13 +25,15 @@
         </div> 
 </template>
 
+<!-- Lignes 29-33 : Template ajoutant les commentaires sous les bons articles-->
 <template name="comment_list" >
         {{#each comment in comments}}
               {{> comment_single comment=comment}}
         {{/each}}
 </template>
 
-  <template name ="comment_single">
+<!-- Lignes 36-52 : Template définissant le contenu de chaque commentaire, pour utilisateur connecté et déconnecté-->
+<template name ="comment_single">
     {{#if currentUser}}
       <div class="card my-2">
         <div class="card-body">    
@@ -39,14 +41,11 @@
             <p class="card-text">{{comment.content}} {{comment.text}}</p>
         </div>
       </div> 
-    {{else}}
-     
+    {{else}}   
       <div class="card my-2">
-        <div class="card-body">
-               
+        <div class="card-body">             
             <h5 class="card-title"> {{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
-            <p class="card-text"> {{comment.text}} {{comment.content}}</p>
-            
+            <p class="card-text"> {{comment.text}} {{comment.content}}</p>           
         </div>
       </div>     
     {{/if}}
