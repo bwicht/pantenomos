@@ -47,6 +47,6 @@ Template.vot_comments.events({
 
 Template.comment_list.helpers({
   comments(){
-    return Comments.find({articleId: FlowRouter.getParam('articleId')});    
+    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();   
   },
 });
