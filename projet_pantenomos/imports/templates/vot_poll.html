@@ -1,6 +1,53 @@
 <!-- Première partie: sondage -->
+<!-- Si l'utilisateur est connecté-->
 <template name="vot_poll">
+    
+    <div class="border border-danger">
+        <div class="main_1">
+        <h2>Êtes-vous pour ou contre cette initiative?</h2><br>
 
+        <div class="d-flex justify-content-between">
+
+            <div class = "survey">
+
+                <form class="poll" id="pollChoice">
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="Pour" name="choice" value="Pour">
+                        <label class="custom-control-label" for="Pour">Pour</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="PourPrincipe" name="choice" value="PourPrincipe">
+                        <label class="custom-control-label" for="PourPrincipe">Pour sur le principe</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ContrePrincipe" name="choice" value ="ContrePrincipe">
+                        <label class="custom-control-label" for="ContrePrincipe">Contre sur le principe</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="Contre" name="choice" value="Contre">
+                        <label class="custom-control-label" for="Contre">Contre</label>
+                    </div> <br> <br>
+                    <input type="submit" id="btnAddVote" class ="valider" value="Voter">
+
+
+                </form>
+
+                <br><p id = "choixReponse">Votre réponse: {{pollChoice.value}}</p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</template>
+
+<!-- <template name="vot_poll2">
+    {{#if currentUser}}
     <div class="border border-danger">
         <div class="main_1">
         <h2>Êtes-vous pour ou contre cette initiative?</h2><br>
@@ -29,7 +76,9 @@
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" value="Contre">
                         <label class="custom-control-label" for="defaultInline3">Contre</label>
-                    </div>
+                    </div> <br> <br>
+                    <input type="submit" id="btnAddVote" value="Voter">
+
 
                 </form>
 
@@ -40,4 +89,5 @@
         </div>
     </div>
 </div>
-</template>
+{{/if}}
+</template> -->
