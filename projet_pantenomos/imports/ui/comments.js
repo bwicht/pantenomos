@@ -23,21 +23,21 @@ Template.vot_comments.events({
 
    event.target.content.value = "";
 },  
-
-
   'submit .newComment'(event,instance){
 
     event.preventDefault();
 
+
     let newComment = {
-        project_id: FlowRouter.getParam('_id'),
+        articleId: FlowRouter.getParam('articleId'),
         text: document.getElementById("txtComment").value,
         pseudo: document.getElementById("pseudoComment").value,
         createdAt: new Date(),
+        ownerId: Meteor.userId()
   };
 
-  Meteor.call('comments.create', newComment);
- 
+  Comments.insert(newComment)
+
   document.getElementById("txtComment").value = "";
   document.getElementById("pseudoComment").value = "";
 
@@ -48,19 +48,4 @@ Template.comment_list.helpers({
   comments(){
     return Comments.find({articleId: FlowRouter.getParam('articleId')});    
   },
-  comments: function() {
-    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
- },
 });
-// Lignes 37-64 : event et helper pour récupérer le commentaire et l'id de l'utilisateur connecté 
-
-
-//extrait les données collectées dans la BD
-/*Template.vot_comments2.helpers({
-  
-  comments: function() {
-
-    //A modifier pour ne chercher que les commentaires propres au projet FlowRouter.getParam('_id')
-    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
- },
-});*/

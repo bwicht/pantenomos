@@ -35,8 +35,8 @@
     {{#if currentUser}}
       <div class="card my-2">
         <div class="card-body">    
-            <h5 class="card-title">{{getUserFullname comment.ownerId}}, le {{formateDate comment.createdAt}}</h5>
-            <p class="card-text">{{comment.content}}</p>
+            <h5 class="card-title">{{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text">{{comment.content}} {{comment.text}}</p>
         </div>
       </div> 
     {{else}}
@@ -44,37 +44,11 @@
       <div class="card my-2">
         <div class="card-body">
                
-            <h5 class="card-title"> {{comment.pseudo comment.ownerId}}, le {{formateDate comment.createdAt}}</h5>
-            <p class="card-text"> {{comment.text}}</p>
+            <h5 class="card-title"> {{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text"> {{comment.text}} {{comment.content}}</p>
             
         </div>
       </div> 
       
     {{/if}}
 </template>
-
-  <!-- Lignes 38-74 : Création du formulaire de commentaire pour l'utilisateur déconnecté-->
-<!--  
-<template name="comment_list2" >
-    {{#if currentUser}}  
-    {{else}} 
-          {{#each comment in comments}}
-                {{> comment_single2 comment=comment}}
-          {{/each}}
-    {{/if}}
-  </template>
-  
-
-
-<template name ="comment_single2">
-  {{#if currentUser}}
-  {{else}}
-    <div class="card my-2">
-      <div class="card-body">    
-          <h5 class="card-title">{{comment.pseudo}}, le {{formateDate comment.createdAt}}, {{comment.text}}</h5>
-          <p class="card-text">{{comment.content}}</p>
-      </div>
-    </div> 
-  {{/if}}
-</template>
--->
