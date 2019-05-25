@@ -29,7 +29,6 @@ Template.vot_comments.events({
 
     event.preventDefault();
 
-
     let newComment = {
         articleId: FlowRouter.getParam('articleId'),
         text: document.getElementById("txtComment").value,
