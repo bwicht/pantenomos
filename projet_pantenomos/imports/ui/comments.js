@@ -23,6 +23,8 @@ Template.vot_comments.events({
 
    event.target.content.value = "";
 },  
+
+
   'submit .newComment'(event,instance){
 
     event.preventDefault();
@@ -40,25 +42,15 @@ Template.vot_comments.events({
   document.getElementById("pseudoComment").value = "";
 
   }
-/*
-  'submit .newComment'(event, instance) {
-    //empêche le navigateur par défaut de soumettre le formulaire
-    event.preventDefault();
- 
-    
-
-   Meteor.call('comments.create', newComment);
- 
-   document.getElementById("txtComment").value = "";
-   document.getElementById("pseudoComment").value = "";
-   }
-   */
 });
 
 Template.comment_list.helpers({
   comments(){
     return Comments.find({articleId: FlowRouter.getParam('articleId')});    
   },
+  comments: function() {
+    return Comments.find({"comment.p": FlowRouter.getParam('articleId')}).fetch();
+ },
 });
 // Lignes 37-64 : event et helper pour récupérer le commentaire et l'id de l'utilisateur connecté 
 

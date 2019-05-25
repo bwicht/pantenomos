@@ -42,8 +42,8 @@
     {{else}}
       <div class="card my-2">
         <div class="card-body">    
-            <h5 class="card-title">{{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
-            <p class="card-text">{{comment.text}}</p>
+            <h5 class="card-title"> {{comment.pseudo comment.ownerId}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text"> {{comment.text}}</p>
         </div>
       </div> 
     {{/if}}
