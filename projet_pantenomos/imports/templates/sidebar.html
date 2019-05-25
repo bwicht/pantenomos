@@ -17,20 +17,22 @@
             <a href="#" id="home" class="text-secondary">Home</a>
         
         <br><br>
- 
+
+       
         <a href="#projetSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-secondary">Projets</a>
         <ul class="collapse list-unstyled" id="projetSubmenu">
-            <li>
-                <a href="#"></a>
-            </li>
 
+            {{#each projects}}    
             
-        
+            <li class=projects id={{_id}}>
+                <a href="#">{{project.title}}</a>  
+             </li>
+            
+            {{/each}}
+            
         </ul> 
     </ul> 
 </div>
-  
-
   
 </template>
 

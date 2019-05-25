@@ -1,7 +1,7 @@
 import { Projects } from '../api/db_projects.js';
-
 import '../templates/sidebar.html';
 
+//Retourner sur la Homepage
 
 Template.sidebar.events({
 
@@ -12,14 +12,30 @@ Template.sidebar.events({
     }
 
 });
-Template.sidebar.events({
-    'click #project.title': function(events){
-        event.preventDefault();
-        Flowrouter.go('votation')
-    }
-})
 
-   
+//Accéder aux projets 
+
+Template.sidebar.events({
+
+    'click .projects': function(events){
+
+        event.preventDefault();
+
+        FlowRouter.go('votation',{_id:event.currentTarget.id})
+       
+    },
+ 
+});
+
+
+//extraie les données collectées dans la BD
+Template.sidebar.helpers({
+    projects() {
+     
+        return Projects.find().fetch();
+    },
+});
+
 
 
 
