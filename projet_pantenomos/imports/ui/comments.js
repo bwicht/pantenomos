@@ -14,7 +14,7 @@ Template.vot_comments.events({
 
     let commentDoc = {
       content: content,
-      articleId: FlowRouter.getParam('articleId'),
+      project_id: FlowRouter.getParam('_id'),
       createdAt: new Date(),
       ownerId: Meteor.userId()
    }
@@ -30,7 +30,7 @@ Template.vot_comments.events({
     event.preventDefault();
 
     let newComment = {
-        articleId: FlowRouter.getParam('articleId'),
+        project_id: FlowRouter.getParam('_id'),
         text: document.getElementById("txtComment").value,
         pseudo: document.getElementById("pseudoComment").value,
         createdAt: new Date(),
