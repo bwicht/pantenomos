@@ -30,7 +30,7 @@ Template.vot_comments.events({
     event.preventDefault();
 
     let newComment = {
-        articleId: FlowRouter.getParam('articleId'),
+        project_id: FlowRouter.getParam('_id'),
         text: document.getElementById("txtComment").value,
         pseudo: document.getElementById("pseudoComment").value,
         createdAt: new Date(),
@@ -49,7 +49,7 @@ Template.comment_list.helpers({
     return Comments.find({articleId: FlowRouter.getParam('articleId')});    
   },
   comments: function() {
-    return Comments.find({"comment.p": FlowRouter.getParam('articleId')}).fetch();
+    return Comments.find({"comment.project_id": FlowRouter.getParam('_id')}).fetch();
  },
 });
 // Lignes 37-64 : event et helper pour récupérer le commentaire et l'id de l'utilisateur connecté 
