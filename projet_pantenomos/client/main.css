@@ -218,6 +218,10 @@ h5 {
     margin-bottom: 24px;
 }
 
+.bordure{
+    border: 5px solid;
+    border-color:rgb(255, 222, 222);
+}
 
 /* ==========================================================================
    Mobile styles - Width adjustments
