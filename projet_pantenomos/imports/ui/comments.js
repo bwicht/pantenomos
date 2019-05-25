@@ -2,7 +2,7 @@
 import  { Comments } from '../api/db_comments.js';
 import '../templates/vot_comments.html';
 
-// Lignes 6-35 : event et helper pour récupérer le commentaire et l'id de l'utilisateur connecté 
+// Lignes 6-25 : Création de la variable du commentaire de l'utilisateur connecté 
 Template.vot_comments.events({
   'submit .js-create-comment'(event,instance) {
 
@@ -23,6 +23,8 @@ Template.vot_comments.events({
 
    event.target.content.value = "";
 },  
+
+// Lignes 27-46 : Création de la variable du commentaire de l'utilisateur déconnecté 
   'submit .newComment'(event,instance){
 
     event.preventDefault();
