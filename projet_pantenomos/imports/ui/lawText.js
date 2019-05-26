@@ -2,30 +2,30 @@
 import { Projects } from '../api/db_projects.js';
 import '../templates/vot_lawText.html';
 
-let lastClickedPoint;
-let lastSelectedClassName;
+import rangy from 'rangy'
+import 'rangy/lib/rangy-selectionsaverestore'
+import 'rangy/lib/rangy-classapplier'
+import 'rangy/lib/rangy-highlighter'
+import 'rangy/lib/rangy-textrange'
+import 'rangy/lib/rangy-serializer'
+
+let lastSelectedClassName = "highlightPour";
+
+let savedSelection;
+
+let highlighter;
+
+function changeHighlightColor() {
+
+    highlighter.addClassApplier(rangy.createClassApplier(lastSelectedClassName, {
+
+        ignoreWhiteSpace: true
+    
+    }));
+}
 
 //surlignage en fonction du choix du sondage
 Template.vot_lawText.events({
-
-    'mouseover .showPopup'(event, instance) {
-
-        let hoveringDiv = document.getElementById("hoveringDiv");
-
-        event.target.innerHTML = "+";
-
-        // hasUserClicked = false;
-
-        lastClickedPoint = event.target.parentNode;
-
-        let left  = event.clientX + "px";
-        let top  = event.clientY + 10 + "px";
-
-        hoveringDiv.style.left = left;
-        hoveringDiv.style.top = top;
-
-        hoveringDiv.style.display = "block";
-    },
 
     'click .showPopup'(event, instance) {
 
@@ -38,97 +38,148 @@ Template.vot_lawText.events({
 
     },
 
-    'mouseover .popupChoices'(event, instance) {
-
-        // if (event.target.classList.length > 1) {
-
-        //     lastClickedPoint.classList.add(event.target.classList[1]);
-        // }
-
-        // else {
-
-        //     lastClickedPoint.className = lastClickedPoint.classList[0];
-        // }
-    },
-
-    'mouseout .popupChoices'(event, instance) {
-
-        // if (!hasUserClicked) {
-
-        //     if (event.target.classList.length > 1) {
-           
-        //         lastClickedPoint.classList.remove(event.target.classList[1]);
-        //     }
-
-        //     else {
-
-        //         lastClickedPoint.className = lastClickedPoint.classList[0];
-        //     }
-        // }
-    },
-
     'click .popupChoices'(event, instance) {
 
-        // hasUserClicked = true;
-
-        //lastClickedPoint.classList.add(event.target.classList[1]);
+        rangy.restoreSelection(savedSelection);
 
         lastSelectedClassName = event.target.classList[1];
 
         event.target.parentNode.style.display = "none";
+
+        changeHighlightColor();
+
+        let selection = rangy.getSelection();
+
+        let selectionNode = selection.anchorNode;
+
+        let lastSelectedDiv;
+
+        let lastSelectedP;
+
+        //On cherche le div parent
+        while (selectionNode.parentNode) {
+            
+            selectionNode = selectionNode.parentNode;
+
+            if (selectionNode.tagName == "P") {
+
+                lastSelectedP = selectionNode;
+
+                continue;
+            }
+            
+            if (selectionNode.tagName === "DIV") {
+
+                lastSelectedDiv = selectionNode;
+                
+                break;   
+            }
+        }
+
+        highlighter.highlightSelection(lastSelectedClassName, {containerElementId: lastSelectedDiv.id});
+
+        let highlightments = [];
+
+        let start;
+
+        let end;
+
+        lastSelectedDiv.childNodes.forEach(function(element) {
+
+            if (element.tagName == "P") {
+
+                let position = 0;
+
+                element.childNodes.forEach(function(node) {
+
+                    if(!node.tagName) {
+
+                        position += node.textContent.split(' ').length - 1;
+                    }
+
+                    else if (node.classList[0]) {
+
+                        let highlightedWords = node.textContent.split(' ');
+
+                        highlightedWords.forEach(function(word) {
+
+                            if (word != "") {
+
+                                //TODO: add user ID
+                                let highlightment = {project: FlowRouter.getParam('_id'), parent: element.id, position: null, score: null};
+
+                                switch(node.classList[0]) {
+
+                                    case "highlightContre": 
+
+                                        highlightment.score = -20;
+                                        break;
+
+                                    case "highlightContrePrincipe":
+
+                                        highlightment.score = -10;
+                                        break;
+                            
+                                    case "highlightPasDavis":
+
+                                        highlightment.score = null;
+                                        break;
+
+                                    case "highlightPourPrincipe":
+
+                                        highlightment.score = 10;
+                                        break;
+
+                                    case "highlightPour":
+
+                                        highlightment.score = 20;
+                                        break;
+                                }
+
+                                highlightment.position = position++;
+
+                                if (highlightment.score) {
+
+                                    highlightments.push(highlightment);
+                                }
+                            }
+                        
+                        });
+
+                    }
+
+                });
+
+            }
+        
+        });
+
+        console.log(highlightments);
+
+        selection.removeAllRanges();
     },
 
     'mouseup .articlePoint'(event, instance) {
 
-        let selection = document.getSelection();
+        let selectedText = rangy.getSelection();
 
-        let selectionText = selection.toString();
+        selectedText.expand("word", { wordOptions: { wordRegex:/[a-z0-9\u00C0-\u00FF]+('[a-z0-9\u00C0-\u00FF]+)*/gi } } );
 
-        //
-        if (selectionText.split('\n').length > 1) {
+        savedSelection = rangy.saveSelection();
 
-            selection.collapseToStart();
+        let hoveringDiv = document.getElementById("hoveringDiv");
 
-            let index = 0;
+        lastSelectedPoint = event.target.parentNode;
 
-            //étendons la sélection jusqu'à trouver un retour à la ligne...
-            while (true) {
+        let left  = event.clientX + "px";
+        let top  = event.clientY + 10 + "px";
 
-                if (selection.toString()[index] != "\n") {
+        hoveringDiv.style.left = left;
+        hoveringDiv.style.top = top;
 
-                    try {
-                                    
-                        selection.extend(selection.anchorNode, index++);
-                    }
+        hoveringDiv.style.display = "block";
 
-                    catch {
-
-                        break;
-                    }
-                }
-            }
-        }
-        
-        //selection.modify("extend", "forward", "word");
-
-        selectionText = selection.toString();
-
-         //définition des variables pour créer un span selon l'élément sélecionné dans le sondage
-         let highlight = document.createElement('span');
-
-         highlight.className = lastSelectedClassName;
-
-         selectionText = selectionText.split('\n')[0];
-
-         highlight.textContent = selectionText;
-
-         let range = selection.getRangeAt(0);
-
-         range.deleteContents();
-
-         range.insertNode(highlight);
-
-    }
+    },
 
 });
 
@@ -142,11 +193,15 @@ Template.vot_lawText.helpers({
         return currentProject && currentProject.project;
     },
 
-    //regexp pour les sauts de lignes
-    // addLineBreak: function (data) {
-        
-    //     return data.replace(/(.*)/g, "<div class=\"articlePoint\">\$1</div>");
 
-    // },
+});
+
+Template.vot_lawText.onRendered(function() {
+    
+    rangy.init();
+
+    highlighter = rangy.createHighlighter();
+
+    changeHighlightColor();
 
 });

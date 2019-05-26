@@ -55,7 +55,7 @@ h5 {
     
 }
 
-.cardHome {
+.card {
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
@@ -131,6 +131,11 @@ h5 {
 .highlightPourPrincipe {
     background-color: #d9f2d9;
 }
+
+.highlightPasDavis {
+    background-color: none;
+}
+
 
 .highlightContre {
     background-color: #ffcccc;
@@ -212,9 +217,11 @@ h5 {
     background:white;
     border: 1px solid lightgrey;
     position: fixed;
+    overflow: hidden;
     display: none;
     width: 150px;
     font-size: 12px;
+    z-index: 10;
 }
 
 .showPopup {
@@ -231,6 +238,11 @@ h5 {
     align-items: center;
 }
 
+.popupChoices:hover {
+
+    background-color: lightgrey;
+}
+
 .lawAmendementTitle {
     font-size: 18px;
     margin-bottom: 24px;
@@ -245,6 +257,7 @@ h5 {
     border: 5px solid;
     border-color:rgb(255, 222, 222);
 }
+
 
 /* ==========================================================================
    Mobile styles - Width adjustments
