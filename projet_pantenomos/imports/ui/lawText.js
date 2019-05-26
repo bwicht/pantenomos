@@ -163,22 +163,40 @@ Template.vot_lawText.events({
 
         let selectedText = rangy.getSelection();
 
-        selectedText.expand("word", { wordOptions: { wordRegex:/[a-z0-9\u00C0-\u00FF]+('[a-z0-9\u00C0-\u00FF]+)*/gi } } );
+        if (selectedText.anchorNode.parentNode.tagName == "DIV") {
 
-        savedSelection = rangy.saveSelection();
+            selectedText.removeAllRanges();
+        }
 
-        let hoveringDiv = document.getElementById("hoveringDiv");
+        else {
 
-        lastSelectedPoint = event.target.parentNode;
+            selectedText.expand("word", { wordOptions: { wordRegex:/[a-z0-9\u00C0-\u00FF]+('[a-z0-9\u00C0-\u00FF]+)*/gi } } );
 
-        let left  = event.clientX + "px";
-        let top  = event.clientY + 10 + "px";
+            savedSelection = rangy.saveSelection();
 
-        hoveringDiv.style.left = left;
-        hoveringDiv.style.top = top;
+            let hoveringDiv = document.getElementById("hoveringDiv");
 
-        hoveringDiv.style.display = "block";
+            lastSelectedPoint = event.target.parentNode;
 
+            let left  = event.clientX + "px";
+            let top  = event.clientY + 10 + "px";
+
+            hoveringDiv.style.left = left;
+            hoveringDiv.style.top = top;
+
+            hoveringDiv.style.display = "block";
+        }
+
+    },
+
+    'mouseup .lawTextTitle'(event, instance) {
+
+        rangy.getSelection().removeAllRanges();
+    },
+
+    'mouseup .lawAmendementTitle'(event, instance) {
+
+        rangy.getSelection().removeAllRanges();
     },
 
 });
