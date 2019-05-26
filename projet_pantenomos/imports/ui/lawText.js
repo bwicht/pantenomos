@@ -78,84 +78,6 @@ Template.vot_lawText.events({
 
         highlighter.highlightSelection(lastSelectedClassName, {containerElementId: lastSelectedDiv.id});
 
-        let highlightments = [];
-
-        let start;
-
-        let end;
-
-        lastSelectedDiv.childNodes.forEach(function(element) {
-
-            if (element.tagName == "P") {
-
-                let position = 0;
-
-                element.childNodes.forEach(function(node) {
-
-                    if(!node.tagName) {
-
-                        position += node.textContent.split(' ').length - 1;
-                    }
-
-                    else if (node.classList[0]) {
-
-                        let highlightedWords = node.textContent.split(' ');
-
-                        highlightedWords.forEach(function(word) {
-
-                            if (word != "") {
-
-                                //TODO: add user ID
-                                let highlightment = {project: FlowRouter.getParam('_id'), parent: element.id, position: null, score: null};
-
-                                switch(node.classList[0]) {
-
-                                    case "highlightContre": 
-
-                                        highlightment.score = -20;
-                                        break;
-
-                                    case "highlightContrePrincipe":
-
-                                        highlightment.score = -10;
-                                        break;
-                            
-                                    case "highlightPasDavis":
-
-                                        highlightment.score = null;
-                                        break;
-
-                                    case "highlightPourPrincipe":
-
-                                        highlightment.score = 10;
-                                        break;
-
-                                    case "highlightPour":
-
-                                        highlightment.score = 20;
-                                        break;
-                                }
-
-                                highlightment.position = position++;
-
-                                if (highlightment.score) {
-
-                                    highlightments.push(highlightment);
-                                }
-                            }
-                        
-                        });
-
-                    }
-
-                });
-
-            }
-        
-        });
-
-        console.log(highlightments);
-
         selection.removeAllRanges();
     },
 
@@ -189,7 +111,7 @@ Template.vot_lawText.events({
 
     },
 
-    'mouseup .lawTextTitle'(event, instance) {
+    'mouseup .lawArticleTitle'(event, instance) {
 
         rangy.getSelection().removeAllRanges();
     },
@@ -197,6 +119,89 @@ Template.vot_lawText.events({
     'mouseup .lawAmendementTitle'(event, instance) {
 
         rangy.getSelection().removeAllRanges();
+    },
+
+    'click #highlightSubmitButton'(event, instance) {
+
+        let highlightments = [];
+
+        let allArticles = document.getElementsByClassName("lawArticleContent");
+        
+        for (let currentArticle of allArticles) {
+
+            currentArticle.childNodes.forEach(function(element) {
+
+                if (element.tagName == "P") {
+
+                    let position = 0;
+
+                    element.childNodes.forEach(function(node) {
+
+                        if(!node.tagName) {
+
+                            //Compte le nombre de mots pas souligné
+                            position += node.textContent.split(' ').length - 1;
+                        }
+
+                        //Si lep assage est souligné
+                        else if (node.classList[0]) {
+
+                            let highlightedWords = node.textContent.split(' ');
+
+                            highlightedWords.forEach(function(word) {
+
+                                if (word != "") {
+
+                                    //TODO: add user ID
+                                    let highlightment = {project: FlowRouter.getParam('_id'), parent: element.id, position: null, score: null};
+
+                                    switch(node.classList[0]) {
+
+                                        case "highlightContre": 
+
+                                            highlightment.score = -20;
+                                            break;
+
+                                        case "highlightContrePrincipe":
+
+                                            highlightment.score = -10;
+                                            break;
+                                
+                                        case "highlightPasDavis":
+
+                                            highlightment.score = null;
+                                            break;
+
+                                        case "highlightPourPrincipe":
+
+                                            highlightment.score = 10;
+                                            break;
+
+                                        case "highlightPour":
+
+                                            highlightment.score = 20;
+                                            break;
+                                    }
+
+                                    highlightment.position = position++;
+
+                                    if (highlightment.score) {
+
+                                        highlightments.push(highlightment);
+                                    }
+                                }
+                            
+                            });
+
+                        }
+
+                    });
+
+                }
+            });
+        }
+
+        console.log(highlightments);
     },
 
 });
@@ -210,7 +215,6 @@ Template.vot_lawText.helpers({
 
         return currentProject && currentProject.project;
     },
-
 
 });
 

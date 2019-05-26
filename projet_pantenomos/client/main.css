@@ -225,7 +225,6 @@ h5 {
 }
 
 .showPopup {
-
     background-color: lightgrey;
     border: 1px solid grey;
     font-size: 14px;
@@ -239,7 +238,6 @@ h5 {
 }
 
 .popupChoices:hover {
-
     background-color: lightgrey;
 }
 
@@ -249,7 +247,6 @@ h5 {
 }
 
 .lawTextBody {
-
     margin-bottom: 24px;
 }
 
@@ -258,6 +255,14 @@ h5 {
     border-color:rgb(255, 222, 222);
 }
 
+#highlightSubmitButton {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.center {
+    text-align: center;
+}
 
 /* ==========================================================================
    Mobile styles - Width adjustments

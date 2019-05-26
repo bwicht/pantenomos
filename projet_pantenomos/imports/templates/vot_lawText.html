@@ -14,7 +14,6 @@
 
     <div id="laws" class="container">
 
-
         {{#each project.amendements}}
 
             {{#let amendementIndex=@index}}
@@ -27,22 +26,22 @@
 
                     <div class="lawTextBody">
 
-                        <div class="lawTextTitle">{{article.title}}</div>
+                        <div class="lawArticleTitle">{{article.title}}</div>
 
-                        <div id="am_{{amendementIndex}}_art_{{articleIndex}}">
+                        <div class="lawArticleContent" id="am_{{amendementIndex}}_art_{{articleIndex}}">
 
                         {{#each article.points}}
 
                             {{#let pointIndex=@index}}
 
-                            <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_point_{{pointIndex}}">{{content}}</p>
+                            <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_pt_{{pointIndex}}">{{content}}</p>
 
                             {{/let}}
 
                         {{/each}}
 
                         </div>
-
+                        
                     </div>
 
                     {{/let}}
@@ -53,6 +52,11 @@
                 
         {{/each}}
 
+            <div class="center">
+                <input type="button" id="highlightSubmitButton" value="Soumettre mon avis">
             </div>
+
+            </div>
+
         </div>
 </template>
