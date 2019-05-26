@@ -13,7 +13,7 @@
                 <form class="poll" id="pollChoice">
 
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="Pour" name="choice" value="Pour">
+                        <input type="radio" class="custom-control-input" id="Pour" name="choice" value="Pour" checked="checked">
                         <label class="custom-control-label" for="Pour">Pour</label>
                     </div>
 
@@ -36,7 +36,8 @@
 
                 </form>
 
-                <br><p id = "choixReponse">Votre réponse: {{pollChoice.value}}</p>
+                <br><p id = "choixReponse">Votre choix et nombre de votes :{{bloop}}  {{nombreVote}}</p><br>
+                
 
             </div>
 
