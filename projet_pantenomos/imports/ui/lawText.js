@@ -228,7 +228,7 @@ Template.vot_lawText.events({
 
                         console.log(paragraph.id);
 
-                        //Ne marche pas
+                        //Ne marche pas encore:
                         // let scores = Highlightments.find({}, {"$and": [{"highlightment.project_id": FlowRouter.getParam('_id')}, {"highlightment.parent_id": paragraph.id}]}).fetch();
 
                         // scores.forEach(function(score) {
