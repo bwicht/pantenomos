@@ -1,5 +1,7 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
+import { Highlightments } from '../api/db_highlightments.js';
+
 import '../templates/vot_lawText.html';
 
 import rangy from 'rangy'
@@ -123,7 +125,7 @@ Template.vot_lawText.events({
 
     'click #highlightSubmitButton'(event, instance) {
 
-        let highlightments = [];
+        let userHighlightments = [];
 
         let allArticles = document.getElementsByClassName("lawArticleContent");
         
@@ -153,7 +155,7 @@ Template.vot_lawText.events({
                                 if (word != "") {
 
                                     //TODO: add user ID
-                                    let highlightment = {project: FlowRouter.getParam('_id'), parent: element.id, position: null, score: null};
+                                    let highlightment = {project_id: FlowRouter.getParam('_id'), parent_id: element.id, position: null, score: null};
 
                                     switch(node.classList[0]) {
 
@@ -187,7 +189,7 @@ Template.vot_lawText.events({
 
                                     if (highlightment.score) {
 
-                                        highlightments.push(highlightment);
+                                        userHighlightments.push(highlightment);
                                     }
                                 }
                             
@@ -201,7 +203,46 @@ Template.vot_lawText.events({
             });
         }
 
-        console.log(highlightments);
+        //Insertion des surlignages dans la BD
+        Meteor.call('highlightments.create', userHighlightments);
+
+       //highlighter.removeAllHighlights();
+
+        //Reconstitue les highlights "moyens"
+
+        //Pour chaque article
+        for (let currentArticle of allArticles) {
+
+            //Pour chaque node de l'article
+            currentArticle.childNodes.forEach(function(paragraph) {
+
+                //Si le node est un paragraphe
+                if (paragraph.tagName == "P") {
+
+                    let listWords = paragraph.textContent.split(" ");
+
+                    wordPosition = 0;
+
+                    //Pour chaque mot du paragraphe
+                    listWords.forEach(function(word) {
+
+                        console.log(paragraph.id);
+
+                        //Ne marche pas
+                        // let scores = Highlightments.find({}, {"$and": [{"highlightment.project_id": FlowRouter.getParam('_id')}, {"highlightment.parent_id": paragraph.id}]}).fetch();
+
+                        // scores.forEach(function(score) {
+
+                        //     console.log(score.highlightment);
+                        // });
+
+                        wordPosition++;
+
+                    });
+                }
+            });
+        }
+
     },
 
 });
