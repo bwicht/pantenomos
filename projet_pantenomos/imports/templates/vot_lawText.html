@@ -1,17 +1,20 @@
 <!-- Seconde partie: texte de loi -->
 <template name="vot_lawText">
 
-<div class="hoveringDiv" id="hoveringDiv">
-    <div class="popupChoices highlightPour">Pour</div>
-    <div class="popupChoices highlightPourPrincipe">Pour sur le principe</div>
-    <div class="popupChoices">Pas d'avis</div>
-    <div class="popupChoices highlightContrePrincipe">Contre sur le principe</div>
-    <div class="popupChoices highlightContre">Contre</div>
-</div>
-       <div class="main_1"> 
+    <div class="hoveringDiv" id="hoveringDiv">
+        <div class="popupChoices highlightPour">Pour</div>
+        <div class="popupChoices highlightPourPrincipe">Pour sur le principe</div>
+        <div class="popupChoices highlightPasDavis">Pas d'avis</div>
+        <div class="popupChoices highlightContrePrincipe">Contre sur le principe</div>
+        <div class="popupChoices highlightContre">Contre</div>
+    </div>
+
+ <div class="border border-danger mt-4">
+     <div class="main_1"> 
          <h2>Quels sont les points sur lesquels vous souhaiteriez revenir?</h2><br>
 
     <div id="laws" class="container">
+
 
         {{#each project.amendements}}
 
@@ -26,18 +29,20 @@
                     <div class="lawTextBody">
 
                         <div class="lawTextTitle">{{article.title}}</div>
-                    
-                        {{{article.text}}}
+
+                        <div id="am_{{amendementIndex}}_art_{{articleIndex}}">
 
                         {{#each article.points}}
 
                             {{#let pointIndex=@index}}
 
-                            <div class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_point_{{pointIndex}}">{{content}} <span class="showPopup">+</span></div>
+                            <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_point_{{pointIndex}}">{{content}}</p>
 
                             {{/let}}
 
                         {{/each}}
+
+                        </div>
 
                     </div>
 
@@ -51,4 +56,5 @@
 
             </div>
         </div>
+    </div>
 </template>
