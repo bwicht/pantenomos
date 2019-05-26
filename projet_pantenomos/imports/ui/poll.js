@@ -39,7 +39,7 @@ Template.vot_poll.events({
     'click #btnAddVote': function(event,instance) {
         event.preventDefault();
         instance.nombreVote.set(instance.nombreVote.get()+1);
-        Cases.update({
+        Cases.insert({
             totalVotes : instance.nombreVote.get()
         });
         var radios = document.getElementsByName('choice');
