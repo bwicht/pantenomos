@@ -1,6 +1,6 @@
 //importation des méthodes
 import { ReactiveVar } from 'meteor/reactive-var';
-import  { Cases } from '../api/db_cases.js';
+import  { Votes } from '../api/db_votes.js';
 // nom de la database à remplir
 import '../templates/vot_poll.html';
 
@@ -39,7 +39,7 @@ Template.vot_poll.events({
     'click #btnAddVote': function(event,instance) {
         event.preventDefault();
         instance.nombreVote.set(instance.nombreVote.get()+1);
-        Cases.update({
+        Votes.insert({
             totalVotes : instance.nombreVote.get()
         });
         var radios = document.getElementsByName('choice');
@@ -50,7 +50,7 @@ Template.vot_poll.events({
                 // do whatever you want with the checked radio
                 const avis = radios[i].value;
                 console.log(avis);
-                Cases.insert({avis:avis});
+                Votes.insert({avis:avis});
                 
                 // let vote = {
                 //     avis: avis,

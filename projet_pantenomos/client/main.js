@@ -27,10 +27,10 @@ Template.registerHelper('formateDate', function(date) {
 });
 
 
-import { Cases,Projects,Comments } from '../imports/api'
+import { Votes,Projects,Comments } from '../imports/api'
 
 if (Meteor.isDevelopment){
-    window.Cases = Cases;
+    window.Votes = Votes;
     window.Projects = Projects;
     window.Comments = Comments;
 }
