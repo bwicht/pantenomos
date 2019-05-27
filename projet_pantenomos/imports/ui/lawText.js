@@ -164,8 +164,8 @@ Template.vot_lawText.events({
                         }
 
                         //Si l'enfant possède une classe, c'est que le passage est souligné
-                        else if (node.classList[0]) {
-
+                        else if (node.classList[0] && node.className != "rangySelectionBoundary") {
+                                                            
                             //Nombre de mots soulignés
                             let highlightedWords = node.textContent.split(' ');
 
@@ -309,7 +309,7 @@ Template.vot_lawText.events({
                             }
 
                             //Insertion du mot dans une balise span (avec son score comme titre)
-                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + wordScore + '">' + word + '</span> ';
+                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + Math.round(wordScore * 100) / 100 + '">' + word + '</span> ';
                         
                         }
 
