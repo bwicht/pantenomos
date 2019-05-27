@@ -1,6 +1,6 @@
-# PanteNomos - README
+# Pantenomos - README
 
-### *PanteNomos version 1.0*
+### *Pantenomos version 1.0*
 Par *Antoine Lami, Caroline Roxana Rohrbach, Victor Vermot, Bertil Wicht & Léa Keller*
 
 Projet réalisé dans le cadre du cours *Programmation pour Internet II – Meteor.js* donné par Isaac Pante et Loris Rimaz
@@ -50,4 +50,4 @@ meteor add timdown:rangy
 Puis :
 meteor npm install --save rangy
 
-Copyright © 2019 - l'équipe de développement de PanteNomos : *Antoine Lami – Caroline Roxana Rohrbach – Victor Vermot – Bertil Wicht – Léa Keller*
+Copyright © 2019 - l'équipe de développement de Pantenomos : *Antoine Lami – Caroline Roxana Rohrbach – Victor Vermot – Bertil Wicht – Léa Keller*
