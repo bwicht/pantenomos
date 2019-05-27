@@ -1,45 +1,92 @@
 //importation des méthodes
-import  { Cases } from '../api/db_cases.js';
+import { ReactiveVar } from 'meteor/reactive-var';
+import  { Votes } from '../api/db_cases.js';
+// nom de la database à remplir
 import '../templates/vot_poll.html';
 
-//initialisation des variables qui définiront le choix de l'utilisateur
-//+ un compteur tuto
-//Template.vot_poll.onCreated(function vot_pollOnCreated() {
-    
-//     this.case1 = new ReactiveVar (0);
-//     this.case2 = new ReactiveVar (0);
-//     this.case3 = new ReactiveVar (0);
-//     this.case4 = new ReactiveVar (0);
-//     this.counter = new ReactiveVar (0);
+let userChoice;
 
-//});
+Template.vot_poll.onCreated(function() {
 
-//helpers = fonctions, on leur donne un paramètre et ils rendent un paramètre si nécéssaire
-Template.vot_poll.helpers({
-    cases() {
-        return Cases.find().fetch();
-  
-     },
-     choix() {
-        return Template.instance().case1.get();
-     },
-  });
+  userChoice = new ReactiveVar(false);
+  this.nombreVote = new ReactiveVar(0);
 
-//MERCI D'AJOUTER UN COMMENTAIRE
-Template.vot_poll.events({
-
-    'checked .poll'(event, instance) {
-        //pourquoi event en opaque
-        event.target
-        instance.case.set(instance.case1.get() + 1 );
-        votes.update({article: 72},{$inc : {PourPrincipe : 1 }})
-    },
-
-    'checked .poll'(event, instance){
-        Cases.insert({
-            value: instance.case1.get(),
-            createdAt: new Date()
-        });
-    },
 });
 
+Template.vot_poll.helpers({
+
+    nombreVote: function() {
+
+        return Votes.find({}, {"initiative_id": FlowRouter.getParam('_id')}).fetch().length;
+    },
+
+    choixUtilisateur: function() {
+
+        return userChoice.get();
+    },
+
+
+ });
+
+
+
+
+
+ // récupération du choix de l'utilisateur en fonction de la case cochée
+Template.vot_poll.events({
+
+    'click #btnAddVote': function(event,instance) {
+        event.preventDefault();
+        instance.nombreVote.set(instance.nombreVote.get()+1);
+        var radios = document.getElementsByName('choice');
+
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                
+                // do whatever you want with the checked radio
+                const avis = radios[i].value;
+                console.log(avis);
+
+                Votes.insert({avis : avis});
+                if(avis === "Pour"){
+                   Pour = +1;
+                   
+                } else if(avis === "Contre"){
+                    Contre =+1;
+                    
+                } else if(avis === "PourPrincipe"){
+                    PourPrincipe =+1;
+                    
+                } 
+                
+                
+                else {
+                    ContrePrincipe=+1;
+                    
+
+                }
+                // let vote = {
+                //          avis: radios,
+                //     //     // ajouter pour quelle initiative il voté ?
+                //         createdAt: new Date(),
+                //         // ownerId: Meteor.userId()
+                //          };
+                // Votes.insert({vote});
+                
+                
+                    // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
+               
+
+                
+                break;
+            }
+        
+        
+        
+        
+            // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
+            // votes.update({article: 72},{$inc : {PourPrincipe : 1 }})
+        }    
+        },
+
+});

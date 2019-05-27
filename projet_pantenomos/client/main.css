@@ -60,7 +60,9 @@ h5 {
     padding-top: 100px;
  }
 
-.card{
+
+.cardHome {
+
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
@@ -130,6 +132,14 @@ h5 {
     background-color: #d9f2d9;
 }
 
+.highlightPasDavis {
+    background-color: none;
+}
+
+.highlightNeutral {
+    background-color: #ffee9e;
+}
+
 .highlightContre {
     background-color: #ffcccc;
 }
@@ -142,7 +152,6 @@ h5 {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
 
 .sidebar {
     height: 100%;
@@ -204,12 +213,40 @@ h5 {
     margin-left:20px;
 }
 
-.subArticle {
+.articlePoint {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 16px;
 }
 
+#hoveringDiv {
+    text-align: center;
+    background:white;
+    border: 1px solid lightgrey;
+    position: fixed;
+    overflow: hidden;
+    display: none;
+    width: 150px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.showPopup {
+    background-color: lightgrey;
+    border: 1px solid grey;
+    font-size: 14px;
+}
+
+.popupChoices {
+    padding: 5px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.popupChoices:hover {
+    background-color: lightgrey;
+}
 
 .lawAmendementTitle {
     font-size: 18px;
@@ -217,10 +254,23 @@ h5 {
 }
 
 .lawTextBody {
-
     margin-bottom: 24px;
+    font-size: 16px;
 }
 
+.bordure{
+    border: 1px solid;
+    border-color: brown;
+}
+
+#highlightSubmitButton {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.center {
+    text-align: center;
+}
 
 /* ==========================================================================
    Mobile styles - Width adjustments

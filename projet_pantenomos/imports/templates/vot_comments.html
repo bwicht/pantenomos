@@ -1,36 +1,51 @@
 <!-- Troisième partie: commentaires -->
-<template name="vot_comments">
- 
-<div class="border border-danger mt-4" >
-  <div class="main_1">
 
-  {{> navbar}}
+<!-- Lignes 4-26 : Création des formulaires pour les utilisateur connecté et déconnecté-->
+  <template name="vot_comments">
+        <div class="card">
+          <div class="card-body">
+              {{#if currentUser}}
+            <form class="js-create-comment">
+              <h2>Ajoutez un commentaire général</h2>
+              <input type="text" class='form-control mb-2' placeholder="Commentaire" name="content">
+              <button type="submit" class="btn btn-danger float-right">Commenter</button>
+            </form>
+             {{else}}
+             <form class="newComment"> 
+              <h2>Ajoutez un commentaire général</h2><br>
+                  Pseudonyme:<br><br>
+                  <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br>          
+                  Commentaire:<br><br>
+                  <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br>
+                  <button type="submit" class="btn btn-danger float-right">Commenter</button><br><br>             
+              </form>
+            {{/if}}     
+          </div>
+        </div> 
+</template>
 
-  <h2>Ajoutez un commentaire général</h2>
-
-    <div class="container">
-
-      <form class="newComment">
-
-          Pseudonyme:<br><br>
-          <input input id="pseudoComment" type="text" size="10"><br><br>
-          Commentaire:<br><br>
-          <input id="txtComment" type="text" size="60"><br><br>
-          <input type="submit" value="Poster"><br><br>
-  
-        </form>
-
-      <!-- À faire: ajouter les commentaires en puces, puis essayer de les relier au compte utilisateur. -->
-
-      <ul>
-        
-        {{#each comments}}
-            <li>{{comment.pseudo}}, le {{formateDate comment.createdAt}} : <br> {{comment.text}}<br><br></li>
+<!-- Lignes 29-33 : Template ajoutant les commentaires sous les bons articles-->
+<template name="comment_list" >
+        {{#each comment in comments}}
+              {{> comment_single comment=comment}}
         {{/each}}
-        
-      </ul>
+</template>
 
-  </div>
-</div>
-</div>
+<!-- Lignes 36-52 : Template définissant le contenu de chaque commentaire, pour utilisateur connecté et déconnecté-->
+<template name ="comment_single">
+    {{#if currentUser}}
+      <div class="card my-2">
+        <div class="card-body">    
+            <h5 class="card-title">{{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text">{{comment.content}} {{comment.text}}</p>
+        </div>
+      </div> 
+    {{else}}   
+      <div class="card my-2">
+        <div class="card-body">             
+            <h5 class="card-title"> {{getUserFullname comment.ownerId}} {{comment.pseudo}}, le {{formateDate comment.createdAt}}</h5>
+            <p class="card-text"> {{comment.text}} {{comment.content}}</p>           
+        </div>
+      </div>     
+    {{/if}}
 </template>

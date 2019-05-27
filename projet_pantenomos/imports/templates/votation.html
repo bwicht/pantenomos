@@ -6,19 +6,33 @@
 <div class="main">>
 
     <div id="titleMain">
-
         <h1>{{project.title}}</h1>
-            
     </div>
 
     {{> navbar}}
 
     <p id="summary">{{project.summary}}</p>
 
-    {{> vot_poll}}
-    {{> vot_lawText}}
-    {{> vot_comments}}
+    <div class="mt-2 mr-3 ml-3">
+        <div class="bordure"> 
+            {{> vot_poll}}
+        </div>
+    </div>
 
+    <div class="mt-5 mr-3 ml-3">
+        <div class="bordure"> 
+            {{> vot_lawText}}
+        </div>
+    </div>
+
+      
+    <div class="mt-5 mr-3 ml-3">   
+        <div class="bordure"> 
+            {{> vot_comments}}
+            {{> comment_list}}   
+        </div> 
+    </div>
+    
     {{> copyright}}
     
 </div>

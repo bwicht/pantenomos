@@ -1,7 +1,14 @@
 <!-- Seconde partie: texte de loi -->
 <template name="vot_lawText">
-  
- <div class="border border-danger mt-4">
+
+    <div class="hoveringDiv" id="hoveringDiv">
+        <div class="popupChoices highlightPour">Pour</div>
+        <div class="popupChoices highlightPourPrincipe">Pour sur le principe</div>
+        <div class="popupChoices highlightPasDavis">Pas d'avis</div>
+        <div class="popupChoices highlightContrePrincipe">Contre sur le principe</div>
+        <div class="popupChoices highlightContre">Contre</div>
+    </div>
+
      <div class="main_1"> 
          <h2>Quels sont les points sur lesquels vous souhaiteriez revenir?</h2><br>
 
@@ -9,24 +16,47 @@
 
         {{#each project.amendements}}
 
+            {{#let amendementIndex=@index}}
 
-                <div class="lawAmendementTitle">{{amendement.title}}</div>
+            <div class="lawAmendementTitle">{{amendement.title}}</div>
 
-                    {{#each amendement.articles}}
+                {{#each amendement.articles}}
+
+                    {{#let articleIndex=@index}}
 
                     <div class="lawTextBody">
 
-                    <div class="lawTextTitle">{{article.title}}</div>
-                
-                    {{{addLineBreak article.text}}}
+                        <div class="lawArticleTitle">{{article.title}}</div>
 
+                        <div class="lawArticleContent" id="am_{{amendementIndex}}_art_{{articleIndex}}">
+
+                        {{#each article.points}}
+
+                            {{#let pointIndex=@index}}
+
+                            <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_pt_{{pointIndex}}">{{content}}</p>
+
+                            {{/let}}
+
+                        {{/each}}
+
+                        </div>
+                        
                     </div>
 
-                    {{/each}}
+                    {{/let}}
+
+                {{/each}}
+
+                {{/let}}
                 
         {{/each}}
 
-    </div>
-</div>
-</div>
+            <div class="center">
+                <input type="button" id="highlightSubmitButton" value="Afficher les avis moyens">
+            </div>
+
+            </div>
+
+        </div>
 </template>
