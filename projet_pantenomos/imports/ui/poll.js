@@ -51,9 +51,9 @@ Template.vot_poll.events({
     'click #btnAddVote': function(event,instance) {
         event.preventDefault();
         instance.nombreVote.set(instance.nombreVote.get()+1);
-        // Votes.insert({
-        //     totalVotes : instance.nombreVote.get()
-        // });
+        Votes.insert({
+            totalVotes : instance.nombreVote.get()
+        });
         var radios = document.getElementsByName('choice');
 
         for (var i = 0, length = radios.length; i < length; i++) {
@@ -70,7 +70,7 @@ Template.vot_poll.events({
                     instance.nombreContre.set(instance.nombreContre.get()+1);
                 } else if(avis === "PourPrincipe"){
                     PourPrincipe =+1;
-                    instance.nombrePourPrincipe.set(instance.nombrePourPrincipee.get()+1);
+                    instance.nombrePourPrincipe.set(instance.nombrePourPrincipe.get()+1);
                 } 
                 
                 
@@ -80,12 +80,12 @@ Template.vot_poll.events({
 
                 }
                 let vote = {
-                         avis: avis,
+                         avis: radios,
                     //     // ajouter pour quelle initiative il voté ?
-                        // createdAt: new Date(),
+                        createdAt: new Date(),
                         // ownerId: Meteor.userId()
                          };
-                // Votes.insert({vote});
+                Votes.insert({vote});
                 
                 
                     // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
