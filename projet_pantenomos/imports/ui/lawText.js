@@ -309,7 +309,7 @@ Template.vot_lawText.events({
                             }
 
                             //Insertion du mot dans une balise span (avec son score comme titre)
-                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + wordScore + '">' + word + '</span> ';
+                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + Math.round(wordScore * 100) / 100 + '">' + word + '</span> ';
                         
                         }
 
