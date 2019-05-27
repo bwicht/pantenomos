@@ -17,7 +17,7 @@ let savedSelection;
 
 let highlighter;
 
-let displaysAverageHighlights = false;
+let displaysAverageHighlights;
 
 function changeHighlightColor() {
 
@@ -357,6 +357,8 @@ Template.vot_lawText.onRendered(function() {
     rangy.init();
 
     highlighter = rangy.createHighlighter();
+
+    displaysAverageHighlights = false;
 
     changeHighlightColor();
 
