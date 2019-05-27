@@ -17,6 +17,8 @@ let savedSelection;
 
 let highlighter;
 
+let displaysAverageHighlights = false;
+
 function changeHighlightColor() {
 
     highlighter.addClassApplier(rangy.createClassApplier(lastSelectedClassName, {
@@ -75,6 +77,8 @@ Template.vot_lawText.events({
         //Mise en surbrillance de la sélection (restreinte à son div de départ)
         highlighter.highlightSelection(lastSelectedClassName, {containerElementId: lastSelectedDiv.id});
 
+        document.getElementById("highlightSubmitButton").value = "Soumettre mon avis";
+
         //Suppression de la sélection
         selection.removeAllRanges();
     },
@@ -84,8 +88,15 @@ Template.vot_lawText.events({
         //Sélection de l'utilisateur
         let selectedText = rangy.getSelection();
 
-        //La sélection doit commencer d'un div
-        if (selectedText.anchorNode.parentNode.tagName == "DIV") {
+        //Force Safari a mettre à jour le DOM 
+        savedSelection = rangy.saveSelection();
+
+        rangy.getSelection().removeAllRanges();
+
+        rangy.restoreSelection(savedSelection);
+
+        //La sélection doit commencer d'un paragraphe
+        if (displaysAverageHighlights || selectedText.anchorNode.parentNode.tagName == "DIV") {
 
             selectedText.removeAllRanges();
         }
@@ -125,6 +136,9 @@ Template.vot_lawText.events({
     },
 
     'click #highlightSubmitButton'(event, instance) {
+
+        //Affichage des avis moyens
+        displaysAverageHighlights = true;
 
         //Récupère tous les articles du document
         let allArticles = document.getElementsByClassName("lawArticleContent");
@@ -216,7 +230,7 @@ Template.vot_lawText.events({
         //Après sauvegarde des surlignages, suppression des sélection de l'utilisateur
         highlighter.removeAllHighlights();
 
-        document.getElementById("highlightSubmitButton").disabled = true;
+        document.getElementById("highlightSubmitButton").style.display = "none";
 
         //Reconstitution des highlights "moyens"
 
@@ -321,6 +335,7 @@ Template.vot_lawText.events({
             });
         }
 
+        document.getElementById("highlightSubmitButton").value = "Proposer un avis";
     },
 
 });
