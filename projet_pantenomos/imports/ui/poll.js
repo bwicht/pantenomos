@@ -46,8 +46,12 @@ Template.vot_poll.events({
                 // do whatever you want with the checked radio
                 const avis = radios[i].value;
                 console.log(avis);
+                let vote = {
+                    UserChoice: avis,
+                   };
+                Votes.insert({vote});
 
-                Votes.insert({avis : avis});
+                
                 if(avis === "Pour"){
                    Pour = +1;
                    
@@ -65,13 +69,7 @@ Template.vot_poll.events({
                     
 
                 }
-                // let vote = {
-                //          avis: radios,
-                //     //     // ajouter pour quelle initiative il voté ?
-                //         createdAt: new Date(),
-                //         // ownerId: Meteor.userId()
-                //          };
-                // Votes.insert({vote});
+                
                 
                 
                     // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
