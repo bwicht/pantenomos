@@ -88,7 +88,7 @@ Template.vot_lawText.events({
         //Sélection de l'utilisateur
         let selectedText = rangy.getSelection();
 
-        //Force Safari a mettre à jour le DOM 
+        //Force Safari a mettre à jour l'affichage du DOM en supprimant puis recréant la sélection
         savedSelection = rangy.saveSelection();
 
         rangy.getSelection().removeAllRanges();
@@ -250,7 +250,7 @@ Template.vot_lawText.events({
 
                     let wordPosition = 0;
 
-                    //Suppression du text du paragraphe pour le reconstituer en fonction des surlignages des utilisateurs
+                    //Suppression complète du texte du paragraphe afi de le reconstituer mot à mot en fonction des surlignages des utilisateurs
                     paragraph.textContent = "";
 
                     //Pour chaque mot du paragraphe
@@ -258,7 +258,7 @@ Template.vot_lawText.events({
 
                         let wordScore = 0;
 
-                        //Recherche dans la BD des surlignages des utilisateurs concernant ce mot précis
+                        //Recherche dans la BD des surlignages des utilisateurs relatifs à ce mot précis
                         let scores = Highlightments.find({
                             $and: [
                                 {"highlightment.project_id": FlowRouter.getParam('_id') },
@@ -266,13 +266,15 @@ Template.vot_lawText.events({
                                 {"highlightment.position": wordNumber},
                             ]}).fetch();
 
-                        //Calcul du score moyen pour le mot
+                        //Calcul du score moyen pour ce mot précis:
                         scores.forEach(function(score) {
 
+                            //Addition de tous les scores trouvés pour le mot
                             wordScore += score.highlightment.score;
 
                         });
 
+                        //Puis division par le nombre de score trouvé pour le mot
                         wordScore /= scores.length;
 
                         //Si le mot a été souligné au moins une fois par un utilisateur
@@ -313,7 +315,7 @@ Template.vot_lawText.events({
                         
                         }
 
-                        //Si le mot n'a jamais été souligné
+                        //Si le mot n'a jamais été souligné, on l'ajoute tel quel
                         else {
 
                             paragraph.innerHTML += word + " ";
