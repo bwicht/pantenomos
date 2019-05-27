@@ -314,6 +314,9 @@ Template.vot_lawText.events({
 
                     //Remplacement de la balise personnalisée par une balise HTML
                     paragraph.innerHTML = paragraph.innerHTML.replace(/__(.*?)_(.*?)_(.*?)__£(.*?)£/g, '<span class="$1" title="Score: $4">$2</span> ');
+
+                    //Extension des surlignages jusqu'au mot suivant
+                    paragraph.innerHTML = paragraph.innerHTML.replace(/<\/span>(\s*|\n*)<span/gm, " </span><span");
                 }
             });
         }
