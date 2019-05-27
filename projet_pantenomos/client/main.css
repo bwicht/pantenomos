@@ -153,7 +153,6 @@ h5 {
 
 }
 
-
 .sidebar {
     height: 100%;
     width: 160px;
@@ -251,11 +250,12 @@ h5 {
 
 .lawTextBody {
     margin-bottom: 24px;
+    font-size: 16px;
 }
 
 .bordure{
-    border: 5px solid;
-    border-color:rgb(255, 222, 222);
+    border: 1px solid;
+    border-color: brown;
 }
 
 #highlightSubmitButton {

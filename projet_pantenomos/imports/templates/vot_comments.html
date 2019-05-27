@@ -6,17 +6,17 @@
           <div class="card-body">
               {{#if currentUser}}
             <form class="js-create-comment">
-              <h2>Ajoutez un commentaire général</h2> <br>
+              <h2>Ajoutez un commentaire général</h2>
               <input type="text" class='form-control mb-2' placeholder="Commentaire" name="content">
               <button type="submit" class="btn btn-danger float-right">Commenter</button>
             </form>
              {{else}}
              <form class="newComment"> 
-              <h2>Ajoutez un commentaire général</h2> <br>   
+              <h2>Ajoutez un commentaire général</h2><br>
                   Pseudonyme:<br><br>
-                  <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br><br>             
+                  <input input id="pseudoComment" type="text" class='form-control mb-2' placeholder="Ex. Jean Despont"><br>          
                   Commentaire:<br><br>
-                  <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br><br>
+                  <input id="txtComment" type="text" class='form-control mb-2' placeholder="Commentaire"><br>
                   <button type="submit" class="btn btn-danger float-right">Commenter</button><br><br>             
               </form>
             {{/if}}     
