@@ -21,7 +21,7 @@ Template.sidebar.events({
 
         event.preventDefault();
 
-        FlowRouter.go('votation',{_id:event.currentTarget.id})
+        FlowRouter.go('votation',{_id: event.currentTarget.id})
        
     },
  
