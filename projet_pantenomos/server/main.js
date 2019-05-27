@@ -13,3 +13,11 @@ Meteor.startup(() => {
   //Projects.remove({});
 
 });
+
+//exécute le code au démarrage du serveur
+Meteor.startup(() => {
+
+  //NE PAS ENLEVER DES COMMENTAIRES — vide toute la base de données pour les surlignages /!\
+  //Highlightments.remove({});
+
+});
