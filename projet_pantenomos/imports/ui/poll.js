@@ -9,7 +9,6 @@ let userChoice;
 Template.vot_poll.onCreated(function() {
 
   userChoice = new ReactiveVar(false);
-  this.nombreVote = new ReactiveVar(0);
 
 });
 
@@ -28,63 +27,19 @@ Template.vot_poll.helpers({
 
  });
 
-
-
-
-
- // récupération du choix de l'utilisateur en fonction de la case cochée
+// récupération du choix de l'utilisateur en fonction de la case cochée
 Template.vot_poll.events({
 
     'click #btnAddVote': function(event,instance) {
-        event.preventDefault();
-        instance.nombreVote.set(instance.nombreVote.get()+1);
-        var radios = document.getElementsByName('choice');
 
-        for (var i = 0, length = radios.length; i < length; i++) {
-            if (radios[i].checked) {
-                
-                // do whatever you want with the checked radio
-                const avis = radios[i].value;
-                console.log(avis);
-                let vote = {
-                    UserChoice: avis,
-                   };
-                Votes.insert({vote});
+        let userVote = document.querySelector('.custom-control-input:checked').value;
 
-                
-                if(avis === "Pour"){
-                   Pour = +1;
-                   
-                } else if(avis === "Contre"){
-                    Contre =+1;
-                    
-                } else if(avis === "PourPrincipe"){
-                    PourPrincipe =+1;
-                    
-                } 
-                
-                
-                else {
-                    ContrePrincipe=+1;
-                    
+        let newVote = {initiative_id: FlowRouter.getParam('_id'), vote: userVote};
 
-                }
-                
-                
-                
-                    // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
-               
+        Meteor.call('votes.create', newVote);
 
-                
-                break;
-            }
-        
-        
-        
-        
-            // Cases.update({initativeID: _id },{$inc : {document.getElementByName('choice').value : 1 },{$inc : {VotesTotal : 1}})
-            // votes.update({article: 72},{$inc : {PourPrincipe : 1 }})
-        }    
-        },
+        userChoice.set(userVote);
+
+    },
 
 });
