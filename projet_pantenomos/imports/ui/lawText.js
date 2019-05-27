@@ -308,15 +308,15 @@ Template.vot_lawText.events({
                                 wordClass = "highlightPour";
                             }
 
-                            //Insertion du mot dans une balise personnalisée contenant sa (future) classe et son score
-                            paragraph.textContent += "__" + wordClass + "_" + word + "_" + wordClass + "__" + "£" + Math.round(wordScore * 10) / 10 + "£";
+                            //Insertion du mot dans une balise span (avec son score comme titre)
+                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + wordScore + '">' + word + '</span> ';
                         
                         }
 
                         //Si le mot n'a jamais été souligné
                         else {
 
-                            paragraph.textContent += word + " ";
+                            paragraph.innerHTML += word + " ";
                         }
 
                         //Déplacement au mot suivant
@@ -325,9 +325,6 @@ Template.vot_lawText.events({
                         wordNumber++;
 
                     });
-
-                    //Remplacement de la balise personnalisée par une balise HTML
-                    paragraph.innerHTML = paragraph.innerHTML.replace(/__(.*?)_(.*?)_(.*?)__£(.*?)£/g, '<span class="$1" title="Score: $4">$2</span> ');
 
                     //Extension des surlignages jusqu'au mot suivant
                     paragraph.innerHTML = paragraph.innerHTML.replace(/<\/span>(\s*|\n*)<span/gm, " </span><span");
