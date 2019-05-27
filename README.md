@@ -50,4 +50,28 @@ meteor add timdown:rangy
 Puis :
 meteor npm install --save rangy
 
+## Screenshots des différents fonctionalités du site:
+
+### Accueil du site avec tous les différents projets de lois
+
+<img width="1039" alt="PN_homepage" src="https://user-images.githubusercontent.com/44426485/58439133-d8c83e00-80d2-11e9-881c-a23e9caadd23.png">
+
+### Possibilité à un utilsateur de se login
+<img width="1033" alt="PN_login" src="https://user-images.githubusercontent.com/44426485/58439134-d8c83e00-80d2-11e9-8430-98e9a8f1bb8f.png">
+<img width="432" alt="PN_register" src="https://user-images.githubusercontent.com/44426485/58439139-d960d480-80d2-11e9-9918-64be72db8075.png">
+
+### Présentation de la possibilité d'ajout des textes de lois (Sera par la suite seulement pour les admin)
+<img width="1103" alt="PN_newproject" src="https://user-images.githubusercontent.com/44426485/58439135-d8c83e00-80d2-11e9-9b51-82dc88ae7a97.png">
+
+### Le premier module permet de sonder l'avis des utlisateurs à propos du projet
+<img width="1037" alt="PN_p1" src="https://user-images.githubusercontent.com/44426485/58439136-d960d480-80d2-11e9-9e8d-e649759e6204.png">
+
+### Le second permet aux utilisateurs de surligner les passages par rapport auxquels ils ne sont pas d'accords
+<img width="1034" alt="PN_p2" src="https://user-images.githubusercontent.com/44426485/58439137-d960d480-80d2-11e9-8d86-0538e8626751.png">
+
+### Le dernier permet de donner un commentaire général par rapport au projet
+<img width="1034" alt="PN_p3" src="https://user-images.githubusercontent.com/44426485/58439138-d960d480-80d2-11e9-9274-d7bed4730d50.png">
+
+
+
 Copyright © 2019 - l'équipe de développement de Pantenomos : *Antoine Lami – Caroline Roxana Rohrbach – Victor Vermot – Bertil Wicht – Léa Keller*
