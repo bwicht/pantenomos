@@ -10,6 +10,6 @@ import '../both';
 Meteor.startup(() => {
 
   //NE PAS ENLEVER DES COMMENTAIRES — vide toute la base de données pour les projets /!\
-  //Projects.remove({});
+  //Highlightments.remove({});
 
 });
