@@ -12,6 +12,27 @@
 </template> -->
 
 <template name="sidebar">
-    <div class="sidebar ">
-          </div>
+    <div class="sidebar">
+        <ul class="sidebar-item">
+            <a href="#" id="home" class="text-secondary">Home</a>
+        
+        <br><br>
+
+       
+        <a href="#projetSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-secondary">Projets</a>
+        <ul class="collapse list-unstyled" id="projetSubmenu">
+
+            {{#each projects}}    
+            
+            <li class="projects" id={{_id}}>
+                <a href="#">{{project.title}}</a>  
+             </li>
+            
+            {{/each}}
+            
+        </ul> 
+    </ul> 
+</div>
+  
 </template>
+

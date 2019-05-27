@@ -17,12 +17,3 @@ Template.navbar.events({
     }
 
 });
-Template.navbar.events({
-
-    'click #Home': function(event){
-
-        event.preventDefault();
-        FlowRouter.go('homePage');
-    }
-
-});
