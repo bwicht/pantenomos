@@ -136,6 +136,9 @@ h5 {
     background-color: none;
 }
 
+.highlightNeutral {
+    background-color: #ffee9e;
+}
 
 .highlightContre {
     background-color: #ffcccc;

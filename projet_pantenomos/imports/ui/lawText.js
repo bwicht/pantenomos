@@ -125,8 +125,6 @@ Template.vot_lawText.events({
 
     'click #highlightSubmitButton'(event, instance) {
 
-        let userHighlightments = [];
-
         let allArticles = document.getElementsByClassName("lawArticleContent");
         
         for (let currentArticle of allArticles) {
@@ -189,7 +187,8 @@ Template.vot_lawText.events({
 
                                     if (highlightment.score) {
 
-                                        userHighlightments.push(highlightment);
+                                        //Insertion des surlignages dans la BD
+                                        Meteor.call('highlightments.create', highlightment);
                                     }
                                 }
                             
@@ -203,10 +202,9 @@ Template.vot_lawText.events({
             });
         }
 
-        //Insertion des surlignages dans la BD
-        Meteor.call('highlightments.create', userHighlightments);
+        highlighter.removeAllHighlights();
 
-       //highlighter.removeAllHighlights();
+        document.getElementById("highlightSubmitButton").disabled = true;
 
         //Reconstitue les highlights "moyens"
 
@@ -221,24 +219,82 @@ Template.vot_lawText.events({
 
                     let listWords = paragraph.textContent.split(" ");
 
-                    wordPosition = 0;
+                    let wordNumber = 0;
+
+                    let wordPosition = 0;
+
+                    let ranges = [];
+
+                    paragraph.textContent = "";
 
                     //Pour chaque mot du paragraphe
                     listWords.forEach(function(word) {
 
-                        console.log(paragraph.id);
+                        let wordScore = 0;
 
-                        //Ne marche pas encore:
-                        // let scores = Highlightments.find({}, {"$and": [{"highlightment.project_id": FlowRouter.getParam('_id')}, {"highlightment.parent_id": paragraph.id}]}).fetch();
+                        //Marche maintenant!
+                        let scores = Highlightments.find({
+                            $and: [
+                                {"highlightment.project_id": FlowRouter.getParam('_id') },
+                                {"highlightment.parent_id": paragraph.id },
+                                {"highlightment.position": wordNumber},
+                            ]}).fetch();
 
-                        // scores.forEach(function(score) {
+                        scores.forEach(function(score) {
 
-                        //     console.log(score.highlightment);
-                        // });
+                            wordScore += score.highlightment.score;
 
-                        wordPosition++;
+                        });
+
+                        wordScore /= scores.length;
+
+                        if (scores.length > 0) {
+
+                            let wordClass;
+
+                            if (wordScore < -15) {
+
+                                wordClass = "highlightContre";
+
+                            }
+
+                            else if (wordScore >= -15 && wordScore < -5) {
+
+                                wordClass = "highlightContrePrincipe";
+                            }
+
+                            else if (wordScore >= -5 && wordScore < 5) {
+
+                                wordClass = "highlightNeutral";
+
+                            }
+
+                            else if (wordScore >= 5 && wordScore <= 15) {
+
+                                wordClass = "highlightPourPrincipe";
+                            }
+
+                            else if (wordScore > 15) {
+
+                                wordClass = "highlightPour";
+                            }
+
+                            paragraph.textContent += "__" + wordClass + "_" + word + "_" + wordClass + "__" + "£" + wordScore + "£";
+                        
+                        }
+
+                        else {
+
+                            paragraph.textContent += word + " ";
+                        }
+
+                        wordPosition += word.length + 1;
+
+                        wordNumber++;
 
                     });
+
+                    paragraph.innerHTML = paragraph.innerHTML.replace(/__(.*?)_(.*?)_(.*?)__£(.*?)£/g, '<span class="$1" title="Score: $4">$2</span> ');
                 }
             });
         }
