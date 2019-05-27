@@ -17,7 +17,7 @@ Le site est minimaliste, mettant volontairement l'accent sur les textes de loi q
 
 La page relative au projet ouvert se divise en trois parties:
 
-* Un sondage général, dans lequel l'utilisateur à la possibilité de donner un avis général (« OUI » et « NON ») ou un peu plus nuancé (« OUI SUR LE PRINCIPE » et « NON SUR LE PRINCIPE »). À titre indicatif, cette information délivre une information superficielle, qu'il est ensuite question de détailler.
+* Un sondage général, dans lequel l'utilisateur à la possibilité de donner un avis général (« Pour » et « Contre ») ou un peu plus nuancé (« Pour sur le principe » et « Contre sur le principe »). À titre indicatif, cette information délivre une information superficielle, qu'il est ensuite question de détailler.
 
 * La partie principale du site est celle contenant le texte exhaustif de la votation ou de l'initiative en cours. Le texte se divise en amendements comportant plusieurs articles. L'utilisateur a la possibilité de surligner le contenu de ces articles, d'un unique mot à la totalité du paragraphe, et de sélectionner une couleur relative à son opinion. Une fois tous les éléments sélectionnés, il enregistre sa sélection au moyen du bouton « Soumettre son avis ». Une fois l'avis soumit, ou si l'utilisateur n'a aucune opinion particulière, il a également la possibilité de visualiser la sélection des autres au moyen du bouton « Afficher les avis moyens ». Dans une éthique de neutralité, cette visualisation n'apparaît que lorsque l'utilisateur en fait la demande.
 
