@@ -4,6 +4,7 @@ import { Template } from 'meteor/templating';
 import '../imports/api/db_comments.js';
 import { Projects } from '../imports/api/db_projects.js';
 import '../both';
+import { Votes } from '../imports/api/db_cases.js';
 //exécute le code au démarrage du serveur
 Meteor.startup(() => {
 
