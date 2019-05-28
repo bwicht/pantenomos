@@ -33,7 +33,7 @@ Les textes des initiatives et votations populaires sont repris du site officiel 
 
 ## Interface de l'utilisateur
 
-L'utilisateur peut se connecter à n'importe quel moment, via le bouton relatif dans le bandeau du site. S'il n'est pas encore enregistré, il peut le faire en remplissant un formulaire (la tranche d'âge, le sexe ainsi que le canton sont optionnels).
+L'utilisateur peut se connecter à n'importe quel moment, via le bouton relatif dans le bandeau du site. S'il n'est pas encore enregistré, il peut le faire en remplissant un formulaire (la tranche d'âge, le sexe ainsi que le canton sont optionnels). Les utilisateurs préférant l'anonymat ont la possibilité de s'inscrire au sondage, de surligner et de commenter de la même façon.
 ![alt text](https://github.com/bwicht/pantenomos/blob/master/projet_pantenomos/public/images/PN_login.png "Connexion")
 ![alt text](https://github.com/bwicht/pantenomos/blob/master/projet_pantenomos/public/images/PN_register.png "Inscription")
 
