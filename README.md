@@ -37,8 +37,6 @@ L'utilisateur peut se connecter à n'importe quel moment, via le bouton relatif 
 ![alt text](https://github.com/bwicht/pantenomos/blob/master/projet_pantenomos/public/images/PN_login.png "Connexion")
 ![alt text](https://github.com/bwicht/pantenomos/blob/master/projet_pantenomos/public/images/PN_register.png "Inscription")
 
-Une fois enregistré, l'utilisateur peut poster un commentaire rattaché à son ID, mais l'interface n'est pour l'instant pas particulièrement développée, n'ayant par exemple aucun espace privé et aucun historique de projets concertés et avec lesquels il a interagi. Les utilisateurs préférant l'anonymat ont la possibilité de s'inscrire au sondage, de surligner et de commenter de la même façon.
-
 ## Base de données
 
 La base de données de l'application, MongoDB, contient quatre collections rattachées à l'ID de la cinquième collection, le projet auquel elles sont liées. Ces quatre premières collections sont:
