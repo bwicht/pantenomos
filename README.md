@@ -44,7 +44,7 @@ Une fois enregistré, l'utilisateur peut poster un commentaire rattaché à son 
 La base de données de l'application, MongoDB, contient quatre collections rattachées à l'ID de la cinquième collection, le projet auquel elles sont liées. Ces quatre premières collections sont:
 * les utilisateurs inscrits (*user*)
 * le sondage (*cases*)
-* les surlignements (*highlitments*)
+* les surlignements (*highlightments*)
 * les commentaires (*comments*)
 
 Concernant la collection des projets (*projects*), un bouton « Nouveau projet » (destiné à disparaître dans une version aboutie du projet – l'option étant réservée à un administrateur) permet d'accéder au formulaire d'ajout d'un nouveau projet dans la base de données, avec certaines modalités comme le titre, une description, et enfin les différents amendements et articles relatifs. La saisie est manuelle et une fois le projet validé, la page relative est générée automatiquement.
