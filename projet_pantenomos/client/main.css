@@ -272,6 +272,13 @@ h5 {
     text-align: center;
 }
 
+.consigne {
+
+    color: brown;
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+
 /* ==========================================================================
    Mobile styles - Width adjustments
    ========================================================================== */
