@@ -21,6 +21,7 @@ let displaysAverageHighlights;
 
 function changeHighlightColor() {
 
+    //Application de la classe choisie à la sélection
     highlighter.addClassApplier(rangy.createClassApplier(lastSelectedClassName, {
 
         ignoreWhiteSpace: true
@@ -28,7 +29,6 @@ function changeHighlightColor() {
     }));
 }
 
-//surlignage en fonction du choix du sondage
 Template.vot_lawText.events({
 
     'click .popupChoices'(event, instance) {
@@ -95,7 +95,7 @@ Template.vot_lawText.events({
 
         rangy.restoreSelection(savedSelection);
 
-        //La sélection doit commencer d'un paragraphe
+        //La sélection doit commencer d'un paragraphe; si elle part d'un DIV (ou que les avis moyens sont déjà affichés), on la supprime
         if (displaysAverageHighlights || selectedText.anchorNode.parentNode.tagName == "DIV") {
 
             selectedText.removeAllRanges();
@@ -159,14 +159,14 @@ Template.vot_lawText.events({
                         //Sans tag, ce n'est pas une sélection
                         if(!node.tagName) {
 
-                            //Compte le nombre de mots pas souligné
+                            //Compte le nombre de mots consécutifs qui ne sont pas soulignés et déplace le curseur
                             position += node.textContent.split(' ').length - 1;
                         }
 
                         //Si l'enfant possède une classe, c'est que le passage est souligné
                         else if (node.classList[0] && node.className != "rangySelectionBoundary") {
                                                             
-                            //Nombre de mots soulignés
+                            //Nombre de mots soulignés = nombre de mot du noeud
                             let highlightedWords = node.textContent.split(' ');
 
                             //Pour chaque mot souligné
@@ -175,7 +175,7 @@ Template.vot_lawText.events({
                                 //Si le mot n'est pas un espace
                                 if (word != "") {
 
-                                    //A faire: ajout de l'ID de l'utilisateur
+                                    //A faire: ajout de l'ID de l'utilisateur courant à la collection
                                     let highlightment = {project_id: FlowRouter.getParam('_id'), parent_id: element.id, position: null, score: null};
 
                                     //Sélection du score en fonction de l'avis 
@@ -207,7 +207,7 @@ Template.vot_lawText.events({
                                             break;
                                     }
 
-                                    //Position du mot souligné
+                                    //Position du mot souligné dans le paragraphe
                                     highlightment.position = position++;
 
                                     if (highlightment.score) {
@@ -227,14 +227,14 @@ Template.vot_lawText.events({
             });
         }
 
-        //Après sauvegarde des surlignages, suppression des sélection de l'utilisateur
+        //Après sauvegarde des surlignages, suppression des sélections de l'utilisateur
         highlighter.removeAllHighlights();
 
         document.getElementById("highlightSubmitButton").style.display = "none";
 
         //Reconstitution des highlights "moyens"
 
-        //Pour chaque article du codument
+        //Pour chaque article du document
         for (let currentArticle of allArticles) {
 
             //Pour chaque node de l'article
@@ -250,8 +250,8 @@ Template.vot_lawText.events({
 
                     let wordPosition = 0;
 
-                    //Suppression complète du texte du paragraphe afi de le reconstituer mot à mot en fonction des surlignages des utilisateurs
-                    paragraph.textContent = "";
+                    //Suppression complète du texte du paragraphe afin de pouvoir le reconstituer mot à mot en fonction des surlignages des utilisateurs
+                    paragraph.innerHTML = "";
 
                     //Pour chaque mot du paragraphe
                     listWords.forEach(function(word) {
@@ -274,7 +274,7 @@ Template.vot_lawText.events({
 
                         });
 
-                        //Puis division par le nombre de score trouvé pour le mot
+                        //Puis division par le nombre de scores trouvés pour le mot
                         wordScore /= scores.length;
 
                         //Si le mot a été souligné au moins une fois par un utilisateur
@@ -282,11 +282,10 @@ Template.vot_lawText.events({
 
                             let wordClass;
 
-                            //Attribution d'une classe en fonction du score moyen
+                            //Attribution d'une classe en fonction du score moyen pour le mot
                             if (wordScore < -15) {
 
                                 wordClass = "highlightContre";
-
                             }
 
                             else if (wordScore >= -15 && wordScore < -5) {
@@ -310,8 +309,8 @@ Template.vot_lawText.events({
                                 wordClass = "highlightPour";
                             }
 
-                            //Insertion du mot dans une balise span (avec son score comme titre)
-                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + Math.round(wordScore * 100) / 100 + '">' + word + '</span> ';
+                            //Insertion du mot dans une balise span (avec son score et le nombre d'avis comme titre)
+                            paragraph.innerHTML += '<span class="' + wordClass + '" title="Score: ' + Math.round(wordScore * 100) / 100 + ' (' + scores.length + ' avis)">' + word + '</span> ';
                         
                         }
 
@@ -328,7 +327,7 @@ Template.vot_lawText.events({
 
                     });
 
-                    //Extension des surlignages jusqu'au mot suivant
+                    //Extension des surlignages jusqu'au mot suivant (s'il est également souligné) afin d'éviter les trous dans les surlignages
                     paragraph.innerHTML = paragraph.innerHTML.replace(/<\/span>(\s*|\n*)<span/gm, " </span><span");
                 }
             });
