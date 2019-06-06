@@ -6,8 +6,8 @@ Template.navbar.events({
         event.preventDefault();
         FlowRouter.go('homePage');
     }
-
 });
+
 Template.navbar.events({
 
     'click #Title': function(event){
@@ -15,5 +15,4 @@ Template.navbar.events({
         event.preventDefault();
         FlowRouter.go('homePage');
     }
-
 });

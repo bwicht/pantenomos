@@ -2,49 +2,55 @@
 
     <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
 
-            <a href="#" class="navbar-brand"><img src="https://www.admin.ch/gov/fr/_jcr_content/logo/image.imagespooler.png/1443432260207/Logo%20Schweizerische%20Eidgenossenschaft.png"
-                alt="Logo confédération" id="logo" class="logo"></a>
+        <a href="#" class="navbar-brand"><img src="https://www.admin.ch/gov/fr/_jcr_content/logo/image.imagespooler.png/1443432260207/Logo%20Schweizerische%20Eidgenossenschaft.png"
+        alt="Logo confédération" id="logo" class="logo"></a>
 
-          <!-- vw pour que le text soit responsive-->
-                <span class="navbar-text" id="Title">
-                    <a href="#"></a>
-                     <h1 style="font-size:3vw;">Projet Pantenomos</h1>
-                      </span>         
-                
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- pour que le text soit responsive -->
+        <span class="navbar-text" id="Title">
+            <a href="#"></a>
+            <h1 style="font-size:3vw;">Projet Pantenomos</h1>
+        </span>         
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <li class="navbar-item">
-                        <a href="/#" class="nav-link">Page d'accueil</a>
-                    </li>
-                </ul>
-                   <!-- lignes 26-32 : Création boutons "Connexion" et "Déconnexion" de la navbar-->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="/#" class="nav-link">Page d'accueil</a>
+                </li>
+            </ul>
+
+            <!-- création boutons "Connexion" et "Déconnexion" de la navbar -->
             {{#unless loginIn}}
             {{#if currentUser}}
-            <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
-            {{else}}
-            <button class ="btn btn-danger js-open-login-modal">Connexion</button>
-            {{/if}}    
-            {{/unless}} 
-            </div>
 
+            <button class ="btn btn-outline-secondary js-logout">Déconnexion</button>
+
+            {{else}}
+
+            <button class ="btn btn-danger js-open-login-modal">Connexion</button>
+
+            {{/if}}    
+            {{/unless}}
+
+        </div>
     </nav>
-    
+
 </template>
 
-<!-- lignes 37-46 : Création du template contenant la modal -->
+<!-- création du template contenant la modal -->
 <template name="login_modal">
-    
-        <div class ="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    {{> atForm}}
-                </div>
+
+    <div class ="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            {{> atForm}}
+
             </div>
         </div>
-        
+    </div>
+
 </template>

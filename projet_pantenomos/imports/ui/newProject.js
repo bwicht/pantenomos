@@ -1,13 +1,12 @@
 //importation des méthodes
 import { Projects } from '../api/db_projects.js';
 
-//À AJOUTER: 1. Ajout de notes de bas de page 2. Mise en forme de base en Markup Language.
+//ajout futur: ajout de notes de bas de page et mise en forme de base en Markup Language.
 
-//Initialise la variable amendementCount
+//initialise la variable amendementCount
 let amendementCount;
 
 Template.newProject.onRendered(function () {
-
     amendementCount = 0;
 });
 
@@ -28,7 +27,6 @@ Template.newProject.events({
         Array.from(amendements).forEach((amendement) => {
             
             let newAmendement = {title: document.getElementById("am_" + amendement.id + "_title").value, articles: []};
-
             let articles = document.getElementsByClassName("article " + amendement.id);
 
             Array.from(articles).forEach((article) => {
@@ -38,13 +36,11 @@ Template.newProject.events({
                 Array.from(document.getElementById(article.id + "_text").value.split('\n')).forEach((point) => {
 
                     if (point != "") {
-
                         newPoints.push({content: point, score: 0});
                     }
                 });                
 
                 let newArticle = {title: document.getElementById(article.id + "_title").value, points: newPoints};
-
                 newAmendement.articles.push({article: newArticle});
 
             });
@@ -73,13 +69,11 @@ Template.newProject.events({
     'click #addAmendement': function(event){
 
         event.preventDefault();
-
         amendementCount++;
 
         let newAmendement = document.createElement("div");
 
-        newAmendement.className = "amendement";
-        
+        newAmendement.className = "amendement";        
         newAmendement.id = amendementCount;
 
         let newAmendementTitle = document.createElement("input");
@@ -90,7 +84,6 @@ Template.newProject.events({
         newAmendementTitle.value = amendementCount + ". ";
 
         newAmendement.appendChild(newAmendementTitle);
-
         newAmendement.appendChild(document.createElement("br"));
 
         let newAddArticle = document.createElement("input");
@@ -99,7 +92,6 @@ Template.newProject.events({
         newAddArticle.value = "+";
 
         newAmendement.appendChild(newAddArticle);
-
         newAmendement.appendChild(document.createElement("br"));
 
         let articleCount = 0;
@@ -112,13 +104,11 @@ Template.newProject.events({
             let newArticle = document.createElement("div");
 
             newArticle.className = "article " + amendementCount;
-
             newArticle.id = "am_" + newAmendement.id + "_art_" + articleCount
 
             let newArticleTitle = document.createElement("input");
 
             newArticleTitle.className = "articleTitle";
-
             newArticleTitle.id = newArticle.id + "_title";
 
             newArticleTitle.type = "text";
@@ -126,7 +116,6 @@ Template.newProject.events({
             newArticleTitle.value = "Art. " + articleCount;
 
             newArticle.appendChild(newArticleTitle);
-
             newArticle.appendChild(document.createElement("br"));
 
             let newArticleTextArea = document.createElement("textarea");
@@ -138,7 +127,6 @@ Template.newProject.events({
             newArticleTextArea.cols = 100;
 
             newArticle.appendChild(newArticleTextArea);
-
             newArticle.appendChild(document.createElement("br"));
 
             let removeArticle = document.createElement("input");
@@ -148,28 +136,20 @@ Template.newProject.events({
 
             //possibilité de supprimer les nouveaux articles
             removeArticle.addEventListener("click", function() {
-        
                 articleCount--;
-
                 newAmendement.removeChild(newArticle);
 
             });
 
             newAmendement.removeChild(newAddArticle);
-
             newAmendement.appendChild(newArticle);
-
             newAmendement.appendChild(newAddArticle);
-
             newArticle.appendChild(removeArticle);
-
             newAmendement.appendChild(document.createElement("br"));
 
         });
 
         document.getElementById("lawText").appendChild(newAmendement);
-
         document.getElementById("lawText").appendChild(document.createElement("br"));
-
     }
 });

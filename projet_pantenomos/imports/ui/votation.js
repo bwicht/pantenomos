@@ -6,10 +6,7 @@ import '../templates/votation.html';
 Template.votation.helpers({
     
     project: function() {
-
         let currentProject = Projects.findOne({_id: FlowRouter.getParam('_id')});
-
         return currentProject && currentProject.project;
     },
-
 });

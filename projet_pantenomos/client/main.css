@@ -38,6 +38,7 @@ h5 {
     width: 30%;
     padding: 0 10px;
 }
+
 @media screen and (max-width:600px) {
     .card-deck{
         width: 100%;
@@ -60,16 +61,13 @@ h5 {
     padding-top: 100px;
  }
 
-
 .cardHome {
-
     border: 3px red;
     box-shadow: 0 4px 8px 0 rgba(255, 3, 3, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #fff9f8;
 }
-
 
 .articleTextArea {
     font-size: 12px;
@@ -112,10 +110,12 @@ h5 {
     margin-top: 30px;
     margin-bottom: 10px;
 }
-#logo{
+
+#logo {
     height:70px;
 }
-#titleMain{
+
+#titleMain {
     padding-top: 110px;
 }
 
@@ -150,7 +150,6 @@ h5 {
 
 .navbar-item {
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .sidebar {
@@ -162,11 +161,10 @@ h5 {
     overflow-x: hidden;
     padding-top: 16px;
   }
-.sidebar-item{
+
+.sidebar-item {
     padding-top:120px;
 }
-
-
 
 .main {
     margin-left: 160px; 
@@ -188,27 +186,27 @@ h5 {
     height: 100%;
     z-index: -2;
     opacity: 0.4;
-    }
+}
 
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
 }
   
-#Title{
+#Title {
     margin: 0 auto;
     width: 50%;
     display: block;
 }
 
-#summary{
+#summary {
     margin: 0 auto;
     text-align: justify;
     width: 50%;
     padding: 30px;
 }
 
-.main_1{
+.main_1 {
     margin-top:10px;
     margin-left:20px;
 }
@@ -273,7 +271,6 @@ h5 {
 }
 
 .consigne {
-
     color: brown;
     margin-top: -25px;
     margin-bottom: 25px;
@@ -283,35 +280,30 @@ h5 {
    Mobile styles - Width adjustments
    ========================================================================== */
 /* Landscape phones and down */
-@media (max-width: 480px) { 
 
+@media (max-width: 480px) { 
 }
 
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) { 
-
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) { 
-
 }
 
 /* Desktops and laptops ----------- */
 @media (min-width: 992px) and (max-width: 1199px) {
-
 }
 
 /* Large screens ----------- */
 @media (min-width: 1200px) and (max-width: 3000px) {
-
 }
 
 /* ==========================================================================
    Height adjustments
    ========================================================================== */
 /* Landscape phones and down */
+
 @media (max-height:  800px) { 
-
 }
-

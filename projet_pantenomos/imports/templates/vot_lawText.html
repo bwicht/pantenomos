@@ -1,63 +1,56 @@
-<!-- Seconde partie: texte de loi -->
+<!-- seconde partie: texte de loi -->
 <template name="vot_lawText">
 
     <div class="hoveringDiv" id="hoveringDiv">
+
         <div class="popupChoices highlightPour">Pour</div>
         <div class="popupChoices highlightPourPrincipe">Pour sur le principe</div>
         <div class="popupChoices highlightPasDavis">Pas d'avis</div>
         <div class="popupChoices highlightContrePrincipe">Contre sur le principe</div>
         <div class="popupChoices highlightContre">Contre</div>
+        
     </div>
 
-     <div class="main_1"> 
-         <h2>Quels sont les points sur lesquels vous souhaiteriez revenir?</h2><br>
-         <h5 class="consigne">Utilisez votre curseur pour les mettre en évidence.</h5>
+    <div class="main_1">
 
-    <div id="laws" class="container">
+        <h2>Quels sont les points sur lesquels vous souhaiteriez revenir?</h2><br>
+        <h5 class="consigne">Utilisez votre curseur pour les mettre en évidence.</h5>
 
-        {{#each project.amendements}}
+        <div id="laws" class="container">
 
+            {{#each project.amendements}}
             {{#let amendementIndex=@index}}
 
             <div class="lawAmendementTitle">{{amendement.title}}</div>
 
-                {{#each amendement.articles}}
+            {{#each amendement.articles}}
+            {{#let articleIndex=@index}}
 
-                    {{#let articleIndex=@index}}
+            <div class="lawTextBody">
+                <div class="lawArticleTitle">{{article.title}}</div>
+                <div class="lawArticleContent" id="am_{{amendementIndex}}_art_{{articleIndex}}">
 
-                    <div class="lawTextBody">
+                    {{#each article.points}}
+                    {{#let pointIndex=@index}}
 
-                        <div class="lawArticleTitle">{{article.title}}</div>
-
-                        <div class="lawArticleContent" id="am_{{amendementIndex}}_art_{{articleIndex}}">
-
-                        {{#each article.points}}
-
-                            {{#let pointIndex=@index}}
-
-                            <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_pt_{{pointIndex}}">{{content}}</p>
-
-                            {{/let}}
-
-                        {{/each}}
-
-                        </div>
-                        
-                    </div>
+                    <p class="articlePoint" id="am_{{amendementIndex}}_art_{{articleIndex}}_pt_{{pointIndex}}">{{content}}</p>
 
                     {{/let}}
+                    {{/each}}
 
-                {{/each}}
+                </div>
+            </div>
 
-                {{/let}}
-                
-        {{/each}}
+            {{/let}}
+            {{/each}}
+            {{/let}}
+            {{/each}}
 
             <div class="center">
                 <input type="button" id="highlightSubmitButton" class="btn btn-danger" value="Afficher les avis moyens">
             </div>
-
-            </div>
-
+            
         </div>
+    </div>
+
 </template>
