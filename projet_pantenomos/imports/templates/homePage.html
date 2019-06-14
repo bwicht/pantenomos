@@ -1,37 +1,38 @@
-<!-- Page d'accueil -->
+<!-- page d'accueil -->
 <template name="homePage">
 
     {{> sidebar}}
-
     {{> navbar}}
 
-<br><br>
-<div class="main">
-<div class="container_1">
-    <div class="row">
-        
-        {{#each projects}}
+    <br><br>
+    <div class="main">
+        <div class="container_1">
+            <div class="row">
 
-            <div class="card-deck"> 
-                <div class="card cardHome" id="{{_id}}" >
-                    <div class="initiative">
-            <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet-->
-                        <h4 class="mb-0">{{project.title}}</h4>
+            {{#each projects}}
+
+                <div class="card-deck"> 
+                    <div class="card cardHome" id="{{_id}}" >
+                        <div class="initiative">
+
+                            <!-- mb-0 pour ne pas avoir d'espace sous le titre du projet -->
+                            <h4 class="mb-0">{{project.title}}</h4>
+
+                        </div>
                     </div>
                 </div>
 
+            {{/each}}
+
             </div>
-        {{/each}}
-    
+        </div>
+
+        <br><br>
+
+        <input id="btnNewProject" type="button" class="btn btn-danger" value="Nouveau projet"/>
+
+        {{> copyright}}
+
     </div>
-</div>
 
-    <br><br>
-
-    <input id="btnNewProject" type="button" class="btn btn-danger" value="Nouveau projet"/>
-
-    {{> copyright}}
-
-</div>
 </template>
-

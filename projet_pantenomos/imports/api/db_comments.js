@@ -5,11 +5,8 @@ import { Mongo } from 'meteor/mongo';
 export const Comments = new Mongo.Collection('comments');
 
 Meteor.methods({
-    
     'comments.create'(comment) {
-
         let e = Comments.insert({comment});
-
         return e;
     }
 })

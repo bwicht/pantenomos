@@ -2,33 +2,32 @@
 <template name="newProject">
 
     {{> sidebar}}
-
     {{> navbar}}
 
     <div class="main"><br><br><br><br><br>
 
-    <form id="formNewProject">
+        <form id="formNewProject">
 
-        <p>
-            <input id="projectTitle" type="text" size="60" placeholder="Titre du projet" />
-        </p>
+            <p>
+                <input id="projectTitle" type="text" size="60" placeholder="Titre du projet" />
+            </p>
 
-        <p>
-            <textarea id="projectSummary" rows="3" cols="58" placeholder="Résumé du projet"></textarea>
-        </p>
+            <p>
+                <textarea id="projectSummary" rows="3" cols="58" placeholder="Résumé du projet"></textarea>
+            </p>
 
-        <div id="lawText">
-        </div>
+            <div id="lawText">
+            </div>
 
-        <p>
-            <input id="addAmendement" type="button" class="btn btn-danger" value="Nouvel amendement">
-        </p>
+            <p>
+                <input id="addAmendement" type="button" class="btn btn-danger" value="Nouvel amendement">
+            </p>
 
-        <input type="submit" id="btnAddNewProject" class="btn btn-danger" value="Ajouter projet">
+            <input type="submit" id="btnAddNewProject" class="btn btn-danger" value="Ajouter projet">
+        </form>
+        
+        {{> copyright}}
 
-    </form>
-    
-    {{> copyright}}
+    </div>
 
-</div>
 </template>

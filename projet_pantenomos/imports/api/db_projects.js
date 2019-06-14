@@ -5,10 +5,7 @@ import { Mongo } from 'meteor/mongo';
 export const Projects = new Mongo.Collection('projects');
 
 Meteor.methods({
-    
     'projects.create'(project) {
-
         return Projects.insert({project});
     },
-    
 })
